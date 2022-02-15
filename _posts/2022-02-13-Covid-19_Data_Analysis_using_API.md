@@ -5,6 +5,8 @@ categories: coding
 tag: [blog, python, jupyter, Covid-19]
 toc: true
 author_profile: false
+sidebar:
+    nav: "docs"
 ---
 
 <head>
