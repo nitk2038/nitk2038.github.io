@@ -103,7 +103,7 @@ analytics:
 # Site Author
 author:
   name             : "JuYeong Shin"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : "KHU CSE 19"
   location         : "1732, Deogyeong-daero"
   email            : "bl4angel20@gmail.com"
