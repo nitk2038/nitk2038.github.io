@@ -16,17 +16,17 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "MajorWallet"
+title                    : "MajorWallet's blog"
 title_separator          : "|"
 subtitle                 : "Falling in love with Data and AI"
 name                     : "JuYeong Shin"
 description              : "MajorWallet's blog"
 url                      : "https://majorWallet.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "majorWallet/majorWallet.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # "/assets/images/myLogo.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "MajorWallet's blog" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "JuYeong Shin"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "KHU CSE 19"
+  bio              : "KHU CSE 19<br>KHU DKE Lab"
   location         : "1732, Deogyeong-daero"
   email            : "bl4angel20@gmail.com"
   links:
