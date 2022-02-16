@@ -46,21 +46,9 @@ Click [here](https://github.com/majorWallet)
 
 ---
 
-<!--Table-->
-|Header|Description|
-|--|--|
-|Cell1|Cell2|
-|Cell1|Cell2|
-|Cell1|Cell2|
-|Cell1|Cell2|
-
----
-
 <!-- Code -->
 
 ```Python
 print("Hello World!")
 ```
 ---
-
-<!-->
