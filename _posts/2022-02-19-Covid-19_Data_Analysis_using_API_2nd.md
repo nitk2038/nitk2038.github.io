@@ -730,7 +730,7 @@ display(map_covid)
 
 
 
-## analyze the correlate between the number of confirmed cases and the number of deaths using machine learning
+## Analysis of trends in the number of confirmed cases using Machine Learning
 
 ### make dataframe to use at machine learning
 
