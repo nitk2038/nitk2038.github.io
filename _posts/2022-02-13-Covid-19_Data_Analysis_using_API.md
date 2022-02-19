@@ -2,7 +2,7 @@
 layout: single
 title:  "Covid-19 Data Analysis using API"
 categories: coding
-tag: [blog, python, jupyter, Covid-19]
+tag: [blog, python, jupyter, COVID-19. coding]
 toc: true
 author_profile: false
 sidebar:
