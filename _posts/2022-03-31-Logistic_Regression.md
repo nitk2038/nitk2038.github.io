@@ -33,6 +33,7 @@ sidebar:
 - When learning, the error is minimized with the loss function of logistic regression.
 - Find the minimum value of the loss function value while calculating the slope of the logistic regression function value.
 
+## Sample Code
 
 ```python
 import numpy as np
