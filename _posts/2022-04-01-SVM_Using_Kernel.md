@@ -1,3 +1,14 @@
+---
+layout: single
+title:  "SVM using kernel"
+categories: coding
+tag: [blog, python, coding, Machine_Learning, pandas, numpy, sklearn]
+toc: true
+author_profile: false
+sidebar:
+    nav: "docs"
+---
+
 # SVM (Support Vector Macnine) Using Kernel technique
 
 ## Fundamental Concept
