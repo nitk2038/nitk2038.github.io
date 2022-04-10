@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "K-Means"
+title:  "Gaussian Mixture Model"
 categories: coding
 tag: [blog, python, coding, Machine_Learning, pandas, numpy, sklearn]
 toc: true
