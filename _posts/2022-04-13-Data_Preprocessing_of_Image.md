@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Data Preprocessing of Documents"
+title:  "Data Preprocessing of Image"
 categories: coding
 tag: [blog, python, coding, Machine_Learning, pandas, numpy, sklearn]
 toc: true
