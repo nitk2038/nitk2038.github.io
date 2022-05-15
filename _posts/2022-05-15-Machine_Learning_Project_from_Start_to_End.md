@@ -2,7 +2,7 @@
 layout: single
 title:  "Machine Learning Project From Start to End"
 categories: coding
-tag: [blog, python, coding, Machine_Learning, pandas, numpy, sklearn]
+tag: [blog, python, coding, Machine_Learning, numpy, sklearn]
 toc: true
 author_profile: false
 sidebar:
