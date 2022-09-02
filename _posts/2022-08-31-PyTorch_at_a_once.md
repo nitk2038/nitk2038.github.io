@@ -2,7 +2,7 @@
 layout: single
 title:  "PyTorch Studying at a once"
 categories: coding
-tag: [blog, python, coding, Machine_Learning, numpy, PyTorch, matplotlib, keras]
+tag: [blog, python, coding, Machine_Learning, numpy, PyTorch, matplotlib]
 toc: true
 author_profile: false
 sidebar:
