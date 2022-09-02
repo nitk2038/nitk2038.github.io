@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Artificial Neural Network"
+title:  "Artificial Neural Network PPT"
 categories: coding
 tag: [blog, python, coding, Machine_Learning, numpy, matplotlib, keras, PPT]
 toc: true
