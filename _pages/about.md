@@ -8,13 +8,15 @@ toc_label: "MYSELF"
 
 
 ---
-># JuYeong's profile
 
 <div style="width:33%" markdown="1">
-    <br />
-    <p align="left">
-        <img src = "../assets/images/profile_image.jpg" align="left" height="200" width="150"/>
-    </p>
+
+># JuYeong's profile
+
+<br />
+<p align="left">
+    <img src = "../assets/images/profile_image.jpg" align="left" height="200" width="150"/>
+</p>
 
 ## 신주영 (Juyeong Shin)
 ### Undergraduate Student
