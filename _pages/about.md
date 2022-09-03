@@ -11,7 +11,7 @@ sidebar_main: true
 
 ---
 
-<center width>
+<center>
 
 ># JuYeong's profile
 
