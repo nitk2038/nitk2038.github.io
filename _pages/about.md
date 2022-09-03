@@ -8,15 +8,29 @@ toc_label: "MYSELF"
 
 
 ---
->## JuYeong's profile
+># JuYeong's profile
 <br />
 <p align="left">
-    <img src = "../assets/images/profile_image.jpg" align="left" />
+    <img src = "../assets/images/profile_image.jpg" align="left" height="320" width="240"/>
 </p>
 
+## 신주영 (Juyeong Shin)
+### Undergraduate Student
+#### Department of Computer Science and Engineering, KyungHee University, Republic of Korea
+#### Department of Management, KyungHee University, Republic of Korea
+<br />
+
+#### E-mail: bl4angel20@khu.ac.kr
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ---
->## Introduce myself
+># Introduce myself
 - 👋 Hi, I’m @majorWallet
 - 👀 I’m interested in Machine Learning with Graphs
 - 🌱 I’m currently learning Graph Convolutional Network
