@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Preparing Machine Learning PPT"
+title:  "Regularization PPT"
 categories: coding
 tag: [blog, python, coding, Machine_Learning, numpy, matplotlib, sklearn, PPT]
 toc: true
