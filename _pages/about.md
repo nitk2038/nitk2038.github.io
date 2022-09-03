@@ -9,25 +9,19 @@ toc_label: "MYSELF"
 
 ---
 
-<div style="width:33%" markdown="1">
+<center>
 
 ># JuYeong's profile
 
-<br />
-<p align="left">
-    <img src = "../assets/images/profile_image.jpg" align="left" height="200" width="150"/>
-</p>
+<img src = "../assets/images/profile_image.jpg" align="left" height="200" width="150"/>
 
-## 신주영 (Juyeong Shin)
-### Undergraduate Student
-#### Department of Computer Science and Engineering, KyungHee University, Republic of Korea
-#### Department of Management, KyungHee University, Republic of Korea
+<h2> 신주영 (Juyeong Shin) </h2>
+<h3> Undergraduate Student </h3>
+<h4> Department of Computer Science and Engineering, KyungHee University, Republic of Korea <h4>
+<h4> Department of Management, KyungHee University, Republic of Korea </h4>
 <br />
 
-#### E-mail: bl4angel20@khu.ac.kr
-<br />
-<br />
-<br />
+<h4> E-mail: bl4angel20@khu.ac.kr </h4>
 <br />
 
 ---
