@@ -9,10 +9,12 @@ toc_label: "MYSELF"
 
 ---
 ># JuYeong's profile
-<br />
-<p align="left">
-    <img src = "../assets/images/profile_image.jpg" align="left" height="320" width="240"/>
-</p>
+
+<div style="width:33%" markdown="1">
+    <br />
+    <p align="left">
+        <img src = "../assets/images/profile_image.jpg" align="left" height="200" width="150"/>
+    </p>
 
 ## 신주영 (Juyeong Shin)
 ### Undergraduate Student
@@ -25,15 +27,15 @@ toc_label: "MYSELF"
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
 
 ---
 ># Introduce myself
+
 - 👋 Hi, I’m @majorWallet
 - 👀 I’m interested in Machine Learning with Graphs
 - 🌱 I’m currently learning Graph Convolutional Network
 - 💞️ I’m currently collaborate on Data and Knowledge Engineering laboratory
 - 📫 How to reach me E-mail: bl4angel20@gmail.com, phone: 010-9809-9551
 ---
+
+</div>
