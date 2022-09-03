@@ -8,25 +8,19 @@ author_profile: true
 sidebar_main: true
 ---
 
-
----
-
+<div markdown="1">
 <center>
 
+---
 ># JuYeong's profile
 
-<img src = "../assets/images/profile_image.jpg" align="left" height="280" width="210"/>
+<img src = "../assets/images/profile_image.jpg" height="280" width="210"/>
 
-<h2> 신주영 (Juyeong Shin) </h2>
-<h3> Undergraduate Student </h3>
-<h4> Department of Computer Science and Engineering, KyungHee University, Republic of Korea <h4>
-<h4> Department of Management, KyungHee University, Republic of Korea </h4>
-<h4> E-mail: bl4angel20@khu.ac.kr </h4>
-<br />
-<br />
-<br />
-<br />
-<br />
+<h4> 신주영 (Juyeong Shin) </h4>
+<h5> Undergraduate Student </h5>
+<h6> Department of Computer Science and Engineering, KyungHee University, Republic of Korea <h6>
+<h6> Department of Management, KyungHee University, Republic of Korea </h6>
+<h6> E-mail: bl4angel20@khu.ac.kr </h6>
 <br />
 
 ---
@@ -40,3 +34,4 @@ sidebar_main: true
 ---
 
 </center>
+</div>
