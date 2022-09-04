@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Difference between COVID-19 Data Analysis 1st and 2nd"
-categories: coding
+categories: gossip
 tag: [blog, gossip, coding]
 toc: true
 author_profile: false

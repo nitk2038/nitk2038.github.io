@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Machine Learning is harder to learn than I thought."
-categories: coding
-tag: [blog, python, coding]
+categories: gossip
+tag: [blog, gossip]
 toc: true
 author_profile: false
 sidebar:

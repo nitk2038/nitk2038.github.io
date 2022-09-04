@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "I learned CSS!"
-categories: coding
+categories: Web
 tag: [blog, gossip, coding]
 toc: true
 author_profile: false

@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Neural Network"
-categories: coding
+categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, sklearn]
 toc: true
 author_profile: false

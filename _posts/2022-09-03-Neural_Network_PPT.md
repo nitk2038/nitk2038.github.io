@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Artificial Neural Network PPT"
-categories: coding
-tag: [blog, python, coding, Machine_Learning, numpy, matplotlib, keras, PPT]
+categories: Machine_Learning
+tag: [blog, python, coding, Machine_Learning, numpy, matplotlib, keras, Deep_Learning, TensorFlow, PPT]
 toc: true
 author_profile: false
 sidebar:

@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Data Preprocessing of Documents PPT"
-categories: coding
-tag: [blog, python, coding, Machine_Learning, numpy, matplotlib, sklearn, PPT]
+categories: Machine_Learning
+tag: [blog, python, coding, Machine_Learning, numpy, sklearn, Deep_Learning, PPT]
 toc: true
 author_profile: false
 sidebar:

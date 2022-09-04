@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Evaluation Method PPT"
-categories: coding
-tag: [blog, python, coding, Machine_Learning, numpy, matplotlib, keras, PPT]
+categories: Machine_Learning
+tag: [blog, python, coding, Machine_Learning, numpy, PPT]
 toc: true
 author_profile: false
 sidebar:

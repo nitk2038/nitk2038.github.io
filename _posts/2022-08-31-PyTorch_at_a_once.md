@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "PyTorch Studying at a once"
-categories: coding
-tag: [blog, python, coding, Machine_Learning, numpy, PyTorch, matplotlib]
+categories: Deep_Learning
+tag: [blog, python, coding, Machine_Learning, numpy, PyTorch, matplotlib, Deep_Learning]
 toc: true
 author_profile: false
 sidebar:

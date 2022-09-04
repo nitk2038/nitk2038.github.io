@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Preparing Machine Learning PPT"
-categories: coding
+categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, matplotlib, sklearn, PPT]
 toc: true
 author_profile: false
