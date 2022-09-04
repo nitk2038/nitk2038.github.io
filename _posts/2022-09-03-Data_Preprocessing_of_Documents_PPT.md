@@ -3,10 +3,7 @@ layout: single
 title:  "Data Preprocessing of Documents PPT"
 categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, sklearn, Deep_Learning, PPT]
-toc: true
-author_profile: false
-sidebar:
-    nav: "docs"
+classes: wide
 ---
 
 ![img](/images/2022-09-03-Data_Preprocessing_of_Documents_PPT/슬라이드1.JPG)

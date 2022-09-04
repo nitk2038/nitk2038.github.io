@@ -3,10 +3,7 @@ layout: single
 title:  "Naive Bayes Classification PPT"
 categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, sklearn, PPT]
-toc: true
-author_profile: false
-sidebar:
-    nav: "docs"
+classes: wide
 ---
 
 ![img](/images/2022-09-03-Naive_Bayes_Classification_PPT/슬라이드1.JPG)

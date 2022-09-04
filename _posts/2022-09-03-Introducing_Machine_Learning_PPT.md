@@ -3,10 +3,7 @@ layout: single
 title:  "Introducing Machine Learning PPT"
 categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, PPT]
-toc: true
-author_profile: false
-sidebar:
-    nav: "docs"
+classes: wide
 ---
 
 ![img](/images/2022-09-03-Introducing_Machine_Learning_PPT/슬라이드1.JPG)

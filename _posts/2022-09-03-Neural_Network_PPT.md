@@ -3,10 +3,7 @@ layout: single
 title:  "Artificial Neural Network PPT"
 categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, matplotlib, keras, Deep_Learning, TensorFlow, PPT]
-toc: true
-author_profile: false
-sidebar:
-    nav: "docs"
+classes: wide
 ---
 
 ![img](/images/2022-09-03-Neural_Network_PPT/슬라이드1.JPG)
