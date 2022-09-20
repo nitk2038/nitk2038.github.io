@@ -31,7 +31,7 @@ sidebar_main: true
 ### Projects
 * Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs, 2021--
     - Supervision: Institute of Information & Communications Technology Planning & Evaluation (IITP)
-    - Role: Researcher(2022) & Development of graph sampling techniques
+    - Role: Researcher(2022) & Development of Graph Sampling Techniques
 
 ### Publications
 * Kijin Kwon, Juyeong Shin, Youngkoo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618#). Journal of Korea Computer Congress, Pages 1223 - 1225
