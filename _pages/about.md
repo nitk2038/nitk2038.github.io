@@ -29,7 +29,7 @@ sidebar_main: true
 * 2020.08--2021.11: Republic of Korea Army 22nd Division Infantry (Machine Gunner)
 
 ### Projects
-* Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs, 2022--Present
+* Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs, 2022--
 <br/>Supervision: Institute of Information & Communications Technology Planning & Evaluation (IITP)
 <br/>Role: Researcher(2022)
 
