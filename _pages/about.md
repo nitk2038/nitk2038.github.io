@@ -25,7 +25,8 @@ sidebar_main: true
 
 ### Work Experience
 
-* 2022.04--: Data & Knowledge Engineering Labortory, Kyung Hee University, Republic of Korea, undergraduate student
+* 2022.09--: T.G.WinG Machine Learning Lecture, Lecturer
+* 2022.04--: Data & Knowledge Engineering Labortory, Kyung Hee University, Republic of Korea, Undergraduate Student
 * 2020.08--2021.11: Republic of Korea Army 22nd Division Infantry (Machine Gunner)
 
 ### Projects
