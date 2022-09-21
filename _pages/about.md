@@ -21,7 +21,7 @@ sidebar_main: true
 ### Education
 * Department of Business Administration, Kyung Hee University, Republic of Korea, Bachelor Diploma, 2024.03--
 * Department of Computer Science and Engineering, Kyung Hee University, Republic of Korea, Bachelor Diploma, 2019.03--
-* Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03--2019.01
+* Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03--2019.02
 
 ### Work Experience
 
