@@ -19,7 +19,6 @@ sidebar_main: true
 * Tel: +82 10-9809-9551
 
 ### Education
-* Department of Business Administration, Kyung Hee University, Republic of Korea, Bachelor Diploma, 2024.03--
 * Department of Computer Science and Engineering, Kyung Hee University, Republic of Korea, Bachelor Diploma, 2019.03--
 * Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03--2019.02
 
@@ -32,10 +31,11 @@ sidebar_main: true
 ### Projects
 * Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs, 2021--
     - Supervision: Institute of Information & Communications Technology Planning & Evaluation
-    - Role: Researcher (2022) & Development of Graph Sampling Techniques
+    - Role: Undergraduate Research Student (2022) & Development of Graph Sampling Techniques
 
 ### Publications
 * Kijin Kwon, Juyeong Shin, Youngkoo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618#). Journal of Korea Computer Congress, Pages 1223 - 1225
+* Juyeong Shin, Youngkoo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Technique using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr). Journal of Korea Computer Congress. Pages -
 
 ### Research Interests
 * Machine Learning / Deep Learning / Graph Convolutional Network / Graph Sampling Technique
@@ -45,4 +45,4 @@ sidebar_main: true
 Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT
 
 #### Libraries
-pandas, numpy, matplotlib, scikit-learn, TensorFlow, PyTorch, DGL
+pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
