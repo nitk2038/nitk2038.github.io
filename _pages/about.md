@@ -15,7 +15,7 @@ sidebar_main: true
 </p>
 
 * Software Engineer, Data & Knowledge Engineering Labortory, DKE Lab.
-* Email: [bl4angel20@khu.ac.kr](mailto:bl4angel20@khu.ac.kr) / [bl4angel20@gmail.com](mailto:bl4angel20@gmail.com)
+* Email: [bl4angel20@khu.ac.kr](mailto:bl4angel20@khu.ac.kr) / [bl4angel20@dke.khu.ac.com](mailto:bl4angel20@dke.khu.ac.com)
 * Tel: +82 10-9809-9551
 
 ### Education
