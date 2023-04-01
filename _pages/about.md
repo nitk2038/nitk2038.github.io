@@ -48,4 +48,4 @@ sidebar_main: true
 Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT
 
 #### Libraries
-pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL, DistDGL
+pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
