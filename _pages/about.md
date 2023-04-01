@@ -28,9 +28,9 @@ sidebar_main: true
 * 2020.08--2021.11: Republic of Korea Army 22nd Division Infantry (Machine Gunner)
 
 ### Projects
-* Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs, 2021--
+* Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs, 2021--2024
     - Supervision: Institute of Information & Communications Technology Planning & Evaluation
-    - Role: Undergraduate Research Student (2022) & Development of Graph Sampling Techniques
+    - Role: Undergraduate Research Student (2022--) & Development of Graph Sampling Techniques
 
 ### Publications
 * Kijin Kwon, Juyeong Shin, Youngkoo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618#). Journal of Korea Computer Congress, Pages 1223 - 1225
