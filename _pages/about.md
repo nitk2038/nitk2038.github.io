@@ -43,6 +43,9 @@ sidebar_main: true
 ### Research Interests
 * Machine Learning / Deep Learning / Graph Convolutional Network / Distributed Graph Neural Network
 
+### Study Interests
+* Linear Algebra / Deep Learning / Computer Vision / Natural Language Processing / Graph Neural Network / Query Processing / Distributed Data Processing
+
 ### Skills
 #### Programming Languages
 Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT
