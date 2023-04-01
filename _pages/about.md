@@ -23,7 +23,7 @@ sidebar_main: true
 * Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03--2019.02
 
 ### Work Experience
-* 2022.09--: T.G.WinG Machine Learning Study, Lecturer
+* 2022.09--2022.12: T.G.WinG Machine Learning Study, Lecturer
 * 2022.04--: Data & Knowledge Engineering Labortory, Kyung Hee University, Republic of Korea, Undergraduate Student
 * 2020.08--2021.11: Republic of Korea Army 22nd Division Infantry (Machine Gunner)
 
@@ -34,14 +34,18 @@ sidebar_main: true
 
 ### Publications
 * Kijin Kwon, Juyeong Shin, Youngkoo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618#). Journal of Korea Computer Congress, Pages 1223 - 1225
-* Juyeong Shin, Youngkoo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Technique using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr). Journal of Korea Software Congress. Pages - , (Accepted, Scheduled to be published)
+* Juyeong Shin, Youngkoo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 - 1310
+
+### Awards and Honors
+* Top Award in Undergraduate Paper Contest
+  * Korea Software Congress, 2022
 
 ### Research Interests
-* Machine Learning / Deep Learning / Graph Convolutional Network / Graph Sampling Technique
+* Machine Learning / Deep Learning / Graph Convolutional Network / Distributed Graph Neural Network
 
 ### Skills
 #### Programming Languages
 Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT
 
 #### Libraries
-pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
+pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL, DistDGL
