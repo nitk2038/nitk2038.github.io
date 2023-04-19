@@ -15,11 +15,11 @@ sidebar_main: true
 </p>
 
 * Software Engineer, Data & Knowledge Engineering Labortory, DKE Lab.
-* Email: [bl4angel20@khu.ac.kr](mailto:bl4angel20@khu.ac.kr) / [bl4angel20@dke.khu.ac.kr](mailto:bl4angel20@dke.khu.ac.kr)
+* Email: [bl4angel20@khu.ac.kr](mailto:bl4angel20@khu.ac.kr) / [bl4angel20@gmail.com](mailto:bl4angel20@gmail.com)
 * Tel: +82 10-9809-9551
 
 ### Education
-* Department of Computer Science and Engineering, Kyung Hee University, Republic of Korea, Bachelor Diploma, 2019.03--
+* Department of Computer Science and Engineering, Kyung Hee University, Republic of Korea, Bachelor Diploma, 2019.03--2026.02
 * Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03--2019.02
 
 ### Work Experience
@@ -33,7 +33,7 @@ sidebar_main: true
     - Role: Undergraduate Research Student (2022--) & Development of Graph Sampling Techniques
 
 ### Publications
-* Juyeong Shin, Youngkoo Lee. (2023). [Efficient Graph Data Augmentation Technique for Subgraph Sampling Based GCN](). Journal of Korea Computer Congress, Scheduled to submit the paper, Pages -
+* Juyeong Shin, Youngkoo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Computer Congress, Scheduled to submit the paper, Pages -
 * Juyeong Shin, Youngkoo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 - 1310
 * Kijin Kwon, Juyeong Shin, Youngkoo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618#). Journal of Korea Computer Congress, Pages 1223 - 1225
 
