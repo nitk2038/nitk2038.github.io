@@ -8,7 +8,7 @@ author_profile: true
 sidebar_main: true
 ---
 
-## Juyeong Shin, Bachelor undergraduate
+## Juyeong Shin, Bachelor Candidate
 
 <p align="center">
     <img src="../assets/images/profile_image.jpg" />
@@ -30,7 +30,11 @@ sidebar_main: true
 ### Projects
 * Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs, 2021--2024
     - Supervision: Institute of Information & Communications Technology Planning & Evaluation
-    - Role: Undergraduate Research Student (2022--) & Development of Graph Sampling Techniques
+    - Role: Undergraduate Research Student (2022--2024)
+        - Investigate existing studies for large graph integration
+        - Supports large graph learning engine design
+        - Development of graph sampling techniques
+        - Development of graph data augmentation techniques
 
 ### Publications
 * Juyeong Shin, Youngkoo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Computer Congress, Scheduled to submit the paper, Pages -
