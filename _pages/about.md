@@ -2,10 +2,10 @@
 layout: single
 title: About me
 permalink: /about/
-toc: true
-toc_sticky: true
+toc: false
+toc_sticky: false
 author_profile: true
-sidebar_main: true
+sidebar_main: false
 ---
 
 ## Juyeong Shin, Bachelor Candidate
@@ -20,6 +20,7 @@ sidebar_main: true
 
 ### Education
 * Department of Computer Science and Engineering, Kyung Hee University, Republic of Korea, Bachelor Diploma, 2019.03--2026.02
+    - GPA: 3.7 / 4.3
 * Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03--2019.02
 
 ### Work Experience
@@ -37,7 +38,7 @@ sidebar_main: true
         - Development of graph data augmentation techniques
 
 ### Publications
-* Juyeong Shin, Youngkoo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Computer Congress, Scheduled to submit the paper, Pages -
+* Juyeong Shin, Hyeonwoo Park, Youngkoo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages -
 * Juyeong Shin, Youngkoo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 - 1310
 * Kijin Kwon, Juyeong Shin, Youngkoo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618#). Journal of Korea Computer Congress, Pages 1223 - 1225
 
@@ -46,20 +47,20 @@ sidebar_main: true
   * Korea Software Congress, 2022
 
 ### Research Interests
-* Machine Learning / Deep Learning / Graph Convolutional Network / Graph Sampling / Distributed Graph Neural Network
+* Machine Learning / Deep Learning / Graph Convolutional Network / Distributed Training / CUDA acceleration
 
 ### Study Interests
 * Linear Algebra / Deep Learning / Computer Vision / Natural Language Processing / Graph Neural Network / Query Processing / Distributed Data Processing
 
 ### Skills
 #### Programming Languages
-Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT
+Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT, MarkDown
 
 #### Libraries
 pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
 
 #### Frameworks
-Docker, ElasticSearch
+Docker, Kubernetes, ElasticSearch, Neo4j
 
 #### Operating System
 Windows, Ubuntu, CentOS
