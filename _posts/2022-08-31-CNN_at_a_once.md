@@ -3,10 +3,10 @@ layout: single
 title:  "CNN Studying at a once"
 categories: Deep_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, TensorFlow, matplotlib, keras, Deep_Learning]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 

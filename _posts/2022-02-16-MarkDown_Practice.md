@@ -3,10 +3,10 @@ layout: single
 title:  "Markdown Practice!"
 categories: gossip
 tag: [blog, gossip]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 <!-- Heading -->

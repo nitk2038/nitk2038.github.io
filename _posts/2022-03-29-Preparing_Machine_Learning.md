@@ -3,10 +3,10 @@ layout: single
 title:  "Preparing Machine Learning."
 categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, pandas, matplotlib]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 # Preparing Machine Learning (Data preprocessing)

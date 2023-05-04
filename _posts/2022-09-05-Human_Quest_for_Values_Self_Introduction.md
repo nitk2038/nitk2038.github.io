@@ -3,10 +3,10 @@ layout: single
 title:  "Human Quest for Values Self Introduction"
 categories: Human_Quest_for_Values
 tag: [blog, GE, Human_Quest_for_Values, Home_Work]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 # 1. 내가 누군가

@@ -3,10 +3,9 @@ layout: single
 title:  "Quest for myself"
 categories: gossip
 tag: [gossip]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
 ---
 
 

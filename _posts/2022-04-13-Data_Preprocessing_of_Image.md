@@ -3,10 +3,10 @@ layout: single
 title:  "Data Preprocessing of Image"
 categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, sklearn]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 # Converting Image Data

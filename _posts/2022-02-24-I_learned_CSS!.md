@@ -3,10 +3,10 @@ layout: single
 title:  "I learned CSS!"
 categories: Web
 tag: [blog, gossip, coding]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 # I learned CSS!

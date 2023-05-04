@@ -3,10 +3,7 @@ layout: single
 classes: wide
 title: About me
 permalink: /about/
-toc: false
-toc_sticky: false
 author_profile: true
-sidebar_main: false
 ---
 
 <html>
@@ -102,9 +99,9 @@ sidebar_main: false
         <div class="text-container_">
             <h2 style="margin-top: 0.5em">Motto and Passion</h2>
             <p>Learning, Thinking, and Finding solutions</p>
-            <p>Also, Thinking about the explanation which explains solution</p>
-            <p>Working for myself</p>
-            <p>Also, Working for others</p>
+            <p>Thinking about the explanation with grounds</p>
+            <p>Existentialism, Humanism, Liberalism, Open Society</p>
+            <p>Knowing the difference and not evaluating</p>
             <h2 style="margin-top: 1.5em">Introduction</h2>
             <p>Software Engineer, College of Software, DKE Lab.</p>
             <p>Computer Science &amp; Engineering, Kyung Hee University</p>

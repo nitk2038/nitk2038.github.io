@@ -3,10 +3,10 @@ layout: single
 title:  "COVID-19 Data Analysis using API"
 categories: Data_Analysis
 tag: [blog, python, COVID-19, coding]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 <head>

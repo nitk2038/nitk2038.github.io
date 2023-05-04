@@ -3,10 +3,10 @@ layout: single
 title:  "Machine Learning is harder to learn than I thought."
 categories: gossip
 tag: [blog, gossip]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 # Machine Learning is harder to learn than I thoght.

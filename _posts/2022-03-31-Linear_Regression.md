@@ -3,10 +3,10 @@ layout: single
 title:  "Linear Regression"
 categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, sklearn]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 # Linear Regression

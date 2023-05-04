@@ -6,7 +6,7 @@ excerpt: "Change log of enhancements and bug fixes made to the theme."
 sidebar:
   nav: docs
 last_modified_at: 2022-01-10T07:59:46-05:00
-toc: false
+toc: true
 ---
 
 ## Unreleased

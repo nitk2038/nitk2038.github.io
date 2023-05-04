@@ -3,10 +3,10 @@ layout: single
 title:  "Difference between COVID-19 Data Analysis 1st and 2nd"
 categories: gossip
 tag: [blog, gossip, coding]
-toc: false
+toc: true
+toc_sticky: true
 author_profile: true
-sidebar:
-    nav: "docs"
+
 ---
 
 # Difference between COVID-19 Data Analysis 1st and 2nd
