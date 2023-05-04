@@ -111,15 +111,16 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:bl4angel20@gmail.com"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/meong_ju0o0"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://facebook.com/meongju0o0"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/meongju0o0"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/meong_ju0o0"
+
 
 # Site Footer
 footer:
@@ -127,15 +128,16 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:bl4angel20@gmail.com"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/meong_ju0o0"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://facebook.com/meongju0o0"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/meongju0o0"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/meong_ju0o0"
+
 
 
 # Reading Files

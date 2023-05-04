@@ -3,8 +3,8 @@ layout: single
 title:  "Human Quest for Values Self Introduction"
 categories: Human_Quest_for_Values
 tag: [blog, GE, Human_Quest_for_Values, Home_Work]
-toc: true
-author_profile: false
+toc: false
+author_profile: true
 sidebar:
     nav: "docs"
 ---

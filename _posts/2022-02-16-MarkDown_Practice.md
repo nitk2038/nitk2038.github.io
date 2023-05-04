@@ -3,8 +3,8 @@ layout: single
 title:  "Markdown Practice!"
 categories: gossip
 tag: [blog, gossip]
-toc: true
-author_profile: false
+toc: false
+author_profile: true
 sidebar:
     nav: "docs"
 ---

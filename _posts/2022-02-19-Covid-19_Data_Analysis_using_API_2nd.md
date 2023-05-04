@@ -3,8 +3,8 @@ layout: single
 title:  "COVID-19 Data Analysis using API 2nd"
 categories: Data_Analysis
 tag: [blog, python, COVID-19, coding]
-toc: true
-author_profile: false
+toc: false
+author_profile: true
 sidebar:
     nav: "docs"
 ---

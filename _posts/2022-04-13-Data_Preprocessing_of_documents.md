@@ -3,8 +3,8 @@ layout: single
 title:  "Data Preprocessing of Documents"
 categories: Machine_Learning
 tag: [blog, python, coding, Machine_Learning, numpy, sklearn]
-toc: true
-author_profile: false
+toc: false
+author_profile: true
 sidebar:
     nav: "docs"
 ---

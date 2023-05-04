@@ -3,8 +3,8 @@ layout: single
 title:  "Machine Learning is harder to learn than I thought."
 categories: gossip
 tag: [blog, gossip]
-toc: true
-author_profile: false
+toc: false
+author_profile: true
 sidebar:
     nav: "docs"
 ---
