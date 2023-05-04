@@ -106,7 +106,7 @@ author:
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : "KHU CSE 19<br>KHU DKE Lab. Undergraduate"
   location         : "1732, Deogyeong-daero"
-  email            : "bl4angel20@gmail.com"
+  email            : #
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
