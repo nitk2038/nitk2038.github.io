@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meongju0o0.github.io/sitemap.xml
