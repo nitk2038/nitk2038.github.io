@@ -54,7 +54,7 @@ author_profile: true
                 flex-direction: row;
             }
             .image-container_ {
-                width: 330px;
+                width: 380px;
                 margin-left: 20px;
                 margin-right: 20px;
                 margin-bottom: 0px;
@@ -70,15 +70,15 @@ author_profile: true
             }
             img.large {
                 display: block;
-                width: 350px;
+                width: 400px;
             }
             img.small {
                 display: none;
-                width: 350px;
+                width: 400px;
             }
             .page__content p {
-                margin-top: 0.3em;
-                margin-bottom: 0.6em;
+                margin-top: 0.2em;
+                margin-bottom: 0.4em;
             }
             p {
                 font-size: 20px;
@@ -100,12 +100,14 @@ author_profile: true
             <h2 style="margin-top: 0.5em">Motto and Passion</h2>
             <p>Learning, Thinking, and Finding solutions</p>
             <p>Thinking about the explanation with grounds</p>
+            <p>Knowledge Processing, Representation, Sharing</p>
             <p>Existentialism, Humanism, Liberalism, Open Society</p>
             <p>Knowing the difference and not evaluating</p>
             <h2 style="margin-top: 1.5em">Introduction</h2>
             <p>Software Engineer, College of Software, DKE Lab.</p>
             <p>Computer Science &amp; Engineering, Kyung Hee University</p>
             <p>Email: <a href="mailto:bl4angel20@khu.ac.kr">bl4angel20@khu.ac.kr</a> / <a href="mailto:bl4angel20@gmail.com">bl4angel20@gmail.com</a></p>
+            <p>SNS: <a href="https://instagram.com/meong_ju0o0">Instagram</a> / <a href="https://facebook.com/meongju0o0">Facebook</a> / <a href="https://github.com/meongju0o0">Github</a> / <a href="https://scholar.google.com/citations?user=ND0oIHUAAAAJ&hl=ko">Google Scholar</a></p>
             <p>Tel: +82 10-9809-9551</p>
         </div>
     </div>
@@ -120,7 +122,7 @@ author_profile: true
 ## Work Experience
 * 2022.09--2022.12: T.G.WinG Machine Learning Study, **Lecturer**
 * 2022.06--2022.07: Samsung SDS Machine Learning Lecture, **Production of Practice Materials**
-* 2022.04--: Data & Knowledge Engineering Labortory, Kyung Hee University, Republic of Korea, **Undergraduate Research Student**
+* 2022.04--: Data & Knowledge Engineering Labortory, Kyung Hee University, **Undergraduate Research Student**
 
 ## Projects
 * Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs, 2021--2024
