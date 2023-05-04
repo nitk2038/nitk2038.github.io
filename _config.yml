@@ -25,7 +25,7 @@ url                      : "https://meongju0o0.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "meongju0o0/meongju0o0.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # "/assets/images/myLogo.jpg"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/logo.png"
 masthead_title           : "meongju0o0's blog" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "JuYeong Shin"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "KHU CSE 19<br>KHU DKE Lab. undergraduate"
+  bio              : "KHU CSE 19<br>KHU DKE Lab. Undergraduate"
   location         : "1732, Deogyeong-daero"
   email            : "bl4angel20@gmail.com"
   links:
@@ -124,6 +124,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:bl4angel20@gmail.com"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://facebook.com/meongju0o0"
