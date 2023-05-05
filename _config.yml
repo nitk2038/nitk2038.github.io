@@ -24,7 +24,7 @@ description              : "meongju0o0's blog"
 url                      : "https://meongju0o0.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "meongju0o0/meongju0o0.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # "/assets/images/myLogo.jpg"
+teaser                   : "/assets/images/teaser.png"
 logo                     : "/assets/images/logo.png"
 masthead_title           : "meongju0o0's blog" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
@@ -143,7 +143,6 @@ footer:
     - label: "DockerHub"
       icon: "fab fa-fw fa-docker"
       url: "https://hub.docker.com/u/meongju0o0"
-
 
 
 # Reading Files
