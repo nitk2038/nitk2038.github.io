@@ -14,7 +14,6 @@ author_profile: true
             flex-direction: column;
         }
         .image-container_ {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin: 0 auto 20px auto;
             text-align: center;
         }
@@ -32,6 +31,7 @@ author_profile: true
             width: 500px;
         }
         img.small {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             display: block;
             width: 500px;
         }
@@ -70,6 +70,7 @@ author_profile: true
                 display: none;
             }
             img.large {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 display: block;
                 width: 400px;
             }
