@@ -106,7 +106,7 @@ author_profile: true
             <p>Existentialism, Humanism, Liberalism, Open Society</p>
             <p>Knowing the difference and not evaluating</p>
             <h2 style="margin-top: 1.5em">Introduction</h2>
-            <p>Computer Science &amp; Engineering, College of Software, Kyung Hee Univ.</p>
+            <p>Computer Science &amp; Engineering, Kyung Hee Univ.</p>
             <p>Software Engineer, Data &amp; Knowledge Engineering Lab.</p>
             <p>Email: <a href="mailto:bl4angel20@khu.ac.kr">bl4angel20@khu.ac.kr</a> / <a href="mailto:bl4angel20@gmail.com">bl4angel20@gmail.com</a></p>
             <p>SNS: <a href="https://instagram.com/meong_ju0o0">Instagram</a> / <a href="https://facebook.com/meongju0o0">Facebook</a> / <a href="https://github.com/meongju0o0">Github</a> / <a href="https://scholar.google.com/citations?user=ND0oIHUAAAAJ&hl=ko">Google Scholar</a></p>
