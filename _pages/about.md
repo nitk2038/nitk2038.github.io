@@ -50,7 +50,7 @@ author_profile: true
                 display: block;
             }
         }
-        @media (min-width: 991px) {
+        @media (min-width: 1080px) {
             .container_ {
                 flex-direction: row;
             }
@@ -136,19 +136,19 @@ author_profile: true
         - Development of graph data augmentation techniques
 
 ## Publications
-* Juyeong Shin, Hyeonwoo Park, Youngkoo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages -
-* Juyeong Shin, Youngkoo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 - 1310
-* Kijin Kwon, Juyeong Shin, Youngkoo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618#). Journal of Korea Computer Congress, Pages 1223 - 1225
+* Juyeong Shin, Hyeonwoo Park, Young-Koo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages -
+* Juyeong Shin, Young-Koo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 - 1310
+* Kijin Kwon, Juyeong Shin, Young-Koo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618#). Journal of Korea Computer Congress, Pages 1223 - 1225
 
 ## Awards and Honors
 * Top Award in Undergraduate Paper Contest
-  * Korea Software Congress, 2022
+    * Korea Software Congress, 2022
 
 ## Research Interests
-* Machine Learning / Deep Learning / Graph Convolutional Network / Distributed Training / CUDA acceleration
+* Machine Learning / Deep Learning / Graph Convolutional Network / Distributed Training
 
 ## Study Interests
-* Linear Algebra / Deep Learning / Computer Vision / Natural Language Processing / Graph Neural Network / Query Processing / Distributed Data Processing
+* Linear Algebra / Deep Learning / Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / CUDA Acceleration / Query Processing
 
 ## Skills
 ### Programming Languages
