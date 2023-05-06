@@ -95,8 +95,10 @@ author_profile: true
     </div>
     <div class="container_">
         <div class="image-container_">
-            <img class="large" src="../assets/images/profile_image.jpg">
-            <img class="small" src="../assets/images/profile_image_small.jpg">
+            <a href="../assets/images/hidden_image.jpg">
+                <img class="large" src="../assets/images/profile_image.jpg">
+                <img class="small" src="../assets/images/profile_image_small.jpg">
+            </a>
         </div>
         <div class="text-container_">
             <h2 style="margin-top: 0.5em">Motto and Passion</h2>
