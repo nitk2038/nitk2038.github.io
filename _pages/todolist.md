@@ -6,6 +6,7 @@ permalink: /todolist/
 author_profile: true
 ---
 
+
 <div id="todoApp">
   <h2>Personal To Do List</h2>
   <div class="input-container">
@@ -15,8 +16,64 @@ author_profile: true
   <ul id="todoList"></ul>
 </div>
 
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  import { getFirestore, collection, query, orderBy, onSnapshot, doc, addDoc, deleteDoc } from "firebase/firestore";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBdvPwIeQQmAv6ysvI0DGTcrtok6lI_sFg",
+    authDomain: "meongju0o0-gitblog-todolist.firebaseapp.com",
+    projectId: "meongju0o0-gitblog-todolist",
+    storageBucket: "meongju0o0-gitblog-todolist.appspot.com",
+    messagingSenderId: "55477124340",
+    appId: "1:55477124340:web:e266e2c5fbddda37d572a1",
+    measurementId: "G-P1WDJX7EK0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getFirestore(app);
+</script>
+
 <script>
+  let ref = db.collection('tasks')
   let dragSrcEl = null;
+
+  function createListItem(taskId, task) {
+    const listItem = document.createElement('li');
+    listItem.setAttribute('data-task-id', taskId);
+    listItem.setAttribute('draggable', 'true');
+    listItem.addEventListener('dragstart', dragStartHandler);
+    listItem.addEventListener('dragover', dragOverHandler);
+    listItem.addEventListener('drop', dropHandler);
+    listItem.addEventListener('dragleave', dragLeaveHandler);
+    listItem.addEventListener('dragend', dragEndHandler);
+
+    const taskNumber = document.createElement('span');
+    taskNumber.className = 'task-number';
+    listItem.appendChild(taskNumber);
+
+    const taskContent = document.createElement('span');
+    taskContent.className = 'task-content';
+    taskContent.textContent = task;
+    listItem.appendChild(taskContent);
+
+    const taskButtons = document.createElement('div');
+    taskButtons.className = 'task-buttons';
+    listItem.appendChild(taskButtons);
+
+    const statusButton = createStatusButton();
+    taskButtons.appendChild(statusButton);
+
+    return listItem;
+  }
 
   function dragStartHandler(e) {
     e.stopPropagation();
@@ -108,29 +165,18 @@ author_profile: true
     return statusButton;
   }
 
-  function addNewTask(task) {
-    const listItem = document.createElement('li');
-    const taskContent = document.createElement('div');
-    taskContent.classList.add('task-content');
-    taskContent.innerHTML = `<span class="task-number"></span>. ${task}`;
-    listItem.appendChild(taskContent);
-    const statusButton = createStatusButton();
-
-    const taskButtons = document.createElement('div');
-    taskButtons.classList.add('task-buttons');
-    taskButtons.appendChild(statusButton);
-    listItem.appendChild(taskButtons);
-
-    listItem.draggable = true;
-    listItem.addEventListener('dragstart', dragStartHandler);
-    listItem.addEventListener('dragover', dragOverHandler);
-    listItem.addEventListener('drop', dropHandler);
-    listItem.addEventListener('dragend', dragEndHandler);
-
+  async function addNewTask(task) {
+    const docRef = await addDoc(ref, {
+      task: task,
+      state: 'Not Yet',
+      createdAt: new Date().toISOString()
+    });
+    const taskId = docRef.id;
+    const listItem = createListItem(taskId, task);
     document.getElementById('todoList').appendChild(listItem);
-
     updateTaskNumbers();
   }
+
 
   function addTask() {
     var task = document.getElementById('todoInput').value;
@@ -149,6 +195,28 @@ author_profile: true
   document.getElementById('addTodo').addEventListener('click', function () {
     addTask();
   });
+
+  function loadTasksFromFirestore() {
+    const tasksQuery = query(collection(db, 'tasks'), orderBy('createdAt'));
+    onSnapshot(tasksQuery, (querySnapshot) => {
+      querySnapshot.docChanges().forEach((change) => {
+        const data = change.doc.data();
+        const taskId = change.doc.id;
+        if (change.type === 'added') {
+          const listItem = createListItem(taskId, data.task);
+          document.getElementById('todoList').appendChild(listItem);
+        } else if (change.type === 'removed') {
+          const listItem = document.querySelector(`li[data-task-id="${taskId}"]`);
+          if (listItem) {
+            listItem.remove();
+          }
+        }
+      });
+      updateTaskNumbers();
+    });
+  }
+
+  loadTasksFromFirestore();
 </script>
 
 <style>
@@ -193,34 +261,34 @@ author_profile: true
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#todoList li.completed {
-text-decoration: line-through;
-}
+  #todoList li.completed {
+    text-decoration: line-through;
+  }
 
-#todoList button {
-font-size: 22px;
-margin-left: 10px;
-background-color: #666666;
-font: $global-font-family;
-color: white;
-border: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-border-radius: 4px;
-transition-duration: 0.4s;
-}
+  #todoList button {
+    font-size: 22px;
+    margin-left: 10px;
+    background-color: #666666;
+    font: $global-font-family;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+  }
 
-#todoList .task-content {
-flex-grow: 1;
-text-align: left;
-}
+  #todoList .task-content {
+    flex-grow: 1;
+    text-align: left;
+  }
 
-#todoList .task-buttons {
-flex-basis: 20%;
-display: flex;
-justify-content: flex-end;
-align-items: left;
-}
+  #todoList .task-buttons {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+  }
 </style>
