@@ -1,0 +1,73 @@
+@import "minimal-mistakes/variables";
+
+#todoApp {
+    margin: 0 auto;
+  }
+
+  .input-container {
+    display: flex;
+  }
+
+  #todoInput,
+  #addTodo {
+    font-size: 24px;
+    height: 36px; /* 높이 조절 */
+  }
+
+  #addTodo {
+    width: 120px; /* 가로 크기 조절 */
+    background-color: #666666; /* 버튼 배경색 */
+    font: $global-font-family;
+    color: white; /* 글자색 */
+    border: none; /* 테두리 없앰 */
+    cursor: pointer; /* 마우스 올리면 포인터 모양 변경 */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px; /* 모서리 둥글게 */
+    transition-duration: 0.4s; /* 마우스 호버 시 애니메이션 */
+  }
+
+  #todoList {
+    list-style: none;
+    padding: 0;
+  }
+
+  #todoList li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 26px;
+    margin: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+  #todoList li.completed {
+    text-decoration: line-through;
+  }
+
+  #todoList button {
+    font-size: 22px;
+    margin-left: 10px;
+    background-color: #666666;
+    font: $global-font-family;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+  }
+
+  #todoList .task-content {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  #todoList .task-buttons {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+  }
