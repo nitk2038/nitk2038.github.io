@@ -95,7 +95,7 @@ author_profile: true
     </div>
     <div class="container_">
         <div class="image-container_">
-            <a href="../assets/images/.hidden_image.jpg">
+            <a href="../assets/images/hidden_image.jpg">
                 <img class="large" src="../assets/images/profile_image.jpg">
                 <img class="small" src="../assets/images/profile_image_small.jpg">
             </a>
