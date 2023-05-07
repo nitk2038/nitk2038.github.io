@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: To Do List
-permalink: /TodoList/
+permalink: /todolist/
 author_profile: true
 ---
 
