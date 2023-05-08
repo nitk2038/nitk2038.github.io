@@ -192,6 +192,7 @@ async function addTask() {
   if (task.trim() !== "") {
     await addNewTask(task);
     document.getElementById('todoInput').value = "";
+    loadTasksFromFirestore();
   }
 }
 
