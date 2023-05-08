@@ -160,7 +160,7 @@ Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT
 pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
 
 ### Frameworks
-Firebase, Docker, Kubernetes, ElasticSearch, Neo4j
+Firebase, ElasticSearch, Neo4j, Docker, Kubernetes
 
 ### Operating System
 Windows, Ubuntu, CentOS
