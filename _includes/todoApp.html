@@ -152,7 +152,6 @@ async function statusButtonClick(e) {
   }
 }
 
-
 async function updateTaskNumbers() {
   const listItems = document.querySelectorAll('#todoList li');
   listItems.forEach((item, index) => {
@@ -184,6 +183,7 @@ async function addNewTask(task) {
   });
   const taskId = docRef.id;
   const listItem = createListItem(taskId, task, 'Not Yet');
+  document.getElementById('todoList').appendChild(listItem);
   updateTaskNumbers();
 }
 
@@ -192,7 +192,6 @@ async function addTask() {
   if (task.trim() !== "") {
     await addNewTask(task);
     document.getElementById('todoInput').value = "";
-    loadTasksFromFirestore();
   }
 }
 
@@ -216,7 +215,6 @@ async function loadTasksFromFirestore() {
     const listItem = createListItem(taskId, data.task, data.state);
     document.getElementById('todoList').appendChild(listItem);
   });
-
   updateTaskNumbers();
 }
 
