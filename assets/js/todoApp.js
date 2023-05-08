@@ -1,4 +1,3 @@
-
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "firebase/app";
   import { getFirestore } from "firebase/analytics";
@@ -144,8 +143,8 @@
     return statusButton;
   }
 
-  async function addNewTask(task) {
-    const docRef = await addDoc(ref, {
+  function addNewTask(task) {
+    const docRef = addDoc(ref, {
       task: task,
       state: 'Not Yet',
       createdAt: new Date().toISOString()
