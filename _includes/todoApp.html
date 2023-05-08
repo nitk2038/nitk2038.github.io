@@ -11,6 +11,7 @@
     </body>
 </html>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 <script type="module" src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
 <script type="module" src="https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js"></script>
 <script type="module" src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"></script>
@@ -47,11 +48,6 @@ function createListItem(taskId, task, state) {
   const listItem = document.createElement('li');
   listItem.setAttribute('data-task-id', taskId);
   listItem.setAttribute('draggable', 'true');
-  listItem.addEventListener('dragstart', dragStartHandler);
-  listItem.addEventListener('dragover', dragOverHandler);
-  listItem.addEventListener('drop', dropHandler);
-  listItem.addEventListener('dragleave', dragLeaveHandler);
-  listItem.addEventListener('dragend', dragEndHandler);
 
   const taskNumber = document.createElement('span');
   taskNumber.className = 'task-number';
@@ -72,66 +68,22 @@ function createListItem(taskId, task, state) {
   return listItem;
 }
 
-function dragStartHandler(e) {
-  e.stopPropagation();
-  dragSrcEl = this;
-  dragSrcEl.style.opacity = '0.5';
-  e.dataTransfer.effectAllowed = 'move';
-  e.dataTransfer.setData('text/plain', '');
-  e.dataTransfer.setData('text/html', this.innerHTML);
-  e.dataTransfer.setData('index', Array.from(dragSrcEl.parentElement.children).indexOf(dragSrcEl));
-}
-
-function dragOverHandler(e) {
-  e.preventDefault();
-  e.dataTransfer.dropEffect = 'move';
-  const target = e.target.closest('li');
-  if (!target) {
-    return;
-  }
-  const rect = target.getBoundingClientRect();
-  const offsetY = e.clientY - rect.top;
-  const direction = offsetY > rect.height / 2 ? 'bottom' : 'top';
-  target.style.border = 'none';
-  target.style.borderBottom = direction === 'bottom';
-  target.style.borderTop = direction === 'top';
-}
-
-function dropHandler(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  const srcIndex = parseInt(e.dataTransfer.getData('index'));
-  const target = e.target.closest('li');
-  if (!target) {
-    return;
-  }
-  const dstIndex = Array.from(target.parentElement.children).indexOf(target);
-  const parentNode = target.parentNode;
-  const srcItem = parentNode.children[srcIndex];
-  const dstItem = parentNode.children[dstIndex];
-  const direction = target.style.borderTop ? 'before' : 'after';
-  if (direction === 'before') {
-    parentNode.insertBefore(srcItem, dstItem);
-  } else {
-    parentNode.insertBefore(srcItem, dstItem.nextSibling);
-  }
-  target.style.border = 'none';
-  dragSrcEl.style.opacity = '1';
-  updateTaskNumbers();
-}
-
-function dragLeaveHandler(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  const target = e.target.closest('li');
-  if (!target) {
-    return;
-  }
-  target.style.border = 'none';
-}
-
-function dragEndHandler(e) {
-  e.stopPropagation();
+async function initializeSortable() {
+  const list = document.getElementById('todoList');
+  const sortable = new Sortable(list, {
+    animation: 150,
+    onUpdate: function () {
+      updateTaskNumbers();
+    },
+    onEnd: async function (evt) {
+      const listItems = document.querySelectorAll('#todoList li');
+      listItems.forEach(async (item, index) => {
+        await updateDoc(doc(db, 'tasks', item.getAttribute('data-task-id')), {
+          order: index
+        });
+      });
+    },
+  });
 }
 
 async function statusButtonClick(e) {
@@ -218,5 +170,6 @@ async function loadTasksFromFirestore() {
   updateTaskNumbers();
 }
 
+initializeSortable();
 loadTasksFromFirestore();
 </script>
