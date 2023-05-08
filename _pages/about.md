@@ -154,13 +154,13 @@ author_profile: true
 
 ## Skills
 ### Programming Languages
-Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT, MarkDown
+Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT
 
 ### Libraries
 pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
 
 ### Frameworks
-Docker, Kubernetes, ElasticSearch, Neo4j
+Firebase, Docker, Kubernetes, ElasticSearch, Neo4j
 
 ### Operating System
 Windows, Ubuntu, CentOS
