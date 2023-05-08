@@ -19,7 +19,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
-import { getFirestore, collection, query, orderBy, onSnapshot, doc, addDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+import { getFirestore, collection, query, orderBy, onSnapshot, doc, addDoc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -146,11 +146,14 @@ async function statusButtonClick(e) {
   }
 }
 
-function updateTaskNumbers() {
+async function updateTaskNumbers() {
   const listItems = document.querySelectorAll('#todoList li');
-  listItems.forEach((item, index) => {
+  listItems.forEach(async (item, index) => {
+    await updateDoc(doc(db, 'tasks', item.getAttribute('data-task-id')), {
+        order: index
+    });
     const taskNumber = item.querySelector('.task-number');
-    taskNumber.textContent = (index + 1).toString() + '. ';
+    taskNumber.innerHTML = (index + 1).toString() + ".&nbsp;";
   });
 }
 
@@ -167,6 +170,7 @@ async function addNewTask(task) {
   const docRef = await addDoc(ref, {
     task: task,
     state: 'Not Yet',
+    order: -1,
     createdAt: new Date().toISOString()
   });
   const taskId = docRef.id;
@@ -193,7 +197,7 @@ document.getElementById('addTodo').addEventListener('click', function () {
 });
 
 function loadTasksFromFirestore() {
-  const tasksQuery = query(collection(db, 'tasks'), orderBy('createdAt'));
+  const tasksQuery = query(collection(db, 'tasks'), orderBy('order'));
   onSnapshot(tasksQuery, (querySnapshot) => {
     querySnapshot.docChanges().forEach((change) => {
       const data = change.doc.data();
