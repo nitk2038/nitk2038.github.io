@@ -10,12 +10,12 @@
 
 #todoInput,
 #addTodo {
-  font-size: 24px;
+  font-size: 22px;
   height: 36px; /* 높이 조절 */
 }
 
 #addTodo {
-  width: 120px; /* 가로 크기 조절 */
+  width: 125px; /* 가로 크기 조절 */
   background-color: #666666; /* 버튼 배경색 */
   font: $global-font-family;
   color: white; /* 글자색 */
@@ -70,4 +70,92 @@
   display: flex;
   justify-content: flex-end;
   align-items: left;
+}
+
+@media (max-width: 767px) {
+  #todoInput,
+  #addTodo {
+  font-size: 18px;
+  height: 30px;
+  }
+  
+  #addTodo {
+  width: 110px;
+  }
+  
+  #todoList li {
+  font-size: 22px;
+  }
+  
+  #todoList button {
+  font-size: 18px;
+  }
+}
+
+@media (max-width: 468px) {
+  #todoInput,
+  #addTodo {
+  font-size: 16px;
+  height: 28px;
+  }
+  
+  #addTodo {
+  width: 100px;
+  }
+  
+  #todoList li {
+  font-size: 18px;
+  }
+  
+  #todoList button {
+  font-size: 16px;
+  }
+}
+
+@media (max-width: 403px) {
+  #todoInput,
+  #addTodo {
+  font-size: 15px;
+  height: 27px;
+  }
+
+  #todoList li {
+    font-size: 17px;
+  }
+
+  #todoList button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 387px) {
+  #todoInput,
+  #addTodo {
+  font-size: 14px;
+  height: 26px;
+  }
+
+  #todoList li {
+    font-size: 16px;
+  }
+
+  #todoList button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 372px) {
+  #todoInput,
+  #addTodo {
+  font-size: 13px;
+  height: 24px;
+  }
+
+  #todoList li {
+    font-size: 15px;
+  }
+
+  #todoList button {
+    font-size: 13px;
+  }
 }
