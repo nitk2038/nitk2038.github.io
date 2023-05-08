@@ -148,12 +148,14 @@ async function statusButtonClick(e) {
 
 async function updateTaskNumbers() {
   const listItems = document.querySelectorAll('#todoList li');
+  listItems.forEach((item, index) => {
+    const taskNumber = item.querySelector('.task-number');
+    taskNumber.innerHTML = (index + 1).toString() + ".&nbsp;";
+  });
   listItems.forEach(async (item, index) => {
     await updateDoc(doc(db, 'tasks', item.getAttribute('data-task-id')), {
         order: index
     });
-    const taskNumber = item.querySelector('.task-number');
-    taskNumber.innerHTML = (index + 1).toString() + ".&nbsp;";
   });
 }
 
