@@ -9,5 +9,3 @@ author_profile: true
 <html>
 {% include todoApp.html %}
 </html>
-
-<script src="{{ '/assets/js/todoApp.js' | relative_url }}"></script>
