@@ -150,7 +150,7 @@ function updateTaskNumbers() {
   const listItems = document.querySelectorAll('#todoList li');
   listItems.forEach((item, index) => {
     const taskNumber = item.querySelector('.task-number');
-    taskNumber.textContent = (index + 1).toString();
+    taskNumber.textContent = (index + 1).toString() + '. ';
   });
 }
 
