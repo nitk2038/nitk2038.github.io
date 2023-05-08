@@ -144,6 +144,11 @@ async function statusButtonClick(e) {
     e.target.closest('li').remove();
     updateTaskNumbers();
   }
+  else {
+    await updateDoc(doc(db, 'tasks', item.getAttribute('data-task-id')), {
+        state: e.target.innerText
+    });
+  }
 }
 
 async function updateTaskNumbers() {
