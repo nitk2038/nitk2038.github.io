@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "meongju0o0's blog"
 title_separator          : "|"
 subtitle                 : "Quest for Knowledge Representation"
-name                     : "JuYeong Shin"
+name                     : "Juyeong Shin"
 description              : "meongju0o0's blog"
 url                      : "https://meongju0o0.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -102,7 +102,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "JuYeong Shin"
+  name             : "Juyeong Shin"
   avatar           : "/assets/images/bio-photo.png"
   bio              : "KHU CSE 19<br>KHU DKE Lab. Undergraduate"
   location         : "1732, Deogyeong-daero"
