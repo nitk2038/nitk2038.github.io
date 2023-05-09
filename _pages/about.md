@@ -136,6 +136,12 @@ author_profile: true
         - Supports large graph learning engine design
         - Development of graph sampling techniques
         - Development of graph data augmentation techniques
+* Toy Projects
+    - Gaussian Distribution Calculator, 2017
+    - IoT Doorlock, 2017
+    - IoT Doorlock with Elevator, 2018
+    - Vigilante Service Table, 2021
+    - Jekyll Minimal Mistakes blog Customizing, 2022--
 
 ## Publications
 * Juyeong Shin, Hyeonwoo Park, Young-Koo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages -
