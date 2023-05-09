@@ -137,11 +137,17 @@ author_profile: true
         - Development of graph data augmentation techniques
 * Toy Projects
     - Gaussian Distribution Calculator, 2017
+        - C
     - IoT Doorlock, 2017
+        - C, Arduino
     - IoT Doorlock with Elevator, 2018
+        - C, Arduino
     - Vigilante Service Table, 2021
+        - C++
     - Jekyll Minimal Mistakes Blog Customizing, 2022--
+        - HTML, CSS, JavaScript, Firebase
     - Distributed GraphSAINT using Microservice, 2023
+        - Docker, Kubernetes, Python, PyTorch, DGL
 
 ## Publications
 * Juyeong Shin, Hyeonwoo Park, Young-Koo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages -
