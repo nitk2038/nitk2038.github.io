@@ -154,7 +154,7 @@ author_profile: true
 
 ## Skills
 ### Programming Languages
-Bash, C, C++, JAVA, Python, HTML, CSS, JAVASCRIPT
+Bash, C, C++, JAVA, Python, HTML, CSS, JavaScript
 
 ### Libraries
 pandas, numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
