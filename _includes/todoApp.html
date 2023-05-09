@@ -123,6 +123,7 @@ function createStatusButton(initialState) {
   let currentState = buttonStates.indexOf(initialState);
   statusButton.innerText = buttonStates[currentState];
   statusButton.addEventListener('click', statusButtonClick);
+  statusButton.addEventListener('touch', statusButtonClick);
   return statusButton;
 }
 
