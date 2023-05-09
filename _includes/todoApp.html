@@ -93,22 +93,22 @@ async function initializeSortable() {
   });
 }
 
+
 async function statusButtonClick(e) {
-  const buttonStates = ['Not Yet', 'Started', 'Done', 'Delete', '_'];
-  let currentState = buttonStates.indexOf(e.target.innerText);
-  currentState = (currentState + 1) % buttonStates.length;
-  e.target.innerText = buttonStates[currentState];
   const item = e.target.closest('li');
-  if (e.target.innerText === '_') {
+  if (e.target.innerText === 'Delete') {
     await deleteDoc(doc(db, 'tasks', item.getAttribute('data-task-id')));
     item.remove();
     updateTaskNumbers();
+    return;
   }
-  else {
-    await updateDoc(doc(db, 'tasks', item.getAttribute('data-task-id')), {
-        state: e.target.innerText
-    });
-  }
+  const buttonStates = ['Not Yet', 'Started', 'Done', 'Delete'];
+  let currentState = buttonStates.indexOf(e.target.innerText);
+  currentState = (currentState + 1) % buttonStates.length;
+  e.target.innerText = buttonStates[currentState];
+  await updateDoc(doc(db, 'tasks', item.getAttribute('data-task-id')), {
+      state: e.target.innerText
+  });
 }
 
 async function updateTaskNumbers() {
