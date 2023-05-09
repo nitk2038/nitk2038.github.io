@@ -145,7 +145,7 @@ author_profile: true
     - Vigilante Service Table, 2021
         - C++
     - Jekyll Minimal Mistakes Blog Customizing, 2022--
-        - HTML, CSS, JavaScript, Firebase
+        - HTML, CSS, JavaScript, Firebase, GitHub
     - Distributed GraphSAINT using Microservice, 2023
         - Docker, Kubernetes, Python, PyTorch, DGL
 
