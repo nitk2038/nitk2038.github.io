@@ -49,12 +49,16 @@ function createListItem(taskId, task, state) {
   listItem.setAttribute('data-task-id', taskId);
   listItem.setAttribute('draggable', 'true');
 
+  const taskHandle = document.createElement('div');
+  taskHandle.className = 'task-handle';
+  listItem.appendChild(taskHandle);
+
   const taskNumber = document.createElement('span');
   taskNumber.className = 'task-number';
   listItem.appendChild(taskNumber);
 
   const taskContent = document.createElement('span');
-  taskContent.className = 'task-content';
+  taskContent.className = 'task-content task-handle';
   taskContent.textContent = task;
   listItem.appendChild(taskContent);
 
@@ -83,6 +87,9 @@ async function initializeSortable() {
         });
       });
     },
+    handle: '.task-handle',  // Specify that only elements with 'task-handle' class can start the drag
+    filter: '.task-buttons', // Prevent drag from starting when clicking on buttons
+    preventOnFilter: false,  // Allow click events on filtered items
   });
 }
 
