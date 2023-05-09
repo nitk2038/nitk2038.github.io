@@ -143,7 +143,7 @@ author_profile: true
     - Jekyll Minimal Mistakes Blog Customizing, 2022--
         - HTML, CSS, JavaScript, Firebase, GitHub
     - Distributed GraphSAINT using Microservice, 2023
-        - Ubuntu(WSL), vstfpd, Docker, Kubernetes, Python, PyTorch, DGL
+        - Ubuntu(WSL), FTP, Docker, Kubernetes, Python, PyTorch, DGL
 
 ## Publications
 * Juyeong Shin, Hyeonwoo Park, Young-Koo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages -
