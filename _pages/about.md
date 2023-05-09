@@ -141,6 +141,7 @@ author_profile: true
     - IoT Doorlock with Elevator, 2018
     - Vigilante Service Table, 2021
     - Jekyll Minimal Mistakes Blog Customizing, 2022--
+    - Distributed GraphSAINT using Microservice, 2023
 
 ## Publications
 * Juyeong Shin, Hyeonwoo Park, Young-Koo Lee. (2023). [Subgraph Sampling Based GCN using Graph Data Augmentation](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages -
