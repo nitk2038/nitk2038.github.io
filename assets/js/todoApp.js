@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
 import { getFirestore, collection, query, orderBy, doc, getDocs, addDoc, deleteDoc, updateDoc, writeBatch } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,7 +22,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 let ref = collection(db, 'tasks')
-let dragSrcEl = null;
 
 function createListItem(taskId, task, state) {
   const listItem = document.createElement('li');

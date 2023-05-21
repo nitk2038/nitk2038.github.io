@@ -1,0 +1,173 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: relative;
+
+  .login-content {
+    width: 420px;
+    padding: 40px;
+    height: 430px;
+    top: 50%;
+    left: 50%;
+    transform: none;
+    z-index: 1;
+    position: relative;
+    background: #FFF;
+    box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid $gray;
+    float: left;
+    transition: all 0.2s ease-out;
+    transition-delay: 0.2s;
+    position: absolute;
+
+    &.login-content-signin.ng-hide:not(.ng-hide-animate) {
+      transition-delay: 0s;
+      display: block!important;
+      opacity: 0;
+      z-index: -1;
+      transform: translate(-45%, -50%);
+    }
+    &.login-content-signup.ng-hide:not(.ng-hide-animate) {
+      transition-delay: 0s;
+      display: block!important;
+      opacity: 0;
+      z-index: -1;
+      transform: translate(-55%, -50%);
+    }
+
+    h2 {
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    form.wrapper-box {
+      margin-top: 40px;
+      background: #fff;
+      input {
+        margin-top: 20px;
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        border-radius: 0;
+        padding-left: 0;
+        box-shadow: none;
+        transition: all 0.1s ease-out;
+      }
+
+      ::-webkit-input-placeholder { color: rgba(0,0,0,0.5); }
+      :-moz-placeholder { color: rgba(0,0,0,0.5); }
+      ::-moz-placeholder { color: rgba(0,0,0,0.5); }
+      :-ms-input-placeholder { color: rgba(0,0,0,0.5); }
+
+      button {
+        display: inline-block;
+        margin-top: 50px;
+        border: 2px solid $dark-gray;
+        background: $dark-gray;
+        border-radius: 25px;
+        padding: 3px 12px 5px 12px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0px;
+        transition: all 0.1s ease-out;
+        &:hover {
+          color: $dark-gray;
+          background: #fff;
+          border: 2px solid $dark-gray;
+        }
+        &:active {
+          box-shadow: none;
+        }
+      }
+    }
+
+    .outer-link{
+      display: inline-block;
+      margin-top: 50px;
+      padding: 5px 0;
+      display: block;
+      color: rgba(0, 0, 0, 0.4);
+      transition: all 0.1s ease-out;
+      &:hover {
+        transition: all 0s ease-out;
+        color: rgba(0,0,0,0.8);
+        text-decoration: none;
+      }
+    }
+
+    &.login-content-signin > div,
+    &.login-content-signup > div {
+      overflow: hidden;
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%);
+    }
+    &.login-content-signin { margin-left: -130px; }
+    &.login-content-signup { margin-left: 130px; }
+
+  }
+
+  .login-switcher {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 660px;
+    height: 400px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.03);
+
+    & > div {
+      width: 40%;
+      margin-top: 125px;
+
+      &.login-switcher-signin { float: left; }
+      &.login-switcher-signup { float: right; }
+
+      h3 {
+        color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-size: 14px;
+      }
+      button {
+        display: block;
+        margin: 20px auto 0 auto;
+        outline: 0;
+        background: none;
+        border: 2px solid rgba(0, 0, 0, 0.1 );
+        border-radius: 20px;
+        color: rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+        font-size: 14px;
+        padding: 4px 12px 5px 12px;
+        transition: all 0.1s ease-out;
+
+        &:hover {
+          border: 2px solid $dark-gray !important;
+          color: rgba(0,0,0,0.8);
+        }
+      }
+    }
+
+    .login-switcher-signin,
+    .login-switcher-signup {
+      transition: all 0.1s ease-out;
+    }
+    .login-switcher-signin.ng-hide:not(.ng-hide-animate),
+    .login-switcher-signup.ng-hide:not(.ng-hide-animate) {
+      display: block!important;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+}
