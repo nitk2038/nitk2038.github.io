@@ -137,9 +137,9 @@ author_profile: true
         - Development of graph data augmentation techniques
 * Toy Projects
     - IoT Doorlock, 2017
-        - C, Arduino
+        - C, Arduino, Serial, SPI, RFID, BlueTooth
     - IoT Doorlock with Elevator, 2018
-        - C, Arduino
+        - C, Arduino, Serial, SPI, RFID, BlueTooth
     - Jekyll Minimal Mistakes Blog Customizing, 2022--
         - HTML, CSS, JavaScript, Ruby, Firebase, GitHub
     - Distributed GraphSAINT using Microservice, 2023
