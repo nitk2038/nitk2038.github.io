@@ -1,6 +1,8 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
 
+<script type="module" src="/assets/js/auth.js"></script>
+
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   {% if author.avatar %}
@@ -18,6 +20,7 @@
     {% if author.bio %}
       <div class="author__bio p-note" itemprop="description">
         {{ author.bio | markdownify }}
+        <p id="login-status"></p>
       </div>
     {% endif %}
   </div>

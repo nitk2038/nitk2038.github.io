@@ -17,6 +17,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+auth.onAuthStateChanged((user) => {
+    const loginStatusElement = document.getElementById('login-status');
+    if (user) {
+        // User is signed in
+        loginStatusElement.textContent = 'Logged in';
+    } else {
+        // User is signed out
+        loginStatusElement.textContent = 'Logged out';
+    }
+});
+
 window.login = function() {
     event.preventDefault();
     const userEmail = document.getElementById("email_field").value;
