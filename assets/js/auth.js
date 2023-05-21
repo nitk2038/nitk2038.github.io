@@ -18,6 +18,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 window.login = function() {
+    event.preventDefault();
     const userEmail = document.getElementById("email_field").value;
     const userPass = document.getElementById("password_field").value;
   
@@ -25,10 +26,22 @@ window.login = function() {
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        console.log('User signed in');
         // ...
     })
     .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        console.log('Error signing out: ', error);
+    });
+}
+
+window.logout = function() {
+    event.preventDefault(); // prevent page reload
+    const auth = getAuth(app);
+    auth.signOut().then(() => {
+        // Sign-out successful.
+        console.log('User signed out.');
+    }).catch((error) => {
+        // An error happened.
+        console.log('Error signing out:', error);
     });
 }
