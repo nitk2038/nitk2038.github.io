@@ -10,8 +10,6 @@ main:
     url: /search/
   - title: "To Do List"
     url: /todolist/
-  - title: "Login"
-    url: /auth/
 
 docs:
   - title: "table of contents"
