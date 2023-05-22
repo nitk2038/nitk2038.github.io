@@ -165,6 +165,9 @@ author_profile: true
 ## Study Interests
 * Linear Algebra / Deep Learning / Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / CUDA Acceleration / Query Processing
 
+## Interested OpenSources
+* Docker / K8s / mariaDB / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus
+
 ## Skills
 ### Programming Languages
 Bash, C, C++, JAVA, Python, HTML, CSS, JavaScript
