@@ -166,7 +166,7 @@ author_profile: true
 * Linear Algebra / Deep Learning / Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / CUDA Acceleration / Query Processing
 
 ## Interested OpenSources
-* Docker / K8s / MariaDB / MongoDB / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus
+* Docker / K8s / MariaDB / MongoDB / Redis / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus
 
 ## Skills
 ### Programming Languages
