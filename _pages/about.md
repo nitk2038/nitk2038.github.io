@@ -136,8 +136,6 @@ author_profile: true
         - Supports large graph learning engine design
         - Development of graph data augmentation techniques
 * Toy Projects
-    - IoT Doorlock, 2017
-        - C, Arduino, Serial, SPI, RFID, BlueTooth
     - IoT Doorlock with Elevator, 2018
         - C, Arduino, Serial, SPI, RFID, BlueTooth
     - Jekyll Minimal Mistakes Blog Customizing, 2022--
@@ -166,7 +164,7 @@ author_profile: true
 * Linear Algebra / Deep Learning / Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / CUDA Acceleration / Query Processing
 
 ## Interested OpenSources
-* Docker / K8s / MariaDB / MongoDB / Redis / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus
+* Docker / K8s / PostgreSQL / MongoDB / Redis / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus
 
 ## Skills
 ### Programming Languages
