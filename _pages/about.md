@@ -50,7 +50,7 @@ author_profile: true
                     display: block;
                 }
             }
-            @media (min-width: 1080px) {
+            @media (min-width: 1125px) {
                 .container_ {
                     flex-direction: row;
                 }
