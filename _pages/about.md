@@ -180,3 +180,14 @@ ElasticSearch, Neo4j, Docker, K8s, Firebase
 
 ### Operating System
 Windows, Ubuntu, CentOS
+
+## GitHub Stats
+
+<html>
+    <p style="align: center">
+        <div style="display: flex; justify-content: center;">
+            <img src="https://github-readme-stats.vercel.app/api?username=meongju0o0&show_icons=true&theme=default" alt="meongju0o0's GitHub Stats" style="margin-right: 10px;" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=meongju0o0&layout=compact&theme=default" alt="Top Languages" />
+        </div>
+    </p>
+</html>
