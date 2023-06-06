@@ -55,7 +55,7 @@ author_profile: true
                     flex-direction: row;
                 }
                 .image-container_ {
-                    width: 380px;
+                    width: 433px;
                     margin-left: 20px;
                     margin-right: 20px;
                     margin-bottom: 0px;
@@ -72,11 +72,11 @@ author_profile: true
                 img.large {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                     display: block;
-                    width: 400px;
+                    width: 450px;
                 }
                 img.small {
                     display: none;
-                    width: 400px;
+                    width: 450px;
                 }
                 .page__content p {
                     margin-top: 0.2em;
@@ -102,10 +102,11 @@ author_profile: true
             </div>
             <div class="text-container_">
                 <h2 style="margin-top: 0.5em">Motto and Passion</h2>
-                <p>Learning, Thinking, and Finding solutions</p>
+                <p>Learning, Thinking, Solution, Practice</p>
                 <p>Thinking about the explanation with grounds</p>
                 <p>Knowledge Processing, Representation, Sharing</p>
-                <p>Existentialism, Humanism, Liberalism, Open Society</p>
+                <p>Existentialism, Humanism, Kategorischer Imperativ</p>
+                <p>Friedrich Nietzsche, Bertrand Russell, Immanuel Kant, 孔子</p>
                 <p>Knowing the difference and not evaluating</p>
                 <h2 style="margin-top: 1.5em">Introduction</h2>
                 <p>Computer Science &amp; Engineering, Kyung Hee Univ.</p>
