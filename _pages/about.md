@@ -151,7 +151,7 @@ author_profile: true
     - Find the one who didn't follow you (for github), Mar. 2023
         - Python, requests, bs4, html5lib
 * Planned Projects
-    - My own NAS Server Using Raspberry Pi
+    - My own NAS Server using Raspberry Pi
         - Raspberry Pi, SSD, Router, Alpine Linux
 
 ## Publications
