@@ -14,6 +14,6 @@
 - Posting
    - HTML, CSS, JavaScript, MarkDown, Firestore DB, Firebase Storage
 
-#### My Motto
+### My Motto
 - Juyeong Shin is special, as are you too
 - I'm stupid. and I have to learn.
