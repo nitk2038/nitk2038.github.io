@@ -150,6 +150,9 @@ author_profile: true
         - C++, iostream, fstream, algorithm, vector
     - Find the one who didn't follow you (for github), Mar. 2023
         - Python, requests, bs4, html5lib
+* Planned Projects
+    - My own NAS Server Using Raspberry Pi
+        - Raspberry Pi, SSD, Router, Alpine Linux
 
 ## Publications
 * Juyeong Shin, Young-Koo Lee. (2023). [Automatic Hyper Parameter Tuning Method for MH-Aug](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages --
