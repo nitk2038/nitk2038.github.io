@@ -9,9 +9,9 @@
    - HTML, CSS, MarkDown
 - To Do List
    - HTML, CSS, JavaScript, MarkDown, Firestore DB
-- Login
+- Login (Implementing...)
    - HTML, CSS, JavaScript, MarkDown, Firebase Authentication
-- Posting
+- Posting (Implementing...)
    - HTML, CSS, JavaScript, MarkDown, Firestore DB, Firebase Storage
 
 ### My Motto
