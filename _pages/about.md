@@ -190,5 +190,5 @@ Windows, Ubuntu, CentOS
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=meongju0o0&layout=compact&theme=default)
 
 ## My Motto
-### Juyeong Shin is special, as are you too.
-### I'm stupid. and I have to learn.
+**Juyeong Shin is special, as are you too.**<br/>
+**I'm stupid. and I have to learn.**
