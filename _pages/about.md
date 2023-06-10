@@ -143,7 +143,7 @@ author_profile: true
         - Ruby, HTML, CSS, JavaScript, Firebase, GitHub
     - Life Balancing Application for Android, 2023
         - Kotlin, XML, android, androidx, Firebase
-    - Distributed GraphSAINT using Microservice, 2023
+    - Distributed GraphSAINT Learning Engine using Microservice, 2023
         - Ubuntu(WSL), FTP, Docker, K8s, Python, PyTorch, DGL
 * **Tiny Projects**
     - Vigilante Service Table, Apr. 2021
