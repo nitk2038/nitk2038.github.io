@@ -21,7 +21,7 @@ author_profile: true
                 width: 100%;
             }
             h1.large_ {
-                display: block;
+                display: block; 
             }
             h1.small_ {
                 display: none;
