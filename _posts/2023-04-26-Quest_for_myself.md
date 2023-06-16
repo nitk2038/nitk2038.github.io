@@ -25,5 +25,10 @@ author_profile: true
 ## 다짐 7
 결국, 오늘도 수고한 '나' 덕분에 행복하고 감사하다.
 
+**Posted**<br/>
 Apr.26.2023<br/>
 AM 02:12
+
+**Updated**<br/>
+Jun.16.2023
+PM 06:36
