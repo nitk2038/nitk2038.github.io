@@ -190,5 +190,5 @@ Windows, Ubuntu, CentOS
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=meongju0o0&layout=compact&theme=default)
 
 ## My Moral Rules
-**Juyeong Shin is special, as are you too.**<br/>
+**I'm special, as are you too.**<br/>
 **I'm stupid. and I have to learn.**
