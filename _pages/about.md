@@ -151,7 +151,7 @@ author_profile: true
     - How many loves me, Jun. 2023
         - HTML, CSS, JavaScript
 * **Planned Projects**
-    - My own NAS Server using Raspberry Pi, Jul. 2023
+    - My own NAS Server using Raspberry Pi, 2023
         - Raspberry Pi, HDD, DAS, Router, Alpine Linux, Samba
 
 ## Publications
