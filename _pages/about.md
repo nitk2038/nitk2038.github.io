@@ -188,7 +188,3 @@ Windows, Ubuntu, CentOS
 ## GitHub Stats
 ![meongju0o0's GitHub Stats](https://github-readme-stats.vercel.app/api?username=meongju0o0&show_icons=true&theme=default)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=meongju0o0&layout=compact&theme=default)
-
-## My Moral Rules
-**I'm special, as are you too.**<br/>
-**I'm stupid. and I have to learn.**
