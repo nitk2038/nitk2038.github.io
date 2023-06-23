@@ -125,21 +125,21 @@ author_profile: true
 * Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03--2019.02
 
 ## Work Experience
-* 2022.09--2022.12: T.G.WinG Machine Learning Study, **Lecturer**
-* 2022.06--2022.07: Samsung SDS Machine Learning Lecture, **Production of Practice Materials**
-* 2022.04--: Data & Knowledge Engineering Labortory, Kyung Hee University, **Undergraduate Research Student**
+* 2022.09 -- 2022.12: T.G.WinG Machine Learning Study, **Lecturer**
+* 2022.06 -- 2022.07: Samsung SDS Machine Learning Lecture, **Production of Practice Materials**
+* 2022.04 --: Data & Knowledge Engineering Labortory, Kyung Hee University, **Undergraduate Research Student**
 
 ## Projects
-* **Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs**, 2021--2024
+* **Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs**, 2021 -- 2024
     - Supervision: Institute of Information & Communications Technology Planning & Evaluation
-    - Role: Undergraduate Research Student (2022--2024)
+    - Role: Undergraduate Research Student (2022 -- 2024)
         - Investigate existing studies for large graph integration
         - Supports large graph learning engine design
         - Development of graph data augmentation techniques
 * **Toy Projects**
     - IoT Doorlock with Elevator, 2018
         - C, Arduino, Serial, SPI, RFID, BlueTooth
-    - Jekyll Minimal Mistakes Blog Customizing, 2022--
+    - Jekyll Minimal Mistakes Blog Customizing, 2022 --
         - Ruby, HTML, CSS, JavaScript, Firebase, GitHub
     - Distributed GraphSAGE Training using DistDGL and Microservice, 2023
         - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
@@ -151,7 +151,7 @@ author_profile: true
     - How many loves me, Jun. 2023
         - HTML, CSS, JavaScript
 * **Planned Projects**
-    - My own NAS Server using Raspberry Pi, 2023
+    - My own NAS Server using Raspberry Pi, Jul. 2023
         - Raspberry Pi, HDD, DAS, Router, Alpine Linux, Samba
 
 ## Publications
