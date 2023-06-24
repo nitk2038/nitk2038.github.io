@@ -21,7 +21,7 @@ author_profile: true
                 width: 100%;
             }
             h1.large_ {
-                display: block; 
+                display: block;
             }
             h1.small_ {
                 display: none;
@@ -104,7 +104,7 @@ author_profile: true
                 <h2 style="margin-top: 0.5em">Motto and Passion</h2>
                 <p>Learning, Thinking, Solution, Practice</p>
                 <p>Thinking about the explanation with grounds</p>
-                <p>Knowledge Processing, Representation, Sharing</p>
+                <p>Knowledge Processing, Representation, Sharing</p>s
                 <p>Existentialism, Humanism, Kategorischer Imperativ, 仁</p>
                 <p>Friedrich Nietzsche, Bertrand Russell, Immanuel Kant, 孔子</p>
                 <p>Knowing the difference and not evaluating</p>
