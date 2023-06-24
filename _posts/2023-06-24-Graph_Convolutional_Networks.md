@@ -57,20 +57,21 @@ author_profile: true
 ![Degree_Matrix](/images/2023-06-24-Graph_Convolutional_Networks/degree_matrix.png)
 
 ## 1. Introduction
-- 풀고자 하는 Task
-    - Classification: 노드 분류
-    - Semi-Supervised: 노드의 일부만 labeling 되어 있음
 
-- 기본 Notation
-    - 그래프 (Graph): $G=(V, E)$
-        - $V$: 그래프의 노드 혹은 정점 (Vertex), $v_i \in V$
-        - $E$: 그래프의 엣지 혹은 간선 (Edge), $(v_i, v_j) \in \epsilon$
-    - 인접행렬 (Adjacency Matrix): $A \in \mathcal{R}^{N \times N}$
-    - 피쳐행렬 (Feature MAtrix): $X$
-    - 차수행렬 (Degree Matrix): $D_{ij} = \sum_{j} A_{ij}$
-    - Neural Network Model Function: $f(\cdot)$, $f(X, A)$
-    - 손실 함수 (Loss Function): $L = L_0 + L_{reg}$
-        - $L_0$: 지도학습 손실 함수, i.e. Cross-Entropy Loss
-        - $L_{reg}$: graph Laplacian Regularization, 지금은 엣지 간의 가중치를 조정하기 위한 항(term)이라는 정도로만 이해
-    - Unnormalized graph Laploacian Regularization: $\Delta=D-A$
-        - 학습을 통해 조정된 엣지 가중치의 변화량을 측정하기 위한 항(term)
+### 1. 풀고자 하는 Task
+- Classification: 노드 분류
+- Semi-Supervised: 노드의 일부만 labeling 되어 있음
+
+### 2. 기본 Notation
+- 그래프 (Graph): $G=(V, E)$
+    - $V$: 그래프의 노드 혹은 정점 (Vertex), $v_i \in V$
+    - $E$: 그래프의 엣지 혹은 간선 (Edge), $(v_i, v_j) \in \epsilon$
+- 인접행렬 (Adjacency Matrix): $A \in \mathcal{R}^{N \times N}$
+- 피쳐행렬 (Feature MAtrix): $X$
+- 차수행렬 (Degree Matrix): $D_{ij} = \sum_{j} A_{ij}$
+- Neural Network Model Function: $f(\cdot)$, $f(X, A)$
+- 손실 함수 (Loss Function): $L = L_0 + L_{reg}$
+    - $L_0$: 지도학습 손실 함수, i.e. Cross-Entropy Loss
+    - $L_{reg}$: graph Laplacian Regularization, 지금은 엣지 간의 가중치를 조정하기 위한 항(term)이라는 정도로만 이해
+- Unnormalized graph Laploacian Regularization: $\Delta=D-A$
+    - 학습을 통해 조정된 엣지 가중치의 변화량을 측정하기 위한 항(term)
