@@ -10,7 +10,7 @@ author_profile: true
 
 # Semi-Supervised Classification With Graph Convolutional Networks, ICLR 2017
 
-## Graph Convolutional Networks(GCN)을 이용한 준지도학습 분류
+## Graph Convolutional Networks (GCN)을 이용한 준지도학습 분류
 
 ## 저자
 - Thomas N.Kipf
