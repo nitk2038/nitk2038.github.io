@@ -75,3 +75,20 @@ author_profile: true
     - $L_{reg}$: graph Laplacian Regularization, 지금은 엣지 간의 가중치를 조정하기 위한 항(term)이라는 정도로만 이해
 - Unnormalized graph Laploacian Regularization: $\Delta=D-A$
     - 학습을 통해 조정된 엣지 가중치의 변화량을 측정하기 위한 항(term)
+
+### 3. Contribution
+- spectral graph convolution 연산에 근사하는 layer-wise propagation rule 제안
+- 즉, spectral convolution 연산을 근사시킬 수 있는 세로운 수식을 제안함으로써, 연산 시간을 줄임
+- 기존 GNN 모델에 비해 fast하고 scalable한 모델 제안
+
+## 2. Fast Approximate Convolutions on Graphs
+
+### 1. Layer-Wise Linear Model
+
+## 3. Semi-Supervised Node Classification
+
+### 1. Explanation
+
+## 4. Results
+
+## 5. Conclusion
