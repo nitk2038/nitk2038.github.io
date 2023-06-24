@@ -54,7 +54,7 @@ author_profile: true
     - 기본적으로, Degree Matrix는 대각 성분에 해당 노드의 Degree를 나타냄
 
 
-![Degree_Matrix](../images/2023-06-24-Graph_Convolutional_Networks/degree_matrix.png)
+![Degree_Matrix](/images/2023-06-24-Graph_Convolutional_Networks/degree_matrix.png)
 
 ## 1. Introduction
 - 풀고자 하는 Task
