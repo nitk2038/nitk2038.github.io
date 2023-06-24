@@ -93,3 +93,7 @@ accuracy_score(y_pred, y_test)
 - Some of the learning data is further divided into evaluation data used during learning.
 - It stores evaluation indicators such as loss in order with evaluation data used during learning so that the degree of learning progress can be known.
 - If there are signs of overfitting during learning, the learning is terminated in the middle.
+
+#### 참고문헌
+
+- 秋庭伸也 et al. 머신러닝 도감 : 그림으로 공부하는 머신러닝 알고리즘 17 / 아키바 신야, 스기야마 아세이, 데라다 마나부 [공] 지음 ; 이중민 옮김, 2019.

@@ -73,3 +73,6 @@ print(metrics.classification_report(expected, predicted))
     weighted avg       0.87      0.87      0.86       899
     
     
+#### 참고문헌
+
+- 秋庭伸也 et al. 머신러닝 도감 : 그림으로 공부하는 머신러닝 알고리즘 17 / 아키바 신야, 스기야마 아세이, 데라다 마나부 [공] 지음 ; 이중민 옮김, 2019.

@@ -113,3 +113,7 @@ classes: wide
 ![img](/images/2022-09-03-Convolutional_Neural_Network_PPT/슬라이드105.JPG)
 ![img](/images/2022-09-03-Convolutional_Neural_Network_PPT/슬라이드106.JPG)
 ![img](/images/2022-09-03-Convolutional_Neural_Network_PPT/슬라이드107.JPG)
+
+#### 참고문헌
+
+- 이수안컴퓨터연구소. 2022. [「컨볼루션 신경망 한번에 끝내기 - CNN 기초부터 이미지 분류 최신 모델까지 Convolution Neural Network Full Tutorial Course」](https://www.youtube.com/watch?v=6TGyI4XjlCk&list=PL7ZVZgsnLwEElur9LpRW9w3NYGVgA3n6t). (2022.09.03.)

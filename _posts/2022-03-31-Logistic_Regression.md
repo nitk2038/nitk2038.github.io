@@ -61,3 +61,7 @@ model.predict_proba([[0], [1], [2]])[:, 1]
 - When unknown data is put into the model trained to solve the classification problem and classified, the classification result changes to a boundary of some data.
 - The boundary in which the classification results change is called the determination boundary.
 - In logistic regression, the decision boundary is where the result of calculated probability is 50%.
+
+#### 참고문헌
+
+- 秋庭伸也 et al. 머신러닝 도감 : 그림으로 공부하는 머신러닝 알고리즘 17 / 아키바 신야, 스기야마 아세이, 데라다 마나부 [공] 지음 ; 이중민 옮김, 2019.

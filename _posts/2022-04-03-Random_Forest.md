@@ -84,3 +84,7 @@ accuracy_score(y_pred, y_test)
 - Feature of high importance are expected to significantly reduce impurities by using them as criteria for dividing areas.
 - The feature of low importance is that it is difficult to reduce impurities even when used as a criterion for dividing areas.
 - In this way, attention should be paid to the importance of features and unnecessary features should be reduced.
+
+#### 참고문헌
+
+- 秋庭伸也 et al. 머신러닝 도감 : 그림으로 공부하는 머신러닝 알고리즘 17 / 아키바 신야, 스기야마 아세이, 데라다 마나부 [공] 지음 ; 이중민 옮김, 2019.
