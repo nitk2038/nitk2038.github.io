@@ -105,10 +105,14 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 
 ## 3. Semi-Supervised Node Classification
 
-### 1. Explanation
+### 1. Explain with Calculate each Vector
+
+### 2. Explain with Matrix Calculation
 
 ## 4. Results
 <p></p>
 
 ## 5. Conclusion
 <p></p>
+
+## 6. 참고문헌
