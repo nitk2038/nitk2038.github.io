@@ -83,7 +83,27 @@ author_profile: true
 
 ## 2. Fast Approximate Convolutions on Graphs
 
-### 1. Layer-Wise Linear Model
+### 1. Layer-Wise Propagation Rule
+- graph-based neural network model: $f(X, A)$
+- multi-layer Graph Convolutional Network
+- 최종 수식은 아래와 같음
+$$H^{l+1}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l)})$$
+- $\tilde{A} = A + I_N$
+    - 즉, $\tilde{A}$는 기존 그래프에다가 자기 자신에 대한 엣지를 추가한 것
+    - 인접행렬의 모든 대각 성분에 $I_N$을 더하면 자기 자신을 가리키는 엣지가 되기 때문
+    - 이때, $I_N$은 $N \times N$ 크기의 단위행렬
+- $\tilde{D}_{ij} = \sum_j{\tilde{A}_{ij}}$
+    - 차수행렬, diagonal degree matrix
+    - 대각성분을 제외한 모든 성분은 0
+    - 각 노드에 해당하는 대각 성분에 해당 노드의 차수가 들어감
+- $\sigma(\cdot): 활성화 함수$
+    - 예를 들면, $RELU(\cdot) = max(0, \cdot)$ 와 같은 활성화 함수가 있음
+- $H^{(l)} \in {\mathcal{R}}^{N \times D}$
+    - $l$ 번째 레이어의 활성화 함수까지 통과한 결과
+    - $H^{(0)} = X$
+    - $H^{(1)} = \sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(0)} W^{(0)})$
+
+### 2. Layer-Wise Linear Model
 
 ## 3. Semi-Supervised Node Classification
 
