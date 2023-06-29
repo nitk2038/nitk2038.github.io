@@ -82,9 +82,7 @@ author_profile: true
 
 ## 2. Fast Approximate Convolutions on Graphs
 
-### 1. 
-
-### 2. Layer-Wise Linear Model
+### 1. Layer-Wise Linear Model
 - graph-based neural network model: $f(X, A)$
 - multi-layer Graph Convolutional Network
 - 최종 수식은 아래와 같음
@@ -101,12 +99,15 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
     - 차수행렬, diagonal degree matrix
     - 대각성분을 제외한 모든 성분은 0
     - 각 노드에 해당하는 대각 성분에 해당 노드의 차수가 들어감
-- $\sigma(\cdot): 활성화 함수$
+- $\sigma(\cdot)$: 활성화 함수
     - 예를 들면, $RELU(\cdot) = max(0, \cdot)$ 와 같은 활성화 함수가 있음
 - $H^{(l)} \in {\mathcal{R}}^{N \times D}$
     - $l$ 번째 레이어의 활성화 함수까지 통과한 결과
     - $H^{(0)} = X$
     - $H^{(1)} = \sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(0)} W^{(0)})$
+
+### 2. Update Hidden States in GCN
+![update_hidden_state](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcqDLFi%2Fbtrb9RYyUXR%2FndW4F9buq3oVILG65YaqE1%2Fimg.png)
 
 ### 3. About ${\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
 - 
@@ -124,3 +125,6 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 <p></p>
 
 ## 6. 참고문헌
+- https://arxiv.org/abs/1609.02907
+- https://signing.tistory.com/125
+- https://process-mining.tistory.com/176
