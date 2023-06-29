@@ -68,7 +68,7 @@ author_profile: true
     - $E$: 그래프의 엣지 혹은 간선 (Edge), $(v_i, v_j) \in \epsilon$
 - 인접행렬 (Adjacency Matrix): $A \in \mathcal{R}^{N \times N}$
 - 피쳐행렬 (Feature MAtrix): $X$
-- 차수행렬 (Degree Matrix): $D_{ij} = \sum_{j} A_{ij}$
+- 차수행렬 (Degree Matrix): $D_{jj} = \sum_{j} A_{ij}$
 - Neural Network Model Function: $f(\cdot)$, $f(X, A)$
 - 손실 함수 (Loss Function): $L = L_0 + L_{reg}$
     - $L_0$: 지도학습 손실 함수, i.e. Cross-Entropy Loss
@@ -92,7 +92,7 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
     - 즉, $\tilde{A}$는 기존 그래프에다가 자기 자신에 대한 엣지를 추가한 것
     - 인접행렬의 모든 대각 성분에 $I_N$을 더하면 자기 자신을 가리키는 엣지가 되기 때문
     - 이때, $I_N$은 $N \times N$ 크기의 단위행렬
-- $\tilde{D}_{ij} = \sum_j{\tilde{A}_{ij}}$
+- $D_{jj} = \sum_{j} A_{ij}$
     - 차수행렬, diagonal degree matrix
     - 대각성분을 제외한 모든 성분은 0
     - 각 노드에 해당하는 대각 성분에 해당 노드의 차수가 들어감
