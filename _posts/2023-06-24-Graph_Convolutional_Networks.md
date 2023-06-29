@@ -53,7 +53,6 @@ author_profile: true
     - 인접행렬 행들의 모든 요소를 더한 값이 해당 노드의 Degree가 됨
     - 기본적으로, Degree Matrix는 대각 성분에 해당 노드의 Degree를 나타냄
 
-
 ![Degree_Matrix](/images/2023-06-24-Graph_Convolutional_Networks/degree_matrix.png)
 
 ## 1. Introduction
@@ -83,11 +82,17 @@ author_profile: true
 
 ## 2. Fast Approximate Convolutions on Graphs
 
-### 1. Layer-Wise Linear Model
+### 1. 
+
+### 2. Layer-Wise Linear Model
 - graph-based neural network model: $f(X, A)$
 - multi-layer Graph Convolutional Network
 - 최종 수식은 아래와 같음
+
+
 $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l)})$$
+
+
 - $\tilde{A} = A + I_N$
     - 즉, $\tilde{A}$는 기존 그래프에다가 자기 자신에 대한 엣지를 추가한 것
     - 인접행렬의 모든 대각 성분에 $I_N$을 더하면 자기 자신을 가리키는 엣지가 되기 때문
@@ -102,6 +107,9 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
     - $l$ 번째 레이어의 활성화 함수까지 통과한 결과
     - $H^{(0)} = X$
     - $H^{(1)} = \sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(0)} W^{(0)})$
+
+### 3. About ${\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+- 
 
 ## 3. Semi-Supervised Node Classification
 
