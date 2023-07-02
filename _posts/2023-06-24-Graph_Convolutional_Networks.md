@@ -358,7 +358,7 @@ $$
 - 유향 그래프 학습에 대한 고려 없음
 - edge feature 학습 고려 없음
 - 제한적 상황에 맞춘 Convolution 근사식을 제공
-    - 범용적인 그래프 (유향, weighted ...) 에 대한 제안 없음
+    - 범용적인 그래프(유향, weighted ...)에 대한 제안 없음
 
 ## 6. 참고문헌
 - [https://arxiv.org/abs/1609.02907](https://arxiv.org/abs/1609.02907)
