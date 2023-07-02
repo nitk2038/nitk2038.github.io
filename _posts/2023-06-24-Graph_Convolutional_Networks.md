@@ -125,7 +125,7 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
     - 즉, 가중치 항을 추가해야함
 - 또한, 모든 Feature Vector가 같은 Weight Matrix를 공유하는 것은 사실 (Weight Sharing)
     - 그러나, 위 수식처럼 같은 Weight Vector를 공유하는 것은 절대 아님
-    - GNN에서 Weight Matrix는 가중치 열벡터의 나열로 구성되는데, 각 열벡터는 서로 다른 값을 가짐
+    - GCN에서 Weight Matrix는 가중치 열벡터의 나열로 구성되는데, 각 열벡터는 서로 다른 값을 가짐
 
 
 ### 3. Correct Explanation about GCN
