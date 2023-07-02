@@ -191,7 +191,7 @@ $$Z=softmax(\hat{A}H^{(0)}W^{(1)})$$
 |D|1.4|-1.2|2.5|
 |E|1.4|2.5|4.5|
 
-### 2. One-Layer Calculating Example (Without Activation Function)
+### 2. First-Layer Calculating Example (Without Activation Function)
 
 - #### adjacency matrix, $A$
 
@@ -319,7 +319,7 @@ $$
 
 - #### $\hat{A} X$
 $$
-\hat{A} X= \begin{bmatrix}
+\hat{A} X = \begin{bmatrix}
 \frac{1}{2} & 0 & 0 & 0 & \frac{1}{\sqrt{6}} \\
 0 & \frac{1}{3} & 0 & \frac{1}{2\sqrt{3}} & \frac{1}{3} \\
 0 & 0 & \frac{1}{3} & \frac{1}{2\sqrt{3}} & \frac{1}{3} \\
@@ -334,6 +334,12 @@ $$
 1.4 & -1.2 & 2.5 \\
 1.4 & 2.5 & 4.5
 \end{bmatrix}
+$$
+
+- #### $H^{(0)} = \hat{A} X W$
+
+$$
+H^{(0)} = \hat{A} X W
 $$
 
 ## 4. Results
