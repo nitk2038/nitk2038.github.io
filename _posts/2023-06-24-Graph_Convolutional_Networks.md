@@ -334,6 +334,9 @@ $$
 1.4 & -1.2 & 2.5 \\
 1.4 & 2.5 & 4.5
 \end{bmatrix}
+$$
+
+$$
 = Aggregated Feature Matrix
 $$
 
@@ -347,10 +350,17 @@ $$
 ![results](/images/2023-06-24-Graph_Convolutional_Networks/results.png)
 
 ## 5. Conclusion
-<p></p>
+기존 Graph Machine Learning 기법들에 비하여 효율적이면서도 성능이 좋은 모델을 제안
+
+## 6. Limitation
+- Minibatch-Training이 여전히 쉽지 않음
+    - 메모리 부족 문제 발생
+- 유향 그래프 학습에 대한 고려 없음
+- edge feature 학습 고려 없음
+- 제한적 상황에 맞춘 Convolution 근사식을 제공
+    - 범용적인 그래프 (유향, weighted ...)에 대한 제안 없음
 
 ## 6. 참고문헌
 - [https://arxiv.org/abs/1609.02907](https://arxiv.org/abs/1609.02907)
 - [https://signing.tistory.com/125](https://signing.tistory.com/125)
 - [https://process-mining.tistory.com/176](https://process-mining.tistory.com/176)
-
