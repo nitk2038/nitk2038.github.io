@@ -334,6 +334,7 @@ $$
 1.4 & -1.2 & 2.5 \\
 1.4 & 2.5 & 4.5
 \end{bmatrix}
+= Aggregated Feature Matrix
 $$
 
 - #### $H^{(0)} = \hat{A} X W$
