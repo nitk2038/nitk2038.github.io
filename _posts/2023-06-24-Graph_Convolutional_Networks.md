@@ -116,6 +116,8 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 - 그러나, GCN은 위 그림과는 차이가 존재
 
 
+
+
 - 처음 GCN에 대해 공부할 때는 위의 그림을 통해 쉽게 이해할 수도 있으나, 수식에서 잘못된 부분이 존재
 - 우선, $H_1^{(l)}$ 은 1번 노드의 Feature Matrix (혹은 Hidden State Matrix)
 - 마찬가지로, $H_2^{(l)}$ 은 2번 노드의 Feature Matrix (혹은 Hidden State Matrix)
@@ -129,8 +131,8 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 
 
 ### 3. Correct Explanation about GCN
-1. $\hat{A} = I_N + {\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
-    - 우선 $\hat{A} = I_N + {\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$ 를 통해 정규화된 Adjacency Matrix를 계산
+1. $\hat{A} = I_N + {D}^{-1/2} A {D}^{-1/2}$
+    - 우선 $\hat{A} = I_N + I_N + {D}^{-1/2} A {D}^{-1/2}$ 를 통해 정규화된 Adjacency Matrix를 계산
     - 위 수식은, 각 엣지 별로 다른 가중치를 주어서 어느 노드의 Feature Vector를 어느 만큼의 가중치를 주어 Convolution (Aggregation) 연산을 할 것인지 결정
     - $I_N$은 본인 스스로의 Node Feature도 연산하여야하기 때문에 추가
 2. $\hat{A} \times H^{(l)}$
