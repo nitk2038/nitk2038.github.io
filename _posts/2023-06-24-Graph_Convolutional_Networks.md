@@ -342,10 +342,10 @@ $$
 = Aggregated Feature Matrix
 $$
 
-- #### $H^{(0)} = \hat{A} X W$
+- #### $H^{(1)} = \hat{A} X W$
 
 $$
-H^{(0)} = \hat{A} X W
+H^{(1)} = \hat{A} X W
 $$
 
 ## 4. Results
