@@ -106,8 +106,44 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
     - $H^{(0)} = X$
     - $H^{(1)} = \sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(0)} W^{(0)})$
 
-### 2. Update Hidden States in GCN
-![update_hidden_state](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcqDLFi%2Fbtrb9RYyUXR%2FndW4F9buq3oVILG65YaqE1%2Fimg.png)
+### 2. Wrong Picture about GCN
+![update_hidden_state](/images/2023-06-24-Graph_Convolutional_Networks/wrong_gcn_explain.png)
+
+
+- 위 그림의 수식에서 W는 Neural Network (Convolution을 배제한) Weight를 의미
+- l은 l번째 Layer를 의미
+- H는 Hidden State (각 레이어를 거친 뒤의 node feature matrix)
+- 그러나, GCN은 위 그림과는 차이가 존재
+
+
+- 처음 GCN에 대해 공부할 때는 위의 그림을 통해 쉽게 이해할 수도 있으나, 수식에서 잘못된 부분이 존재
+- 우선, $H_1^{(l)}$ 은 1번 노드의 Feature Matrix (혹은 Hidden State Matrix)
+- 마찬가지로, $H_2^{(l)}$ 은 2번 노드의 Feature Matrix (혹은 Hidden State Matrix)
+- 이때, 각 노드 별로 차수(degree)가 다르므로 각 hidden state가 더해지는 가중치가 다름
+    - 이때 말하는 가중치는, Adjacency Matrix를 정규화한 엣지 가중치, Neural Network 가중치가 아님
+    - 따라서, 위 수식에 각 노드별로 어느 만큼의 가중치를 주어 Node Feature를 업데이트 할 것인지 기입해야함
+    - 즉, 가중치 항을 추가해야함
+- 또한, 모든 Feature Vector가 같은 Weight Matrix를 공유하는 것은 사실 (Weight Sharing)
+    - 그러나, 위 수식처럼 같은 Weight Vector를 공유하는 것은 절대 아님
+    - GNN에서 Weight Matrix는 가중치 열벡터의 나열로 구성되는데, 각 열벡터는 서로 다른 값을 가짐
+
+
+### 3. Correct Explanation about GCN
+1. ${\hat{A} = \tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+    - 우선 ${\hat{A} = \tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$ 를 통해 정규화된 Adjacency Matrix를 계산
+    - 위 수식은, 각 엣지 별로 다른 가중치를 주어서 어느 노드의 Feature Vector를 어느 만큼의 가중치를 주어 Convolution (Aggregation) 연산을 할 것인지 결정
+2. $\hat{A} \times H^{(l)}$
+    - 정규화된 Adjacency Matrix($\hat{A}$)과 Hidden State Vector($H^{(l)}$) 을 곱하여 각 엣지 가중치 만큼 덧셈 연산 수행
+    - 위 덧셈 연산 수행이 Convolution 연산
+3. $W^{(l)}$
+    - Convolution 된 각 Node Feature Vector와 Neural Network Weight Matrix를 곱하는 연산
+    - Node Feature Vector의 원소 하나가 우리가 흔히 생각하는 Neural Network 그림의 perceptron 1개가 됨
+    - Node Feature Vector가 50차원이면 Neural Network Perceptron은 50개
+    - Weight Matrix $W$는 아래 Neural Network 그림에서 두 레이어 사이의 화살표들에 대응함
+    - 아래 그림에서, input layer는 3차원 벡터, hidden layer는 4차원 벡터
+    - 따라서, 아래 그림에서, Weight Matrix 사이즈는 $3 \times 4$
+
+![nn](https://miro.medium.com/v2/resize:fit:1400/1*3fA77_mLNiJTSgZFhYnU0Q.png)
 
 ### 3. About ${\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
 - 
