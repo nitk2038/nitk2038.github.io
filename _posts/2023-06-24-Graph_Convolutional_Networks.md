@@ -350,7 +350,7 @@ $$
 ![results](/images/2023-06-24-Graph_Convolutional_Networks/results.png)
 
 ## 5. Conclusion
-기존 Graph Machine Learning 기법들에 비하여 효율적이면서도 성능이 좋은 모델을 제안
+- 기존 Graph Machine Learning 기법들에 비하여 효율적이면서도 성능이 좋은 모델을 제안
 
 ## 6. Limitation
 - Minibatch-Training이 여전히 쉽지 않음
