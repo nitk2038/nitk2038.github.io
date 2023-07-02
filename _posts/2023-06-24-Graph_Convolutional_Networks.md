@@ -58,7 +58,7 @@ author_profile: true
 ## 1. Introduction
 
 ### 1. 풀고자 하는 Task
-- Classification: 노드 분류
+- Node Classification: 노드 분류
 - Semi-Supervised: 노드의 일부만 labeling 되어 있음
 
 ### 2. 기본 Notation
@@ -129,9 +129,10 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 
 
 ### 3. Correct Explanation about GCN
-1. ${\hat{A} = \tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
-    - 우선 ${\hat{A} = \tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$ 를 통해 정규화된 Adjacency Matrix를 계산
+1. $\hat{A} = I_N + {\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+    - 우선 $\hat{A} = I_N + {\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$ 를 통해 정규화된 Adjacency Matrix를 계산
     - 위 수식은, 각 엣지 별로 다른 가중치를 주어서 어느 노드의 Feature Vector를 어느 만큼의 가중치를 주어 Convolution (Aggregation) 연산을 할 것인지 결정
+    - $I_N$은 본인 스스로의 Node Feature도 연산하여야하기 때문에 추가
 2. $\hat{A} \times H^{(l)}$
     - 정규화된 Adjacency Matrix($\hat{A}$)과 Hidden State Vector($H^{(l)}$) 을 곱하여 각 엣지 가중치 만큼 덧셈 연산 수행
     - 위 덧셈 연산 수행이 Convolution 연산
@@ -145,10 +146,57 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 
 ![nn](https://miro.medium.com/v2/resize:fit:1400/1*3fA77_mLNiJTSgZFhYnU0Q.png)
 
-### 3. About ${\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
-- 
+### 3. About ${\hat{A} =\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+- GCN은 기본적으로 무향 그래프를 사용 (undirected graph)
+- 또한, Graph Weight는 고려하지 않음
+- Convolution 연산 시, 각 노드의 계수 (각 노드가 얼마나 많은 이웃을 가지고 있는가)를 무시하고 무작정 더면면, 많은 이웃을 가진 노드는 그저 큰 값의 feature vector를, 적은 이웃을 가진 노드는 그저 작은 값으 feature vector를 가지게 될 것임
+- 따라서, 위로 인해 발생할 수 있는 오류를 해결하기 위해 $\hat{A} ={\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$ 연산을 수행
+- 또한, 기존에는 Spectral한 방법으로 Graph Convolution 연산 수행
+- 위 방법은 많은 연산량을 필요로 한다는 단점을 가짐
+- 이에 본 논문은 Fast Approximate Convolution 수식을 제안하였으며, 그 수식이 ${\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+- 위 수식이 본 논문이 제안하는 가장 핵심적인 수식 (기존 Spectral GCN과의 주된 차이점)
 
-## 3. Semi-Supervised Node Classification
+### 4. Two-Layer Forward Model Example
+
+$$Z=f(X, A)=softmax(\hat{A}ReLU(\hat{A}XW^{(0)})W^{(1)})$$
+
+## 3. Calculating Example
+
+### 1. Examples
+- example graph
+
+
+<img src="/images/2023-06-24-Graph_Convolutional_Networks/graph.png" alt="graph" width="250" height="높이">
+
+- example adjacency matrix
+
+||A|B|C|D|E|
+|---|---|---|---|---|---|
+|A|0|0|0|0|1|
+|B|0|0|0|1|1|
+|C|0|0|0|1|1|
+|D|0|1|1|0|1|
+|E|1|1|1|1|0|
+
+- example node feature matrix
+
+||feat1|feat2|feat3|
+|---|---|---|---|
+|A|-1.1|3.2|4.2|
+|B|0.4|5.1|-1.2|
+|C|1.2|1.3|2.1|
+|D|1.4|-1.2|2.5|
+|E|1.4|2.5|4.5|
+
+- One-Layer Calculating Example (Without Activation Function)
+
+
+$$
+\begin{matrix}
+a & b \\
+c & d
+\end{matrix}
+$$
 
 ### 1. Explain with Calculate each Vector
 
@@ -164,3 +212,4 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 - https://arxiv.org/abs/1609.02907
 - https://signing.tistory.com/125
 - https://process-mining.tistory.com/176
+
