@@ -45,7 +45,6 @@ author_profile: true
     - 그래프 노드들의 피쳐(feature, attribute)들을 노드 index 순서대로 나열한 것
     - 아래 그림 참조
 
-
 ![Feature_Matrix](https://blog.kakaocdn.net/dn/kRrEC/btqCB7CyV6S/uCtmLrJVKGokjWXDEtIUNK/img.png)
 
 - Graph Degree Matrix
