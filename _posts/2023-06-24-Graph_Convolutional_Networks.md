@@ -146,25 +146,28 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 
 ![nn](https://miro.medium.com/v2/resize:fit:1400/1*3fA77_mLNiJTSgZFhYnU0Q.png)
 
-### 3. About ${\hat{A} =\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+### 3. About ${\hat{A} = I_N + \tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
 - GCN은 기본적으로 무향 그래프를 사용 (undirected graph)
 - 또한, Graph Weight는 고려하지 않음
 - Convolution 연산 시, 각 노드의 계수 (각 노드가 얼마나 많은 이웃을 가지고 있는가)를 무시하고 무작정 더면면, 많은 이웃을 가진 노드는 그저 큰 값의 feature vector를, 적은 이웃을 가진 노드는 그저 작은 값으 feature vector를 가지게 될 것임
-- 따라서, 위로 인해 발생할 수 있는 오류를 해결하기 위해 $\hat{A} ={\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$ 연산을 수행
+- 따라서, 위로 인해 발생할 수 있는 오류를 해결하기 위해 $\hat{A} = I_N + {\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$ 연산을 수행
 - 또한, 기존에는 Spectral한 방법으로 Graph Convolution 연산 수행
 - 위 방법은 많은 연산량을 필요로 한다는 단점을 가짐
-- 이에 본 논문은 Fast Approximate Convolution 수식을 제안하였으며, 그 수식이 ${\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+- 이에 본 논문은 Fast Approximate Convolution 수식을 제안하였으며, 그 수식이 ${I_N + \tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
 - 위 수식이 본 논문이 제안하는 가장 핵심적인 수식 (기존 Spectral GCN과의 주된 차이점)
 
 ### 4. Two-Layer Forward Model Example
 
 $$Z=f(X, A)=softmax(\hat{A}ReLU(\hat{A}XW^{(0)})W^{(1)})$$
 
+$$H^{(0)}=ReLU(\hat{A}XW^{(0)})$$
+
+$$Z=softmax(\hat{A}H^{(0)}W^{(1)})$$
+
 ## 3. Calculating Example
 
-### 1. Examples
+### 1. Define Graph and Node Feature
 - example graph
-
 
 <img src="/images/2023-06-24-Graph_Convolutional_Networks/graph.png" alt="graph" width="250" height="높이">
 
@@ -188,28 +191,159 @@ $$Z=f(X, A)=softmax(\hat{A}ReLU(\hat{A}XW^{(0)})W^{(1)})$$
 |D|1.4|-1.2|2.5|
 |E|1.4|2.5|4.5|
 
-- One-Layer Calculating Example (Without Activation Function)
+### 2. One-Layer Calculating Example (Without Activation Function)
 
+- #### adjacency matrix, $A$
 
 $$
-\begin{matrix}
-a & b \\
-c & d
-\end{matrix}
+A = \begin{bmatrix}
+0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 1 & 1 \\
+0 & 1 & 1 & 0 & 1 \\
+1 & 1 & 1 & 1 & 0
+\end{bmatrix}
 $$
 
-### 1. Explain with Calculate each Vector
+- #### $\tilde{A}$
 
-### 2. Explain with Matrix Calculation
+$$
+\tilde{A} = I_N + A
+$$
+
+$$
+\tilde{A} = \begin{bmatrix}
+1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 & 1 \\
+0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 & 1 \\
+1 & 1 & 1 & 1 & 1
+\end{bmatrix}
+$$
+
+- #### diagonal degree matrix, $D$
+
+$$
+D = \begin{bmatrix}
+1 & 0 & 0 & 0 & 0 \\
+0 & 2 & 0 & 0 & 0 \\
+0 & 0 & 2 & 0 & 0 \\
+0 & 0 & 0 & 3 & 0 \\
+0 & 0 & 0 & 0 & 4
+\end{bmatrix}
+$$
+
+- #### $\tilde{D}$
+
+$$
+\tilde{D} = \sum_j{\tilde{A}_{ij}}
+$$
+
+$$
+\tilde{D} = \begin{bmatrix}
+2 & 0 & 0 & 0 & 0 \\
+0 & 3 & 0 & 0 & 0 \\
+0 & 0 & 3 & 0 & 0 \\
+0 & 0 & 0 & 4 & 0 \\
+0 & 0 & 0 & 0 & 5
+\end{bmatrix}
+$$
+
+- #### ${\tilde{D}}^{-1/2}$
+
+$$
+{\tilde{D}}^{-1/2} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & 0 & 0 & 0 \\
+0 & \frac{1}{\sqrt{3}} & 0 & 0 & 0 \\
+0 & 0 & \frac{1}{\sqrt{3}} & 0 & 0 \\
+0 & 0 & 0 & \frac{1}{2} & 0 \\
+0 & 0 & 0 & 0 & \frac{1}{\sqrt{5}}
+\end{bmatrix}
+$$
+
+- #### $\hat{A} = {\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+
+$$
+{\tilde{D}}^{-1/2} \tilde{A} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & 0 & 0 & 0 \\
+0 & \frac{1}{\sqrt{3}} & 0 & 0 & 0 \\
+0 & 0 & \frac{1}{\sqrt{3}} & 0 & 0 \\
+0 & 0 & 0 & \frac{1}{2} & 0 \\
+0 & 0 & 0 & 0 & \frac{1}{\sqrt{5}}
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 & 1 \\
+0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 & 1 \\
+1 & 1 & 1 & 1 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & 0 & 0 & \frac{1}{\sqrt{2}} \\
+0 & \frac{1}{\sqrt{3}} & 0 & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
+0 & 0 & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
+0 & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} \\
+\frac{1}{\sqrt{5}} & \frac{1}{\sqrt{5}} & \frac{1}{\sqrt{5}} & \frac{1}{\sqrt{5}} & \frac{1}{\sqrt{5}}
+\end{bmatrix}
+$$
+
+$$
+\hat{A} = {\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & 0 & 0 & \frac{1}{\sqrt{2}} \\
+0 & \frac{1}{\sqrt{3}} & 0 & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
+0 & 0 & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \\
+0 & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} \\
+\frac{1}{\sqrt{5}} & \frac{1}{\sqrt{5}} & \frac{1}{\sqrt{5}} & \frac{1}{\sqrt{5}} & \frac{1}{\sqrt{5}}
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & 0 & 0 & 0 \\
+0 & \frac{1}{\sqrt{3}} & 0 & 0 & 0 \\
+0 & 0 & \frac{1}{\sqrt{3}} & 0 & 0 \\
+0 & 0 & 0 & \frac{1}{2} & 0 \\
+0 & 0 & 0 & 0 & \frac{1}{\sqrt{5}}
+\end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix}
+\frac{1}{2} & 0 & 0 & 0 & \frac{1}{\sqrt{6}} \\
+0 & \frac{1}{3} & 0 & \frac{1}{2\sqrt{3}} & \frac{1}{3} \\
+0 & 0 & \frac{1}{3} & \frac{1}{2\sqrt{3}} & \frac{1}{3} \\
+0 & \frac{1}{2\sqrt{3}} & \frac{1}{2\sqrt{3}} & \frac{1}{4} & \frac{1}{2\sqrt{3}} \\
+\frac{1}{\sqrt{6}} & \frac{1}{3} & \frac{1}{3} & \frac{1}{2\sqrt{3}} & \frac{1}{3}
+\end{bmatrix}
+$$
+
+- #### $\hat{A} X$
+$$
+\hat{A} X= \begin{bmatrix}
+\frac{1}{2} & 0 & 0 & 0 & \frac{1}{\sqrt{6}} \\
+0 & \frac{1}{3} & 0 & \frac{1}{2\sqrt{3}} & \frac{1}{3} \\
+0 & 0 & \frac{1}{3} & \frac{1}{2\sqrt{3}} & \frac{1}{3} \\
+0 & \frac{1}{2\sqrt{3}} & \frac{1}{2\sqrt{3}} & \frac{1}{4} & \frac{1}{2\sqrt{3}} \\
+\frac{1}{\sqrt{6}} & \frac{1}{3} & \frac{1}{3} & \frac{1}{2\sqrt{3}} & \frac{1}{3}
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+-1.1 & 3.2 & 4.2 \\
+0.4 & 5.1 & -1.2 \\
+1.2 & 1.3 & 2.1 \\
+1.4 & -1.2 & 2.5 \\
+1.4 & 2.5 & 4.5
+\end{bmatrix}
+$$
 
 ## 4. Results
-<p></p>
+![results](/images/2023-06-24-Graph_Convolutional_Networks/results.png)
 
 ## 5. Conclusion
 <p></p>
 
 ## 6. 참고문헌
-- https://arxiv.org/abs/1609.02907
-- https://signing.tistory.com/125
-- https://process-mining.tistory.com/176
+- [https://arxiv.org/abs/1609.02907](https://arxiv.org/abs/1609.02907)
+- [https://signing.tistory.com/125](https://signing.tistory.com/125)
+- [https://process-mining.tistory.com/176](https://process-mining.tistory.com/176)
 
