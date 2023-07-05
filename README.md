@@ -11,5 +11,7 @@
    - HTML, CSS, JavaScript, MarkDown, Firestore DB
 - Login(Implementing...)
    - HTML, CSS, JavaScript, MarkDown, Firebase Authentication
+- Comment(Implementing....)
+   - HTML, CSS, JavaScript, MarkDown, Firestore DB, Firebase Storage
 - Posting(Implementing...)
    - HTML, CSS, JavaScript, MarkDown, Firestore DB, Firebase Storage
