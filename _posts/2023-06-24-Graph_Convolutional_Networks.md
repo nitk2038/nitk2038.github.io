@@ -16,7 +16,7 @@ author_profile: true
 - Thomas N.Kipf
 - Max Welling
 
-## 0. Preliminary Knowledge
+## 0. 사전 지식
 
 ### 1. 테이블 데이터
 - Table 형태, 우리가 흔히 생각하는 Excel Chart이다.
@@ -78,6 +78,19 @@ author_profile: true
 - spectral graph convolution 연산에 근사하는 layer-wise propagation rule 제안
 - 즉, spectral convolution 연산을 근사시킬 수 있는 세로운 수식을 제안함으로써, 연산 시간을 줄임
 - 기존 GNN 모델에 비해 fast하고 scalable한 모델 제안
+
+## 2. 핵심 아이디어
+
+### Aggregate
+![gcn_main_idea](/images/2023-06-24-Graph_Convolutional_Networks/gcn_main_idea.png)
+
+- 위 그림의 초록색 노드를 고려
+    1. 주변 이웃 노드의 feature value를 모음
+    2. 그 feature value들의 평균을 구함
+    3. 구해진 평균을 이용해 MLP(Multi-Layer Perceptron) 학습
+
+### GCN Layer
+![2_layer_gcn](https://topb0ts.wpenginepowered.com/wp-content/uploads/2020/10/1_54lEO_92GhXlRZN-yci0xg-510x382.png)
 
 ## 2. Fast Approximate Convolutions on Graphs
 
@@ -147,14 +160,14 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 
 ![nn](https://miro.medium.com/v2/resize:fit:1400/1*3fA77_mLNiJTSgZFhYnU0Q.png)
 
-### 3. About ${\hat{A} = I_N + \tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+### 3. About $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$
 - GCN은 기본적으로 무향 그래프를 사용 (undirected graph)
 - 또한, Graph Weight는 고려하지 않음
 - Convolution 연산 시, 각 노드의 계수 (각 노드가 얼마나 많은 이웃을 가지고 있는가)를 무시하고 무작정 더면면, 많은 이웃을 가진 노드는 그저 큰 값의 feature vector를, 적은 이웃을 가진 노드는 그저 작은 값으 feature vector를 가지게 될 것임
-- 따라서, 위로 인해 발생할 수 있는 오류를 해결하기 위해 $\hat{A} = I_N + {\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$ 연산을 수행
+- 따라서, 위로 인해 발생할 수 있는 오류를 해결하기 위해 $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$ 연산을 수행
 - 또한, 기존에는 Spectral한 방법으로 Graph Convolution 연산 수행
 - 위 방법은 많은 연산량을 필요로 한다는 단점을 가짐
-- 이에 본 논문은 Fast Approximate Convolution 수식을 제안하였으며, 그 수식이 ${I_N + \tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2}$
+- 이에 본 논문은 Fast Approximate Convolution 수식을 제안하였으며, 그 수식이 $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$
 - 위 수식이 본 논문이 제안하는 가장 핵심적인 수식 (기존 Spectral GCN과의 주된 차이점)
 
 ### 4. Two-Layer Forward Model Example
@@ -365,3 +378,4 @@ $$
 - [https://arxiv.org/abs/1609.02907](https://arxiv.org/abs/1609.02907)
 - [https://signing.tistory.com/125](https://signing.tistory.com/125)
 - [https://process-mining.tistory.com/176](https://process-mining.tistory.com/176)
+- [https://www.topbots.com/graph-convolutional-networks/](https://www.topbots.com/graph-convolutional-networks/)
