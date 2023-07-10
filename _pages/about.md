@@ -131,37 +131,53 @@ author_profile: true
 
 ## Projects
 ### Main Projects
+<br/>
 **Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs**, 2021 -- 2024
-    - Supervision: Institute of Information & Communications Technology Planning & Evaluation
-    - Role: Undergraduate Research Student (2022 -- 2024)
-        - Investigate existing studies for large graph integration
-        - Supports large graph learning engine design
-        - Development of graph data augmentation techniques
+- Supervision: Institute of Information & Communications Technology Planning & Evaluation
+- Role: Undergraduate Research Student (2022 -- 2024)
+    - Investigate existing studies for large graph integration
+    - Supports large graph learning engine design
+    - Development of graph data augmentation techniques
+
+- - -
 
 ### Toy Projects
+<br/>
 **Distributed GraphSAGE Training using DistDGL and K8s**, 2023
-    - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
+- Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
+
 **Jekyll Minimal Mistakes Blog Customizing**, 2022 --
-    - Ruby, HTML, CSS, JavaScript, Firebase, GitHub
+- Ruby, HTML, CSS, JavaScript, Firebase, GitHub
+
 **IoT Doorlock with Elevator**, 2018
-    - C, Arduino, Serial, SPI, RFID, BlueTooth
+- C, Arduino, Serial, SPI, RFID, BlueTooth
+
+- - -
 
 ### Tiny Projects
+<br/>
 **How many loves me**, Jun. 2023
-    - HTML, CSS, JavaScript
+- HTML, CSS, JavaScript
+
 **Find the one who didn't follow you (for github)**, May. 2023
-    - Python, requests, bs4, html5lib
+- Python, requests, bs4, html5lib
+
 **Vigilante Service Table**, Apr. 2021
-    - C++, iostream, fstream, algorithm, vector
+- C++, iostream, fstream, algorithm, vector
+
+- - -
 
 ### Planned Projects
+<br/>
 **My own Linux Server**, 2023
-    - ASUS mini PC, HDD, DAS, Router, Ubuntu Desktop, Docker
-        - SSH Server Container (Ubuntu on Ubuntu)
-        - NAS Server Container
-        - Hosting Server Container
-        - Database Server Container
-        - Storage Server Container
+- ASUS mini PC, HDD, DAS, Router, Ubuntu Desktop, Docker
+    - SSH Server Container (Ubuntu on Ubuntu for Linux Practice)
+    - NAS Server Container
+    - Hosting Server Container
+    - Database Server Container
+    - Storage Server Container
+    
+- - -
 
 ## Publications
 * Juyeong Shin, Young-Koo Lee. (2023). [Automatic Hyper Parameter Tuning Method for MH-Aug](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages --
@@ -204,7 +220,3 @@ ElasticSearch, Neo4j, Docker, K8s, Firebase
 
 ### Operating System
 Windows, Ubuntu, CentOS
-
-## GitHub Stats
-![meongju0o0's GitHub Stats](https://github-readme-stats.vercel.app/api?username=meongju0o0&show_icons=true&theme=default)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=meongju0o0&layout=compact&theme=default)
