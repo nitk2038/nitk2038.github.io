@@ -130,32 +130,38 @@ author_profile: true
 * 2022.04 --: Data & Knowledge Engineering Labortory, Kyung Hee University, **Undergraduate Research Student**
 
 ## Projects
-* **Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs**, 2021 -- 2024
+### Main Projects
+**Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs**, 2021 -- 2024
     - Supervision: Institute of Information & Communications Technology Planning & Evaluation
     - Role: Undergraduate Research Student (2022 -- 2024)
         - Investigate existing studies for large graph integration
         - Supports large graph learning engine design
         - Development of graph data augmentation techniques
-* **Toy Projects**
-    - Distributed GraphSAGE Training using DistDGL and K8s, 2023
-        - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
-    - Jekyll Minimal Mistakes Blog Customizing, 2022 --
-        - Ruby, HTML, CSS, JavaScript, Firebase, GitHub
-    - IoT Doorlock with Elevator, 2018
-        - C, Arduino, Serial, SPI, RFID, BlueTooth
-* **Tiny Projects**
-    - How many loves me, Jun. 2023
-        - HTML, CSS, JavaScript
-    - Find the one who didn't follow you (for github), May. 2023
-        - Python, requests, bs4, html5lib
-    - Vigilante Service Table, Apr. 2021
-        - C++, iostream, fstream, algorithm, vector
-* **Planned Projects**
-    - My own Linux Server, 2023
-        - ASUS mini PC, HDD, DAS, Router, Ubuntu Desktop, Docker
-        - NAS Server Container
+
+### Toy Projects
+**Distributed GraphSAGE Training using DistDGL and K8s**, 2023
+    - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
+**Jekyll Minimal Mistakes Blog Customizing**, 2022 --
+    - Ruby, HTML, CSS, JavaScript, Firebase, GitHub
+**IoT Doorlock with Elevator**, 2018
+    - C, Arduino, Serial, SPI, RFID, BlueTooth
+
+### Tiny Projects
+**How many loves me**, Jun. 2023
+    - HTML, CSS, JavaScript
+**Find the one who didn't follow you (for github)**, May. 2023
+    - Python, requests, bs4, html5lib
+**Vigilante Service Table**, Apr. 2021
+    - C++, iostream, fstream, algorithm, vector
+
+### Planned Projects
+**My own Linux Server**, 2023
+    - ASUS mini PC, HDD, DAS, Router, Ubuntu Desktop, Docker
         - SSH Server Container (Ubuntu on Ubuntu)
+        - NAS Server Container
         - Hosting Server Container
+        - Database Server Container
+        - Storage Server Container
 
 ## Publications
 * Juyeong Shin, Young-Koo Lee. (2023). [Automatic Hyper Parameter Tuning Method for MH-Aug](). Journal of Korea Software Congress, Scheduled to submit the paper, Pages --
