@@ -172,6 +172,7 @@ author_profile: true
 
 ### Planned Projects
 <br/>
+
 **My own Linux Server**, 2023
 - ASUS mini PC, HDD, DAS, Router, Ubuntu Desktop, Docker
     - SSH Server Container (Ubuntu on Ubuntu for Linux Practice)
