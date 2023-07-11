@@ -160,7 +160,7 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 
 ![nn](https://miro.medium.com/v2/resize:fit:1400/1*3fA77_mLNiJTSgZFhYnU0Q.png)
 
-### 3. About $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$
+### 4. About $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$
 - GCN은 기본적으로 무향 그래프를 사용 (undirected graph)
 - 또한, Graph Weight는 고려하지 않음
 - Convolution 연산 시, 각 노드의 계수 (각 노드가 얼마나 많은 이웃을 가지고 있는가)를 무시하고 무작정 더면면, 많은 이웃을 가진 노드는 그저 큰 값의 feature vector를, 적은 이웃을 가진 노드는 그저 작은 값으 feature vector를 가지게 될 것임
@@ -170,7 +170,7 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 - 이에 본 논문은 Fast Approximate Convolution 수식을 제안하였으며, 그 수식이 $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$
 - 위 수식이 본 논문이 제안하는 가장 핵심적인 수식 (기존 Spectral GCN과의 주된 차이점)
 
-### 4. Two-Layer Forward Model Example
+### 5. Two-Layer Forward Model Example
 
 $$Z=f(X, A)=softmax(\hat{A}ReLU(\hat{A}XW^{(0)})W^{(1)})$$
 
