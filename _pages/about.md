@@ -131,8 +131,6 @@ author_profile: true
 
 ## Projects
 ### Main Projects
-<br/>
-
 - **Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs**, 2021 - 2024
     - Supervision: Institute of Information & Communications Technology Planning & Evaluation
     - Role: Undergraduate Research Student (2022 - 2024)
@@ -143,8 +141,6 @@ author_profile: true
 - - -
 
 ### Toy Projects
-<br/>
-
 - **Distributed GraphSAGE Training using DistDGL and K8s**, 2023
     - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
 
@@ -157,8 +153,6 @@ author_profile: true
 - - -
 
 ### Tiny Projects
-<br/>
-
 - **How many loves me**, Jun. 2023
     - HTML, CSS, JavaScript
 
@@ -171,14 +165,12 @@ author_profile: true
 - - -
 
 ### Planned Projects
-<br/>
-
 - **My own Linux Server**, 2023
     - ASUS mini PC, HDD, DAS, Router, Ubuntu Desktop, Docker
         - SSH Server Container (Ubuntu on Ubuntu for Linux Practice)
         - NAS Server Container
         - Hosting Server Container
-        - Database Server Container
+        - Database Server Containers
         - Storage Server Container
     
 - - -
