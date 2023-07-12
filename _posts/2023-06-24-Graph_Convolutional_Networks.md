@@ -374,7 +374,7 @@ $$
 - 제한적 상황에 맞춘 Convolution 근사식을 제공
     - 범용적인 그래프(유향, weighted ...)에 대한 제안 없음
 
-## 6. 참고문헌
+## 7. 참고문헌
 - [https://arxiv.org/abs/1609.02907](https://arxiv.org/abs/1609.02907)
 - [https://signing.tistory.com/125](https://signing.tistory.com/125)
 - [https://process-mining.tistory.com/176](https://process-mining.tistory.com/176)
