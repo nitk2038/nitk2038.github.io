@@ -141,24 +141,24 @@ author_profile: true
 - - -
 
 ### Toy Projects
+- **Life Balancing Application for Android**, 2023
+    - Kotlin, Android Studio
 - **Distributed GraphSAGE Training using DistDGL and K8s**, 2023
     - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
-
 - **Jekyll Minimal Mistakes Blog Customizing**, 2022 -
     - Ruby, HTML, CSS, JavaScript, Firebase, GitHub
-
 - **IoT Doorlock with Elevator**, 2018
     - C, Arduino, Serial, SPI, RFID, BlueTooth
 
 - - -
 
 ### Tiny Projects
+- **Git Clone All**, Aug. 2023
+    - batch, sh, jq, curl, git
 - **How many loves me**, Jun. 2023
     - HTML, CSS, JavaScript
-
 - **Find the one who didn't follow you (for github)**, May. 2023
     - Python, requests, bs4, html5lib
-
 - **Vigilante Service Table**, Apr. 2021
     - C++, iostream, fstream, algorithm, vector
 
@@ -172,7 +172,7 @@ author_profile: true
         - Hosting Server Container
         - Database Server Containers
         - Storage Server Container
-    
+
 - - -
 
 ## Publications
@@ -201,7 +201,7 @@ author_profile: true
 
 ## Skills
 ### Programming Languages
-Bash, C, C++, JAVA, Python, HTML, CSS, JavaScript
+Batch, Bash, C, C++, JAVA, Python, HTML, CSS, JavaScript
 
 ### Libraries
 numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
