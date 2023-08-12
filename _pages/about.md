@@ -170,7 +170,7 @@ author_profile: true
         - SSH Server Container (Ubuntu on Ubuntu for Linux Practice)
         - NAS Server Container
         - Hosting Server Container
-        - Database Server Containers
+        - Database Server Container
         - Storage Server Container
 
 - - -
