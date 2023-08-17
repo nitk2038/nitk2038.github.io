@@ -32,7 +32,7 @@ author_profile: true
 - 위와 같은 기법으로 임베딩 된 피쳐는 node classification, clustering, link prediction 등에 사용
 
 - 혹은, ChebNet, GCN과 같은 Transductive 딥러닝 기법을 사용
-    - Transductive 성질로 인해, 실세계에 적용시키기 어려운 한계점을 지님.
+    - Transductive 성질로 인해, 실세계에 적용시키기 어려운 한계점을 지님
         - 미니배치 학습 불가
         - 온라인 학습 불가
         - 분산 학습 불가
