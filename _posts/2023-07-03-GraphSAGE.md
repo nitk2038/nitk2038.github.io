@@ -42,7 +42,7 @@ author_profile: true
 ### 2. 제안하는 Inductive Learning Method 장점
 - 미니배치 학습 가능
 - 온라인 학습 및 추론 가능
-    - 실세계에서 응용될 수 있음
+    - 실세계 거대 그래프에서 응용될 수 있음
 
 ## 2. 제안 기법: GraphSAGE
 
