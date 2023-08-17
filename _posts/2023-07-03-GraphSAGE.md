@@ -43,7 +43,6 @@ author_profile: true
 - 미니배치 학습 가능
 - 온라인 학습 및 추론 가능
     - 실세계에서 응용될 수 있음
-- 
 
 ## 2. 제안 기법: GraphSAGE
 
