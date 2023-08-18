@@ -85,10 +85,18 @@ author_profile: true
 ![https://production-media.paperswithcode.com/methods/1b38ceba-a031-474f-a39f-26abc1735e0b.png](https://production-media.paperswithcode.com/methods/1b38ceba-a031-474f-a39f-26abc1735e0b.png)
 
 ### 1. 임베딩 생성 알고리즘 (GraphSAGE Forward Propagation Algorithm)
-- assume that
-    - $K$ aggregator functions: $AGGREGATE_k, \forall{k}\in{1, ..., K}$
-    - set of weight matrices: $W^k, \forall{k}\in{1, ..., K}$
-        - used to propagate information between different layers of the model or "search depths"
+#### Notations
+- Graph: $G(V, E)$
+- input features: $x_v$
+- depth: $K$
+- neighborhood: $N:v\to{2^v}$
+- $K$ aggregator functions: $AGGREGATE_k, \forall{k}\in{1, ..., K}$
+- set of weight matrices: $W^k, \forall{k}\in{1, ..., K}$
+    - used to propagate information between different layers of the model or "search depths"
+- non-linearity activation: $\sigma$
+
+#### GraphSAGE Forward Propagation Algorithm
+![img](/images/2023-07-03-GraphSAGE/GraphSAGE_forward_propagation_algorithm.png)
 
 ## 3. 실험
 
