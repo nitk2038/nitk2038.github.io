@@ -66,12 +66,11 @@ async function initializeSortable() {
         });
       });
     },
-    handle: '.task-handle',  // Specify that only elements with 'task-handle' class can start the drag
-    filter: '.task-buttons', // Prevent drag from starting when clicking on buttons
-    preventOnFilter: false,  // Allow click events on filtered items
+    handle: '.task-handle',
+    filter: '.task-buttons',
+    preventOnFilter: false,
   });
 }
-
 
 async function statusButtonClick(e) {
   const item = e.target.closest('li');

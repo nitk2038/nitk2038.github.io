@@ -29,7 +29,7 @@ author_profile: true
 - 머신러닝 기반 임베딩 방법을 주로 사용
 - 이때, 사용되는 데이터는 오직 노드 피쳐 벡터
     - 머신러닝 기법: PCA, NMA, t-SNE
-- 위와 같은 기법으로 임베딩 된 피쳐는 node classification, clustering, link prediction 등에 사용
+- 위와 같은 기법으로 임베딩 된 피쳐는 Node Classification,  Clustering, Link Prediction 등에 사용
 
 - 혹은, ChebNet, GCN과 같은 Transductive 딥러닝 기법을 사용
     - Transductive 성질로 인해, 실세계에 적용시키기 어려운 한계점을 지님
@@ -44,7 +44,39 @@ author_profile: true
 - 온라인 학습 및 추론 가능
     - 실세계 거대 그래프에서 응용될 수 있음
 
-## 2. 제안 기법: GraphSAGE
+### 3. GraphSAGE 특징
+- 노드 임베딩을 구하기 위해 사용되는 범용적 framework
+- Inductive Learning Model은 Neighborhood Sampling과 Aggregation 과정을 통해 노드 임베딩을 구함
+- Aggregation은 이웃 노드 피쳐와 최종 레이어의 임베딩 결과를 도출
+- 최종 임베딩 결과는 NN Model Parameter Update에 사용
+- unsupervised, supervised 모두 가능
+
+## 2. 관련 연구
+### 1. Factorization-based embedding approaches
+- low dimensional embeddings using random walk
+    - baseline algorithm: PageRank Algorithm
+    - Deepwalk: Online learning of social representations. In KDD, 2014.
+    - node2vec: Scalable feature learning for networks. In KDD, 2016.
+
+- matrix factorization-based learning objectives
+    - baseline algorithm: Planetoid-$I$
+    - Line: Large-scale information network embedding. In WWW, 2015.
+    - Structural deep network embedding. In KDD, 2016.
+
+### 2. Supervised learning over graphs
+- supervised learning over graph-structured data
+    - Discriminative embeddings of latent variable models for structured data. In ICML, 2016.
+    - A new model for learning in graph domains. In IEEE International Joint Conference on Neural Networks, volume 2, pages 729–734, 2005.
+    - Gated graph sequence neural networks. In ICLR, 2015.
+    - The graph neural network model. IEEE Transactions on Neural Networks, 20(1):61–80, 2009.
+
+### 3. Spectral Graph Convolutional Networks
+- Spectral Method Based Graph Convolutional Networks
+    - Spectral Networks and Locally Connected Networks on Graphs
+    - Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering
+    - Semi-Supervised Classification with Graph Convolutional Networks
+
+## 3. 제안 기법: GraphSAGE
 
 
 ## 3. 실험
