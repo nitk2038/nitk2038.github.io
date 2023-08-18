@@ -19,7 +19,7 @@ author_profile: true
 
 ## 0. Preliminary Knowledge
 ### 1. Graph??
-- [그래프 데이터란?](https://meongju0o0.github.io/data_structure/Graph/)
+- [그래프 데이터란?](https://meongju0o0.github.io/data-structure/Graph/)
 
 ### 2. Transductive Learning vs Inductive Learning
 - [Transductive Learning vs Inductive Learning](https://meongju0o0.github.io/Machine_Learning/transductive-vs-inductive/)
@@ -77,7 +77,18 @@ author_profile: true
     - Semi-Supervised Classification with Graph Convolutional Networks
 
 ## 3. 제안 기법: GraphSAGE
+- 핵심 아이디어
+    - 이웃 노드들을 무작위 추출 (샘플링)
+    - 임베딩을 구하고자 하는 노드의 지엽적 이웃의 피쳐 정보를 Aggregate하여 NN 모델 학습
+    - GD(Gradient Descent)만 가능한 기존 Spectral Method 기반 GCN과 달리, SGD(Stochastic Gradient Descent)가 가능
 
+![https://production-media.paperswithcode.com/methods/1b38ceba-a031-474f-a39f-26abc1735e0b.png](https://production-media.paperswithcode.com/methods/1b38ceba-a031-474f-a39f-26abc1735e0b.png)
+
+### 1. 임베딩 생성 알고리즘 (GraphSAGE Forward Propagation Algorithm)
+- assume that
+    - $K$ aggregator functions: $AGGREGATE_k, \forall{k}\in{1, ..., K}$
+    - set of weight matrices: $W^k, \forall{k}\in{1, ..., K}$
+        - used to propagate information between different layers of the model or "search depths"
 
 ## 3. 실험
 
