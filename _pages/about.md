@@ -157,6 +157,8 @@ author_profile: true
 - - -
 
 ### Tiny Projects
+- **MBTI Clustering**, Sep. 2023
+    - Python, scikit-learn, matplotlib, HTML, CSS, JavaScript, Firebase
 - **Git Clone All**, Aug. 2023
     - batch, sh, jq, curl, git
 - **How many loves me**, Jun. 2023
