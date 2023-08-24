@@ -48,8 +48,8 @@ author_profile: true
 - 노드 임베딩을 구하기 위해 사용되는 범용적 framework
 - Inductive Learning Model은 Neighborhood Sampling과 Aggregation 과정을 통해 노드 임베딩을 구함
 - Aggregation은 이웃 노드 피쳐와 최종 레이어의 임베딩 결과를 도출
-- 최종 임베딩 결과는 NN Model Parameter Update에 사용
-- unsupervised, supervised 모두 가능
+- 최종 임베딩 결과는 NN(Neural Network, 신경망) Model Parameter Update에 사용
+- 비지도학습, 지도학습 모두 가능
 
 ## 2. 관련 연구
 ### 1. Factorization-based embedding approaches
@@ -99,10 +99,11 @@ author_profile: true
 ![img](/images/2023-07-03-GraphSAGE/GraphSAGE_forward_propagation_algorithm.png)
 
 ## 3. 실험
-
+![img](/images/2023-07-03-GraphSAGE/GraphSAGE_experiment_result.png)
 
 ## 4. 결론
-
+- Graph Inductive Learning Method 개발
+- Speed, Scalability
 
 ## 5. 참고문헌
 - [https://proceedings.neurips.cc/paper_files/paper/2017/hash/5dd9db5e033da9c6fb5ba83c7a7ebea9-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2017/hash/5dd9db5e033da9c6fb5ba83c7a7ebea9-Abstract.html)
