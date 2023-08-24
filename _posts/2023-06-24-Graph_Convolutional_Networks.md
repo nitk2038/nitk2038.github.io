@@ -65,7 +65,7 @@ author_profile: true
     - $V$: 그래프의 노드 혹은 정점 (Vertex), $v_i \in V$
     - $E$: 그래프의 엣지 혹은 간선 (Edge), $(v_i, v_j) \in \epsilon$
 - 인접행렬 (Adjacency Matrix): $A \in \mathcal{R}^{N \times N}$
-- 피쳐행렬 (Feature MAtrix): $X$
+- 피쳐행렬 (Feature Matrix): $X$
 - 차수행렬 (Degree Matrix): $D_{ii} = \sum_{j} A_{ij}$
 - Neural Network Model Function: $f(\cdot)$, $f(X, A)$
 - 손실 함수 (Loss Function): $L = L_0 + L_{reg}$

@@ -80,7 +80,7 @@ author_profile: true
 - 핵심 아이디어
     - 이웃 노드들을 무작위 추출 (샘플링)
     - 임베딩을 구하고자 하는 노드의 지엽적 이웃의 피쳐 정보를 Aggregate하여 NN 모델 학습
-    - GD(Gradient Descent)만 가능한 기존 Spectral Method 기반 GCN과 달리, SGD(Stochastic Gradient Descent)가 가능
+    - GD (Gradient Descent)만 가능한 기존 Spectral Method 기반 GCN과 달리, SGD (Stochastic Gradient Descent)가 가능
 
 ![https://production-media.paperswithcode.com/methods/1b38ceba-a031-474f-a39f-26abc1735e0b.png](https://production-media.paperswithcode.com/methods/1b38ceba-a031-474f-a39f-26abc1735e0b.png)
 
