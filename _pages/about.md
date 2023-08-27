@@ -136,7 +136,7 @@ author_profile: true
     - Role: Undergraduate Research Student (2022 - 2024)
         - Investigate existing studies for large graph integration
         - Supports large graph learning engine design
-        - Development of graph data augmentation techniques
+        - Development of graph data augmentation techniques with distributed training
 - **Food Social Network Service**, 2023 - 
     - Role: Developer (2023 - )
 - **Malicious Complaint Detecter**, 2023 - 
