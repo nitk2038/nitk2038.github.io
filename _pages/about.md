@@ -142,6 +142,7 @@ author_profile: true
 - **Malicious Complaint Detecter**, 2023 - 
     - Role: ML Developer (2023 - )
 
+
 - - -
 
 ### Toy Projects
@@ -157,8 +158,6 @@ author_profile: true
 - - -
 
 ### Tiny Projects
-- **MBTI Clustering**, Sep. 2023
-    - Python, scikit-learn, matplotlib, HTML, CSS, JavaScript, Firebase
 - **Git Clone All**, Aug. 2023
     - batch, sh, jq, curl, git
 - **How many loves me**, Jun. 2023
@@ -197,13 +196,13 @@ author_profile: true
     * Korea Software Congress, 2022
 
 ## Research Interests
-* Machine Learning / Deep Learning / Graph Convolutional Network / Graph Data Augmentation / Distributed Training
+* Graph Convolutional Network / Graph Data Augmentation / Distributed Training
 
 ## Study Interests
-* Linear Algebra / Deep Learning / Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / CUDA Acceleration / Query Processing
+* Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / Web Application Service
 
 ## Interested OpenSources
-* Docker / K8s / PostgreSQL / MongoDB / Redis / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus
+* Docker / K8s / PostgreSQL / MongoDB / Redis / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus / React.js
 
 ## Skills
 ### Programming Languages

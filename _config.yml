@@ -103,8 +103,8 @@ analytics:
 # Site Author
 author:
   name             : "Juyeong Shin"
-  avatar           : "/assets/images/bio-photo.png"
-  bio              : "KHU CSE 19<br>KHU DKE Lab. Undergraduate"
+  avatar           : "/assets/images/bio-photo.jpg"
+  bio              : "KHU CSE 19<br>KHU DKE Lab. Researcher"
   location         : "1732, Deogyeong-daero"
   email            : #
   links:

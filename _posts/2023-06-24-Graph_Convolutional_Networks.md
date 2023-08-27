@@ -60,12 +60,12 @@ author_profile: true
 - Node Classification: 노드 분류
 - Semi-Supervised: 노드의 일부만 labeling 되어 있음
 
-### 2. 기본 Notation
+### 2. Notation
 - 그래프 (Graph): $G=(V, E)$
     - $V$: 그래프의 노드 혹은 정점 (Vertex), $v_i \in V$
     - $E$: 그래프의 엣지 혹은 간선 (Edge), $(v_i, v_j) \in \epsilon$
 - 인접행렬 (Adjacency Matrix): $A \in \mathcal{R}^{N \times N}$
-- 피쳐행렬 (Feature MAtrix): $X$
+- 피쳐행렬 (Feature Matrix): $X$
 - 차수행렬 (Degree Matrix): $D_{ii} = \sum_{j} A_{ij}$
 - Neural Network Model Function: $f(\cdot)$, $f(X, A)$
 - 손실 함수 (Loss Function): $L = L_0 + L_{reg}$
@@ -145,7 +145,7 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 ### 3. Correct Explanation about GCN
 1. $\hat{A} = I_N + {D}^{-1/2} A {D}^{-1/2}$
     - 우선 $\hat{A} = I_N + {D}^{-1/2} A {D}^{-1/2}$ 를 통해 정규화된 Adjacency Matrix를 계산
-    - 위 수식은, 각 엣지 별로 다른 가중치를 주어서 어느 노드의 Feature Vector를 어느 만큼의 가중치를 주어 Convolution (Aggregation) 연산을 할 것인지 결정
+    - 위 수식은, 각 엣지 별로 다른 가중치를 주어서 어느 노드의 Feature Vector를 어느 만큼의 가중치를 주어 Convolution 연산을 할 것인지 결정
     - $I_N$은 본인 스스로의 Node Feature도 연산하여야하기 때문에 추가
 2. $\hat{A} \times H^{(l)}$
     - 정규화된 Adjacency Matrix($\hat{A}$)과 Hidden State Vector($H^{(l)}$) 을 곱하여 각 엣지 가중치 만큼 덧셈 연산 수행
@@ -163,12 +163,12 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 ### 4. About $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$
 - GCN은 기본적으로 무향 그래프를 사용 (undirected graph)
 - 또한, Graph Weight는 고려하지 않음
-- Convolution 연산 시, 각 노드의 계수 (각 노드가 얼마나 많은 이웃을 가지고 있는가)를 무시하고 무작정 더면면, 많은 이웃을 가진 노드는 그저 큰 값의 feature vector를, 적은 이웃을 가진 노드는 그저 작은 값으 feature vector를 가지게 될 것임
+- Convolution 연산 시, 각 노드의 계수 (각 노드가 얼마나 많은 이웃을 가지고 있는가)를 무시하고 무작정 더하면, 많은 이웃을 가진 노드는 그저 큰 값의 feature vector를, 적은 이웃을 가진 노드는 그저 작은 값으 feature vector를 가지게 될 것임
 - 따라서, 위로 인해 발생할 수 있는 오류를 해결하기 위해 $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$ 연산을 수행
-- 또한, 기존에는 Spectral한 방법으로 Graph Convolution 연산 수행
-- 위 방법은 많은 연산량을 필요로 한다는 단점을 가짐
+- 위 방법은 전체 그래프를 한번에 학습해야 한다는 단점을 가짐
 - 이에 본 논문은 Fast Approximate Convolution 수식을 제안하였으며, 그 수식이 $\hat{A} = I_N + D^{-1/2} A D^{-1/2}$
 - 위 수식이 본 논문이 제안하는 가장 핵심적인 수식 (기존 Spectral GCN과의 주된 차이점)
+- 그러나, 여전히 mini-batch 학습은 불가능
 
 ### 5. Two-Layer Forward Model Example
 
