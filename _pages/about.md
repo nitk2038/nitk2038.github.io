@@ -137,11 +137,11 @@ author_profile: true
         - Investigate existing studies for large graph integration
         - Supports large graph learning engine design
         - Development of graph data augmentation techniques with distributed training
-- **Food Social Network Service**, 2023 - 
-    - Role: Developer (2023 - )
-- **Malicious Complaint Detecter**, 2023 - 
-    - Role: ML Developer (2023 - )
-
+- **Secret Social Network Service**, 2023 - 
+    - Member: Uichan Seo, Juyeong Shin
+    - Role: FE Developer (2023 - )
+        - Develop Android Application
+        - Develop Web Frontend
 
 - - -
 
