@@ -201,9 +201,6 @@ author_profile: true
 ## Study Interests
 * Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / Web Application Service
 
-## Interested OpenSources
-* Docker / K8s / PostgreSQL / MongoDB / Redis / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus / React.js
-
 ## Skills
 ### Programming Languages
 Batch, Bash, C, C++, JAVA, Python, HTML, CSS, JavaScript
