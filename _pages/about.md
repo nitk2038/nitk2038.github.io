@@ -212,4 +212,4 @@ numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
 ElasticSearch, Neo4j, Docker, K8s, Firebase
 
 ### Operating System
-Windows, Ubuntu, CentOS
+Windows, MacOS, Ubuntu, CentOS
