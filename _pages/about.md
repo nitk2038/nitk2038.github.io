@@ -206,7 +206,7 @@ author_profile: true
 Batch, Bash, C, C++, JAVA, Python, HTML, CSS, JavaScript
 
 ### Libraries
-numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
+numpy, scipy, matplotlib, seaborn, scikit-learn, PyTorch, DGL
 
 ### Frameworks
 ElasticSearch, Neo4j, Docker, K8s, Firebase
