@@ -142,9 +142,6 @@ author_profile: true
     - Role: BE, FE Developer (2023 - )
         - Develop Backend Server
         - Develop Android Application
-        - Develop Web Frontend
-
-- - -
 
 ### Toy Projects
 - **Life Balancing Application for Android**, 2023
@@ -202,18 +199,15 @@ author_profile: true
 ## Study Interests
 * Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / Web Application Service
 
-## Interested OpenSources
-* Docker / K8s / PostgreSQL / MongoDB / Redis / ElasticSearch / Neo4j / Spark / Kafka / Hadoop / Prometheus / React.js
-
 ## Skills
 ### Programming Languages
 Batch, Bash, C, C++, JAVA, Python, HTML, CSS, JavaScript
 
 ### Libraries
-numpy, scipy, matplotlib, seaborn, scikit-learn, TensorFlow, PyTorch, DGL
+numpy, scipy, matplotlib, seaborn, scikit-learn, PyTorch, DGL
 
 ### Frameworks
 ElasticSearch, Neo4j, Docker, K8s, Firebase
 
 ### Operating System
-Windows, Ubuntu, CentOS
+Windows, MacOS, Ubuntu, CentOS
