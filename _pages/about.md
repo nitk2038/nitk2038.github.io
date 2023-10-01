@@ -139,7 +139,8 @@ author_profile: true
         - Development of graph data augmentation techniques with distributed training
 - **Secret Social Network Service**, 2023 - 
     - Member: Uichan Seo, Juyeong Shin
-    - Role: FE Developer (2023 - )
+    - Role: BE, FE Developer (2023 - )
+        - Develop Backend Server
         - Develop Android Application
         - Develop Web Frontend
 
