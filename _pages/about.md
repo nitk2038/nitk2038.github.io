@@ -139,11 +139,9 @@ author_profile: true
         - Development of graph data augmentation techniques with distributed training
 - **Secret Social Network Service**, 2023 - 
     - Member: Uichan Seo, Juyeong Shin
-    - Role: FE Developer (2023 - )
-        - Develop Android, iOS Application (Dart, Flutter)
-        - Develop Web Frontend
-
-- - -
+    - Role: BE, FE Developer (2023 - )
+        - Develop Backend Server
+        - Develop Android Application
 
 ### Toy Projects
 - **Life Balancing Application for Android**, 2023
@@ -155,7 +153,7 @@ author_profile: true
 - **IoT Doorlock with Elevator**, 2018
     - C, Arduino, Serial, SPI, RFID, BlueTooth
 
-- - -
+---
 
 ### Tiny Projects
 - **Git Clone All**, Aug. 2023
@@ -167,7 +165,7 @@ author_profile: true
 - **Vigilante Service Table**, Apr. 2021
     - C++, iostream, fstream, algorithm, vector
 
-- - -
+---
 
 ### Planned Projects
 - **My own Linux Server**, 2023
@@ -178,18 +176,18 @@ author_profile: true
         - Database Server Container
         - Storage Server Container
 
-- - -
+---
 
 ## Publications
 * Juyeong Shin, Young-Koo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 -- 1310
     * Implementation: [GraphSAINT-NRW-ERW-Subgraph-Sampling-Technique-using-Random-Walk-Reflecting-Node-Degree](https://github.com/meongju0o0/GraphSAINT-NRW-ERW-Subgraph-Sampling-Technique-using-Random-Walk-Reflecting-Node-Degree)
 
-- - -
+---
 
 * Kijin Kwon, Juyeong Shin, Young-Koo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618). Journal of Korea Computer Congress, Pages 1223 -- 1225
     * Implementation: [Efficient-Sampling-Techniques-for-Embedding-Large-Graphs](https://github.com/meongju0o0/Efficient-Sampling-Techniques-for-Embedding-Large-Graphs)
 
-- - -
+---
 
 ## Awards and Honors
 * Top Award in Undergraduate Paper Contest
