@@ -9,15 +9,15 @@ author_profile: true
 <html>
     <head>
         <style>
-            .container_ {
+            .intro {
                 display: flex;
                 flex-direction: column;
             }
-            .image-container_ {
+            .image-intro {
                 margin: 0 auto 20px auto;
                 text-align: center;
             }
-            .text-container_ {
+            .text-intro {
                 width: 100%;
             }
             h1.large_ {
@@ -51,16 +51,16 @@ author_profile: true
                 }
             }
             @media (min-width: 1125px) {
-                .container_ {
+                .intro {
                     flex-direction: row;
                 }
-                .image-container_ {
+                .image-intro {
                     width: 433px;
                     margin-left: 20px;
                     margin-right: 20px;
                     margin-bottom: 0px;
                 }
-                .text-container_ {
+                .text-intro {
                     width: calc(100% - 370px);
                 }
                 h1.large_ {
@@ -93,14 +93,14 @@ author_profile: true
             <h1 class = "small_" style="margin-top: 1em; margin-bottom: 0.3em">Juyeong Shin,<br>Bachelor Candidate</h1>
             <h1 class = "large_" style="margin-top: 1em; margin-bottom: 0.3em">Juyeong Shin, Bachelor Candidate</h1>
         </div>
-        <div class="container_">
-            <div class="image-container_">
+        <div class="intro">
+            <div class="image-intro">
                 <a href="../assets/images/hidden_image.jpg">
                     <img class="large" src="../assets/images/profile_image.jpg">
                     <img class="small" src="../assets/images/profile_image_small.jpg">
                 </a>
             </div>
-            <div class="text-container_">
+            <div class="text-intro">
                 <h2 style="margin-top: 0.5em">Motto and Passion</h2>
                 <p>Learning, Thinking, Solution, Practice</p>
                 <p>Thinking about the explanation with grounds</p>
