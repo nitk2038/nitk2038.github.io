@@ -168,18 +168,13 @@ author_profile: true
 
 ---
 
-### Planned Projects
-- **My own Linux Server**, 2023
-    - ASUS mini PC, HDD, DAS, Router, Ubuntu Desktop, Docker
-        - SSH Server Container (Ubuntu on Ubuntu for Linux Practice)
-        - NAS Server Container
-        - Hosting Server Container
-        - Database Server Container
-        - Storage Server Container
+## Publications
+* Juyeong Shin, Young-Koo Lee. (2022). [Distributed Data Augmentation Technique for Graph Neural Network](). Journal of Korea Software Congress, Pages 1308 -- 1310
+    * Scheduled to be published
+    * Implementation: [Distributed-Data-Augmentation-Technique-for-GNN]()
 
 ---
 
-## Publications
 * Juyeong Shin, Young-Koo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 -- 1310
     * Implementation: [GraphSAINT-NRW-ERW-Subgraph-Sampling-Technique-using-Random-Walk-Reflecting-Node-Degree](https://github.com/meongju0o0/GraphSAINT-NRW-ERW-Subgraph-Sampling-Technique-using-Random-Walk-Reflecting-Node-Degree)
 
@@ -212,3 +207,6 @@ ElasticSearch, Neo4j, Docker, K8s, Firebase
 
 ### Operating System
 Windows, MacOS, **Ubuntu**, CentOS
+
+### Development Tools
+nano shell, **Visual Studio Code**, Visual Studio, **PyCharm**, Anaconda
