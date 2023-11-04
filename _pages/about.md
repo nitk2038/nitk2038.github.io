@@ -169,9 +169,9 @@ author_profile: true
 ---
 
 ## Publications
-* Juyeong Shin, Young-Koo Lee. (2023). [Distributed Data Augmentation Technique for Graph Neural Network](). Journal of Korea Software Congress, Pages 1308 -- 1310
+* Juyeong Shin, Young-Koo Lee. (2023). [Distributed Data Augmentation Technique for Graph Neural Network](https://www.dbpia.co.kr). Journal of Korea Software Congress, Pages 1308 -- 1310
     * Scheduled to be published
-    * Implementation: [Distributed-Data-Augmentation-Technique-for-GNN]()
+    * Implementation: [Distributed-Data-Augmentation-Technique-for-GNN](https://github.com/meongju0o0/Distributed-Data-Augmentation-Technique-for-GNN)
 
 ---
 
