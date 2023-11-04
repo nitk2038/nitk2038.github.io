@@ -209,4 +209,4 @@ ElasticSearch, Neo4j, Docker, K8s, Firebase
 Windows, MacOS, **Ubuntu**, CentOS
 
 ### Development Tools
-nano editor, **Visual Studio Code**, Visual Studio, **PyCharm**, Anaconda
+nano editor, **Visual Studio Code**, Visual Studio, **PyCharm**, **Anaconda**
