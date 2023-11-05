@@ -125,7 +125,7 @@ author_profile: true
 * Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03 -- 2019.02
 
 ## Work Experience
-* 2022.04 -- : Data & Knowledge Engineering Labortory, Kyung Hee University, **Research Intern**
+* 2022.04 -- 2026.02: Data & Knowledge Engineering Labortory, Kyung Hee University, **Research Intern**
 * 2022.09 -- 2022.12: T.G.WinG Machine Learning Study, **Lecturer**
 * 2022.06 -- 2022.07: Samsung SDS Machine Learning Lecture, **Production of Practice Materials**
 
@@ -136,7 +136,6 @@ author_profile: true
     - Role: Undergraduate Research Student (2022 - 2024)
         - Investigate existing studies for large graph integration
         - Supports large graph learning engine design
-        - Development of graph data augmentation techniques with distributed training
 - **Secret Social Network Service**, 2023 - 
     - Member: Uichan Seo, Juyeong Shin
     - Role: BE, FE Developer (2023 - )
