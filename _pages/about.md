@@ -139,9 +139,9 @@ author_profile: true
 - **Secret Social Network Service**, 2023 - 
     - Member: Uichan Seo, Juyeong Shin
     - Role: BE, FE Developer (2023 - )
-        - Develop Backend Server
+        - Develop Backend Server (Node.js, Docker, K8s)
+        - Develop Web Application (React.js)
         - Develop Android, iOS Application (Dart, Flutter)
-        - Develop Web Frontend
 
 ### Toy Projects
 - **Life Balancing Application for Android**, 2023
