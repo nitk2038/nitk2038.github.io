@@ -211,11 +211,11 @@ Windows, MacOS, **Ubuntu**, CentOS
 GNU nano editor, **Visual Studio Code**, Visual Studio, **PyCharm**, **Anaconda**, **Git**
 
 ## Participations
-### Conferences
+### Conference
 * 2022 Korea Software Congress
 * 2023 Korea Software Congress
 
-### Volunteer Participations
+### Volunteer
 * 학습지도 및 행정업무 보조 (2017.08.10)
     * 새로배움터 지역아동센터
 * 학습지도 및 행정업무 보조 (2018.01.05)
