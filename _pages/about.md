@@ -210,7 +210,7 @@ Windows, MacOS, **Ubuntu**, CentOS
 ### Development Tools
 GNU nano editor, **Visual Studio Code**, Visual Studio, **PyCharm**, **Anaconda**, **Git**
 
-## Other Participations
+## Participations
 ### Conferences
 * 2022 Korea Software Congress
 * 2023 Korea Software Congress
