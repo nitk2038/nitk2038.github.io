@@ -152,6 +152,8 @@ author_profile: true
     - Ruby, HTML, CSS, JavaScript, Firebase, GitHub
 - **IoT Doorlock with Elevator**, 2018
     - C, Arduino, Serial, SPI, RFID, BlueTooth
+- **Gaussian Distribution Calculator**, May. 2017
+    - C, stdio, stdlib
 
 ---
 
