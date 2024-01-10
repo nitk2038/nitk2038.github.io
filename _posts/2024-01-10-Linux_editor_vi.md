@@ -96,6 +96,6 @@ vi {파일명}
     - y: 복사
     - c: 잘라내기
 
-#### 참고 문헌
-- https://blog.naver.com/PostView.nhn?blogId=ycpiglet&logNo=222367301056
-- https://wayhome25.github.io/etc/2017/03/27/vi/
+### 참고 문헌
+- [https://blog.naver.com/PostView.nhn?blogId=ycpiglet&logNo=222367301056]https://blog.naver.com/PostView.nhn?blogId=ycpiglet&logNo=222367301056
+- [https://wayhome25.github.io/etc/2017/03/27/vi/]https://wayhome25.github.io/etc/2017/03/27/vi/
