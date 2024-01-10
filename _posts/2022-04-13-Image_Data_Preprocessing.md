@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Data Preprocessing of Image"
+title:  "Image Data Preprocessing"
 categories: MachineLearning
 tag: [python, coding, MachineLearning, numpy, sklearn]
 toc: true

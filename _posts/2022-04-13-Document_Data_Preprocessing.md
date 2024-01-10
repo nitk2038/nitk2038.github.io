@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Data Preprocessing of Documents"
+title:  "Document Data Preprocessing"
 categories: MachineLearning
 tag: [python, coding, MachineLearning, numpy, sklearn]
 toc: true

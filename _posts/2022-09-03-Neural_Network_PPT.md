@@ -2,7 +2,7 @@
 layout: single
 title:  "Artificial Neural Network PPT"
 categories: MachineLearning
-tag: [python, coding, MachineLearning, numpy, matplotlib, keras, Deep_Learning, TensorFlow, PPT]
+tag: [python, coding, MachineLearning, numpy, matplotlib, keras, DeepLearning, TensorFlow, PPT]
 classes: wide
 ---
 

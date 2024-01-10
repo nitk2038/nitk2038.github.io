@@ -2,7 +2,7 @@
 layout: single
 title:  "GraphSAGE"
 categories: PaperReview
-tag: [Deep_Learning, PaperReview, python, GCN]
+tag: [DeepLearning, PaperReview, python, GCN]
 toc: true
 toc_sticky: true
 author_profile: true
