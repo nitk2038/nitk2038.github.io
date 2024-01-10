@@ -20,7 +20,7 @@ author_profile: true
 - vi에 몇가지 기능을 추가한 것이 vim
 - 리눅스 CLI에서 vi와 vim 사이의 차이는 없음
 - 다수의 리눅스 환경에서 기본적으로 설치되어 있는 에디터
-- 실행을 위해서는 아래와 같은 명령어로 접근하면 됨
+- 실행을 위해서는 아래 명령어로 접근
 
 ```bash
 vi {파일명}
@@ -97,5 +97,5 @@ vi {파일명}
     - c: 잘라내기
 
 ### 참고 문헌
-- [https://blog.naver.com/PostView.nhn?blogId=ycpiglet&logNo=222367301056]https://blog.naver.com/PostView.nhn?blogId=ycpiglet&logNo=222367301056
-- [https://wayhome25.github.io/etc/2017/03/27/vi/]https://wayhome25.github.io/etc/2017/03/27/vi/
+- [https://blog.naver.com/PostView.nhn?blogId=ycpiglet&logNo=222367301056](https://blog.naver.com/PostView.nhn?blogId=ycpiglet&logNo=222367301056)
+- [https://wayhome25.github.io/etc/2017/03/27/vi/](https://wayhome25.github.io/etc/2017/03/27/vi/)
