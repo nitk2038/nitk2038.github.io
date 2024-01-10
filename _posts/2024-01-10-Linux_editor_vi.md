@@ -23,7 +23,7 @@ author_profile: true
 - 실행을 위해서는 아래와 같은 명령어로 접근하면 됨
 
 ```bash
-vi {$파일명}
+vi {파일명}
 ```
 
 ![enter-vi](/images/2024-04-10-Linux_editor_vi/enter-vi.png)
@@ -34,9 +34,11 @@ vi {$파일명}
 - 입력 모드에서 명령 모드로는 ESC키로 전환
 
 - 명령 모드 화면
+
 ![cmd-mode](/images/2024-04-10-Linux_editor_vi/cmd-mode.png)
 
 - 입력 모드 화면
+
 ![insert-mode](/images/2024-04-10-Linux_editor_vi/insert-mode.png)
 
 - 입력 모드에서는 왼쪽 하단에 '-- INSERT--'라는 텍스트가 존재
@@ -81,6 +83,7 @@ vi {$파일명}
     - /+'찾고자 하는 텍스트'
 
 - 검색 화면
+
 ![searching](/images/2024-04-10-Linux_editor_vi/searching.png)
 
 - 편집 단축키 (명령 모드에서 사용)
