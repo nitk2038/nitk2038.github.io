@@ -2,7 +2,7 @@
 layout: single
 title:  "Convolutional Neural Network PPT"
 categories: DeepLearning
-tag: [python, coding, Machine_Learning, numpy, matplotlib, keras, DeepLearning, TensorFlow, PPT]
+tag: [python, coding, numpy, matplotlib, keras, DeepLearning, TensorFlow, PPT]
 classes: wide
 ---
 
