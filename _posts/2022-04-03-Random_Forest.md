@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Random Forest"
-categories: Machine_Learning
-tag: [blog, python, coding, Machine_Learning, numpy, sklearn]
+categories: MachineLearning
+tag: [python, coding, MachineLearning, numpy, sklearn]
 toc: true
 toc_sticky: true
 author_profile: true

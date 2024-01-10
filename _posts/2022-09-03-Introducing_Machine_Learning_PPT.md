@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Introducing Machine Learning PPT"
-categories: Machine_Learning
-tag: [blog, python, coding, Machine_Learning, PPT]
+categories: MachineLearning
+tag: [python, coding, MachineLearning, PPT]
 classes: wide
 ---
 

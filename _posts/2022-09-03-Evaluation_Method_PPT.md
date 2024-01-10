@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Evaluation Method PPT"
-categories: Machine_Learning
-tag: [blog, python, coding, Machine_Learning, numpy, PPT]
+categories: MachineLearning
+tag: [python, coding, MachineLearning, numpy, PPT]
 classes: wide
 ---
 

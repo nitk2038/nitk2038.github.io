@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Graph Convolutional Networks (GCN)"
-categories: paper_review
-tag: [Deep_Learning, python, GCN]
+categories: PaperReview
+tag: [DeepLearning, PaperReview, python, GCN]
 toc: true
 toc_sticky: true
 author_profile: true

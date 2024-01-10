@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Linux Text Editor (vi)"
-categories: linux
+categories: Linux
 tag: [Linux, GNU, Editor]
 toc: true
 toc_sticky: true
