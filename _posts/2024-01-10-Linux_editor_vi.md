@@ -8,7 +8,7 @@ toc_sticky: true
 author_profile: true
 ---
 
-# Linux text Editor (vi)
+# Linux Text Editor (vi)
 - 리눅스 CLI 환경에서 사용할 수 있는 에디터 종류
     - vi
     - vim
