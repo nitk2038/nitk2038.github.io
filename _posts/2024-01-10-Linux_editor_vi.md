@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Linux text Editor (vi)"
+title:  "Linux Text Editor (vi)"
 categories: linux
 tag: [Linux, GNU, Editor]
 toc: true
@@ -26,7 +26,7 @@ author_profile: true
 vi {파일명}
 ```
 
-![enter-vi](/images/2024-04-10-Linux_editor_vi/enter-vi.png)
+![enter-vi](/images/2024-04-10-Linux_Editor_vi/enter-vi.png)
 
 ### vi editor 사용 방법
 - 기본적으로 vi editor에는 입력 모드와 명령 모드가 존재
@@ -35,11 +35,11 @@ vi {파일명}
 
 - 명령 모드 화면
 
-![cmd-mode](/images/2024-04-10-Linux_editor_vi/cmd-mode.png)
+![cmd-mode](/images/2024-04-10-Linux_Editor_vi/cmd-mode.png)
 
 - 입력 모드 화면
 
-![insert-mode](/images/2024-04-10-Linux_editor_vi/insert-mode.png)
+![insert-mode](/images/2024-04-10-Linux_Editor_vi/insert-mode.png)
 
 - 입력 모드에서는 왼쪽 하단에 '-- INSERT--'라는 텍스트가 존재
 - 명령 모드에서 입력을 수행할 시에는 왼쪽 하단에 명령어 입력 가능
@@ -84,7 +84,7 @@ vi {파일명}
 
 - 검색 화면
 
-![searching](/images/2024-04-10-Linux_editor_vi/searching.png)
+![searching](/images/2024-04-10-Linux_Editor_vi/searching.png)
 
 - 편집 단축키 (명령 모드에서 사용)
     - dd: 현재 줄 잘라내기
