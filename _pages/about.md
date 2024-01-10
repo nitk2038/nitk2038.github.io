@@ -9,15 +9,15 @@ author_profile: true
 <html>
     <head>
         <style>
-            .container_ {
+            .intro {
                 display: flex;
                 flex-direction: column;
             }
-            .image-container_ {
+            .image-intro {
                 margin: 0 auto 20px auto;
                 text-align: center;
             }
-            .text-container_ {
+            .text-intro {
                 width: 100%;
             }
             h1.large_ {
@@ -51,16 +51,16 @@ author_profile: true
                 }
             }
             @media (min-width: 1125px) {
-                .container_ {
+                .intro {
                     flex-direction: row;
                 }
-                .image-container_ {
+                .image-intro {
                     width: 433px;
                     margin-left: 20px;
                     margin-right: 20px;
                     margin-bottom: 0px;
                 }
-                .text-container_ {
+                .text-intro {
                     width: calc(100% - 370px);
                 }
                 h1.large_ {
@@ -93,14 +93,14 @@ author_profile: true
             <h1 class = "small_" style="margin-top: 1em; margin-bottom: 0.3em">Juyeong Shin,<br>Bachelor Candidate</h1>
             <h1 class = "large_" style="margin-top: 1em; margin-bottom: 0.3em">Juyeong Shin, Bachelor Candidate</h1>
         </div>
-        <div class="container_">
-            <div class="image-container_">
+        <div class="intro">
+            <div class="image-intro">
                 <a href="../assets/images/hidden_image.jpg">
                     <img class="large" src="../assets/images/profile_image.jpg">
                     <img class="small" src="../assets/images/profile_image_small.jpg">
                 </a>
             </div>
-            <div class="text-container_">
+            <div class="text-intro">
                 <h2 style="margin-top: 0.5em">Motto and Passion</h2>
                 <p>Learning, Thinking, Solution, Practice</p>
                 <p>Thinking about the explanation with grounds</p>
@@ -121,28 +121,21 @@ author_profile: true
 
 ## Education
 * Department of Computer Science and Engineering, Kyung Hee University, Republic of Korea, Bachelor Candidate, 2019.03 -- 2026.02
-    - GPA: 3.7 / 4.3
+    - GPA: 3.6 / 4.3
 * Gumi High School Science Department, Republic of Korea, High School Diploma, 2016.03 -- 2019.02
 
 ## Work Experience
+* 2022.04 -- 2026.02: Data & Knowledge Engineering Labortory, Kyung Hee University, **Research Intern**
 * 2022.09 -- 2022.12: T.G.WinG Machine Learning Study, **Lecturer**
 * 2022.06 -- 2022.07: Samsung SDS Machine Learning Lecture, **Production of Practice Materials**
-* 2022.04 -- : Data & Knowledge Engineering Labortory, Kyung Hee University, **Undergraduate Research Student**
 
 ## Projects
 ### Main Projects
 - **Development of Graph DBMS Technology for Intelligent High Speed Processing of Large Graphs**, 2021 - 2024
     - Supervision: Institute of Information & Communications Technology Planning & Evaluation
-    - Role: Undergraduate Research Student (2022 - 2024)
+    - Role: Research Intern (2022 - 2024)
         - Investigate existing studies for large graph integration
         - Supports large graph learning engine design
-        - Development of graph data augmentation techniques with distributed training
-- **Secret Social Network Service**, 2023 - 
-    - Member: Uichan Seo, Juyeong Shin
-    - Role: BE, FE Developer (2023 - )
-        - Develop Backend Server
-        - Develop Android, iOS Application (Dart, Flutter)
-        - Develop Web Frontend
 
 ### Toy Projects
 - **Life Balancing Application for Android**, 2023
@@ -165,27 +158,23 @@ author_profile: true
     - Python, requests, bs4, html5lib
 - **Vigilante Service Table**, Apr. 2021
     - C++, iostream, fstream, algorithm, vector
-
----
-
-### Planned Projects
-- **My own Linux Server**, 2023
-    - ASUS mini PC, HDD, DAS, Router, Ubuntu Desktop, Docker
-        - SSH Server Container (Ubuntu on Ubuntu for Linux Practice)
-        - NAS Server Container
-        - Hosting Server Container
-        - Database Server Container
-        - Storage Server Container
+- **Gaussian Distribution Calculator**, May. 2017
+    - C, stdio, stdlib
 
 ---
 
 ## Publications
-* Juyeong Shin, Young-Koo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 -- 1310
-    * Implementation: [GraphSAINT-NRW-ERW-Subgraph-Sampling-Technique-using-Random-Walk-Reflecting-Node-Degree](https://github.com/meongju0o0/GraphSAINT-NRW-ERW-Subgraph-Sampling-Technique-using-Random-Walk-Reflecting-Node-Degree)
+* **Juyeong Shin**, Young-Koo Lee. (2023). [Distributed Data Augmentation Technique for Graph Neural Network](https://www.dbpia.co.kr). Journal of Korea Software Congress, Pages --
+    * Implementation: [DistMHAug](https://github.com/meongju0o0/DistMHAug)
 
 ---
 
-* Kijin Kwon, Juyeong Shin, Young-Koo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618). Journal of Korea Computer Congress, Pages 1223 -- 1225
+* **Juyeong Shin**, Young-Koo Lee. (2022). [GraphSAINT-NRW, ERW: Subgraph Sampling Techniques using Random Walk Reflecting Node Degree](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224420). Journal of Korea Software Congress, Pages 1308 -- 1310
+    * Implementation: [GraphSAINT-NRW-ERW](https://github.com/meongju0o0/GraphSAINT-NRW-ERW)
+
+---
+
+* Kijin Kwon, **Juyeong Shin**, Young-Koo Lee. (2022). [Efficient Sampling Techniques for Embedding Large Graphs](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113618). Journal of Korea Computer Congress, Pages 1223 -- 1225
     * Implementation: [Efficient-Sampling-Techniques-for-Embedding-Large-Graphs](https://github.com/meongju0o0/Efficient-Sampling-Techniques-for-Embedding-Large-Graphs)
 
 ---
@@ -202,13 +191,21 @@ author_profile: true
 
 ## Skills
 ### Programming Languages
-Batch, Bash, C, **C++**, JAVA, **Python**, HTML, CSS, JavaScript
+cmd, bash, C, **C++**, **Python**, Kotlin, JAVA, HTML, CSS, JavaScript
 
 ### Libraries
 numpy, scipy, matplotlib, seaborn, scikit-learn, **PyTorch**, **DGL**
 
 ### Frameworks
-ElasticSearch, Neo4j, Docker, K8s, Firebase
+Node.js, React.js, ElasticSearch, Neo4j, Docker, K8s, Firebase
 
 ### Operating System
 Windows, MacOS, **Ubuntu**, CentOS
+
+### Development Tools
+GNU nano editor, **Visual Studio Code**, Visual Studio, **PyCharm**, **Anaconda**, **Git**
+
+## Participations
+### Conference
+* 2023 Korea Software Congress
+* 2022 Korea Software Congress
