@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Quest for myself"
-categories: gossip
+categories: Gossip
 tag: [gossip]
 toc: true
 toc_sticky: true

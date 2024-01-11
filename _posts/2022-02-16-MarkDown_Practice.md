@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Markdown Practice!"
-categories: gossip
+categories: Gossip
 tag: [gossip]
 toc: true
 toc_sticky: true

@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "arduino Doorlock Elevator Project"
-categories: arduino
+categories: Arduino
 tag: [arduino, coding]
 toc: true
 toc_sticky: true
