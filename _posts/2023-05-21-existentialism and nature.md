@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Existentialism and Nature"
-categories: humanities
+categories: Humanities
 tag: [humanities, gossip]
 toc: true
 toc_sticky: true
