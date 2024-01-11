@@ -38,7 +38,7 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
+    num_posts            : 10
     colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
@@ -105,7 +105,7 @@ author:
   name             : "Juyeong Shin"
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : "KHU CSE 19<br>KHU DKE Lab. Researcher"
-  location         : "1732, Deogyeong-daero"
+  location         : "Republic of Korea"
   email            : #
   links:
     - label: "Email"
