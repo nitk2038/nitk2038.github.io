@@ -15,7 +15,7 @@ author_profile: true
     - nano
 
 ## nano text editor
-- GNU(**G**NU is **N**ot **U**nix) 재단에서 제작
+- GNU(**G**NU is **N**ot **U**nix)재단에서 제작
 - 원래 GNU OS 기본 텍스트 에디터로 사용
 - 후에 대다수 리눅스 배포판(Ubuntu, CentOS, RHEL, ...)에서도 기본 텍스트 에디터로 사용됨
 - 마찬가지로 Unix 배포판(MacOS)에서도 기본 에디터로 지원
@@ -50,8 +50,7 @@ nano {파일명}
 
 - 입력 단축키
     - **ctrl + k: 현재 커서의 전체 줄 삭제**
-    - **ctrl + w: 원하는 단어 찾기**
-    - ctrl + \: 원하는 단어 찾은 후 변경하고자 하는 단어로 변경
+    - ctrl + \: 원하는 단어 찾은 후 변경하고자 하는 단어로 변경 
     - ctrl + u: 직전에 삭제한 줄(ctrl + k로 삭제한 줄, 버퍼에 담김) 붙여넣기
 
 - 검색 단축키
