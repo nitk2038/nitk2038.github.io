@@ -2,7 +2,7 @@
 layout: single
 title:  "SVM Using Kernel PPT"
 categories: MachineLearning
-tag: [python, coding, machine_learning, numpy, sklearn, PPT]
+tag: [python, coding, machine_learning, numpy, sklearn, ppt]
 classes: wide
 ---
 

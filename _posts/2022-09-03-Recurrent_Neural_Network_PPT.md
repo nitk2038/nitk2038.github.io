@@ -2,7 +2,7 @@
 layout: single
 title:  "Recurrent Neural Network PPT"
 categories: DeepLearning
-tag: [python, coding, numpy, matplotlib, keras, deep_learning, tensorflow, PPT]
+tag: [python, coding, numpy, matplotlib, keras, deep_learning, tensorflow, ppt]
 classes: wide
 ---
 
