@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "IoT Doorlock Elevator Project"
-categories: IoT
-tag: [IoT, arduino, coding, C]
+title:  "arduino Doorlock Elevator Project"
+categories: arduino
+tag: [arduino, coding]
 toc: true
 toc_sticky: true
 author_profile: true
