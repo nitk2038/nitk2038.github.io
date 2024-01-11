@@ -2,7 +2,7 @@
 layout: single
 title:  "Converting Image Data PPT"
 categories: MachineLearning
-tag: [python, coding, MachineLearning, numpy, sklearn, PPT]
+tag: [python, coding, machine_learning, numpy, sklearn, PPT]
 classes: wide
 ---
 

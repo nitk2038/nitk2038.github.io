@@ -2,7 +2,7 @@
 layout: single
 title:  "Neural Network"
 categories: MachineLearning
-tag: [python, coding, MachineLearning, numpy, sklearn]
+tag: [python, coding, machine_learning, numpy, sklearn]
 toc: true
 toc_sticky: true
 author_profile: true

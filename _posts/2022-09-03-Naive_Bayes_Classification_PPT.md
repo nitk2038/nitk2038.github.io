@@ -2,7 +2,7 @@
 layout: single
 title:  "Naive Bayes Classification PPT"
 categories: MachineLearning
-tag: [python, coding, MachineLearning, numpy, sklearn, PPT]
+tag: [python, coding, machine_learning, numpy, sklearn, PPT]
 classes: wide
 ---
 

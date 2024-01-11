@@ -2,7 +2,7 @@
 layout: single
 title:  "Preparing Machine Learning PPT"
 categories: MachineLearning
-tag: [python, coding, MachineLearning, numpy, matplotlib, sklearn, PPT]
+tag: [python, coding, machine_learning, numpy, matplotlib, sklearn, PPT]
 classes: wide
 ---
 
