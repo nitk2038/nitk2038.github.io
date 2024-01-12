@@ -47,6 +47,9 @@
     form.wrapper-box {
       margin-top: 40px;
       background: #fff;
+      @media (max-width: 350px) {
+        padding: 5 0;
+      }
       input {
         margin-top: 20px;
         border: none;
@@ -91,9 +94,6 @@
         @media (max-width: 350px) {
           margin-top: 10px;
         }
-      }
-      @media (max-width: 350px) {
-        padding: 5 0;
       }
     }
 
