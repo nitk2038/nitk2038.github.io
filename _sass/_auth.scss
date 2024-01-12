@@ -10,20 +10,19 @@
   position: absolute;
 
   .login-content {
+    position: absolute;
+    transform: none;
     width: 70%;
     max-width: 420px;
-    padding: 5%;
-    height: auto;
+    padding: 4%;
+    right: 50%;
+    left: 50%;
     top: 50%;
     left: 50%;
-    transform: none;
+    height: auto;
     background: #fff;
     box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     border-top: 5px solid $gray;
-    position: absolute;
-    margin: 0 auto;
-    right: auto;
-    left: auto;
 
     &.login-content-signin.ng-hide:not(.ng-hide-animate) {
       transition-delay: 0s;
@@ -45,7 +44,7 @@
       text-align: left;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin: 0px;
+      margin: 0;
     }
 
     form.wrapper-box {
@@ -56,7 +55,7 @@
         border: none;
         border-bottom: 1px solid rgba(0,0,0,0.1);
         border-radius: 0;
-        padding-left: 0;
+        padding-left: 10px;
         box-shadow: none;
         transition: all 0.1s ease-out;
       }
