@@ -55,6 +55,9 @@
         padding-left: 10px;
         box-shadow: none;
         transition: all 0.1s ease-out;
+        @media (max-width: 350px) {
+          margin-top: 10px;
+        }
       }
 
       ::-webkit-input-placeholder { color: rgba(0,0,0,0.5); }
@@ -74,14 +77,23 @@
         font-weight: bold;
         letter-spacing: 0px;
         transition: all 0.1s ease-out;
+
         &:hover {
           color: $dark-gray;
           background: #fff;
           border: 2px solid $dark-gray;
         }
+
         &:active {
           box-shadow: none;
         }
+
+        @media (max-width: 350px) {
+          margin-top: 10px;
+        }
+      }
+      @media (max-width: 350px) {
+        padding: 5 0;
       }
     }
 
