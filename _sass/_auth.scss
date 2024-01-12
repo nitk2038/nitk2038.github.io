@@ -110,8 +110,6 @@
       position: relative;
       transform: translateY(-50%);
     }
-    &.login-content-signin { margin-left: -130px; }
-    &.login-content-signup { margin-left: 130px; }
 
     @media (max-width: 1024px) {
       margin-top: 0px;
