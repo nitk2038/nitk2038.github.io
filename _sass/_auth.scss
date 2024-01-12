@@ -7,7 +7,7 @@
   height: 100%;
   background: #fff;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 
   .login-content {
     position: absolute;
@@ -17,7 +17,7 @@
     padding: 4%;
     top: 50%;
     height: auto;
-    background: #fff;
+    background: #eee;
     box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     border-top: 5px solid $gray;
 
