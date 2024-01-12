@@ -25,7 +25,6 @@
       transition-delay: 0s;
       display: block!important;
       opacity: 0;
-      z-index: -1;
       transform: translate(-45%, -50%);
     }
 
@@ -33,7 +32,6 @@
       transition-delay: 0s;
       display: block!important;
       opacity: 0;
-      z-index: -1;
       transform: translate(-55%, -50%);
     }
 
@@ -135,11 +133,13 @@
     }
   
     @media (max-width: 480px) {
+      margin-top: 20px;
       margin-bottom: 5px;
       width: 90%;
     }
 
     @media (max-width: 350px) {
+      margin-top: 15px;
       margin-bottom: 5px;
       width: 95%;
     }

@@ -1,7 +1,7 @@
 @import "minimal-mistakes/variables";
 
 #todoApp {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .input-container {
@@ -16,22 +16,22 @@
 #todoInput,
 #addTodo {
   font-size: 22px;
-  height: 36px; /* 높이 조절 */
+  height: 36px;
   margin-bottom: 0;
 }
 
 #addTodo {
-  width: 125px; /* 가로 크기 조절 */
-  background-color: #666666; /* 버튼 배경색 */
+  width: 125px;
+  background-color: #666666;
   font: $global-font-family;
-  color: white; /* 글자색 */
-  border: none; /* 테두리 없앰 */
-  cursor: pointer; /* 마우스 올리면 포인터 모양 변경 */
+  color: white;
+  border: none;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 4px; /* 모서리 둥글게 */
-  transition-duration: 0.4s; /* 마우스 호버 시 애니메이션 */
+  border-radius: 4px;
+  transition-duration: 0.4s;
 }
 
 #todoList {
