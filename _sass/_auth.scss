@@ -20,7 +20,10 @@
     background: #fff;
     box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     border-top: 5px solid $gray;
-    position: initial;
+    position: absolute;
+    margin: 0 auto;
+    right: auto;
+    left: auto;
 
     &.login-content-signin.ng-hide:not(.ng-hide-animate) {
       transition-delay: 0s;
