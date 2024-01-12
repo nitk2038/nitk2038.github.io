@@ -24,14 +24,12 @@
     &.login-content-signin.ng-hide:not(.ng-hide-animate) {
       transition-delay: 0s;
       display: block!important;
-      opacity: 0;
       transform: translate(-45%, -50%);
     }
 
     &.login-content-signup.ng-hide:not(.ng-hide-animate) {
       transition-delay: 0s;
       display: block!important;
-      opacity: 0;
       transform: translate(-55%, -50%);
     }
 
