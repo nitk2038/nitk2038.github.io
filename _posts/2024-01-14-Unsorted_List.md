@@ -168,7 +168,6 @@ ItemType UnsortedType::GetNextItem() {
 ```cpp
 int main() {
     UnsortedType list;
-
     for (int i = 1; i <= 3; i++) {
         list.InsertItem(i * 10);
     }
@@ -211,3 +210,4 @@ int main() {
 #### 참고문헌
 - Nell Dale. (2016). "C++ Plus Data Structues Sizth Edition". Jones&Bartlett Learning.
 - [https://www.geeksforgeeks.org/arraylist-in-java/](https://www.geeksforgeeks.org/arraylist-in-java/)
+- OpenAI. (2024). ChatGPT(Jan 10, 2024) [GPT-4]. [https://chat.openai.com](https://chat.openai.com)
