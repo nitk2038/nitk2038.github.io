@@ -16,17 +16,24 @@
 
 ## Jekyll Serve
 ### Windows
-1. install ruby
+1. open cmd as administrator admission
+
+2. install ruby
 ```cmd
 choco install ruby --version 2.7.7.1
 ```
 
-2. gem package install
+3. install MSYS2 and MINGW
+```cmd
+ridk install 3
+```
+
+3. gem package install
 ```cmd
 bundle install
 ```
 
-3. start serving
+4. start serving
 ```cnd
 bundle exec jekyll serve
 ```
