@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Linux Text Editor (vi)"
-categories: Linux
-tag: [linux, gnu, editor]
+categories: DevelpmentTool
+tag: [linux, editor, tool, tip]
 toc: true
 toc_sticky: true
 author_profile: true
