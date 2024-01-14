@@ -31,5 +31,5 @@ bundle install
 bundle exec jekyll serve
 ```
 
-#### License
+### License
 © 2024 meongju0o0 uses MIT License. Powered by Jekyll & Minimal Mistakes.
