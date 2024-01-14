@@ -210,4 +210,5 @@ int main() {
 #### 참고문헌
 - Nell Dale. (2016). "C++ Plus Data Structues Sizth Edition". Jones&Bartlett Learning.
 - [https://www.geeksforgeeks.org/arraylist-in-java/](https://www.geeksforgeeks.org/arraylist-in-java/)
-- OpenAI. (2024). ChatGPT(Jan 10, 2024) [GPT-4]. [https://chat.openai.com](https://chat.openai.com)
+- OpenAI. (2024). ChatGPT(Jan 10, 2024). GPT-4. [https://chat.openai.com](https://chat.openai.com)
+- meongju0o0. (2024). "unsorted_list.cpp". [https://github.com/meongju0o0/blog-data-structure](https://github.com/meongju0o0/blog-data-structure)
