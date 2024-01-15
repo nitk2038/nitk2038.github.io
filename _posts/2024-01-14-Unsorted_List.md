@@ -35,9 +35,9 @@ author_profile: true
 ## Unsorted List(Array Based)
 - 리스트의 아이템들이 정렬된 상태로 배열됨
 - 아이템을 삽입하는 속도는 빠르나, 탐색 속도가 느림
-- 삽입 Big-O: O(1)
-- 삭제 Big-O: O(1)
-- 탐색 Big-O: O(N)
+    - 삽입 Big-O: O(1)
+    - 삭제 Big-O: O(1)
+    - 탐색 Big-O: O(N)
 
 ### UnsortedList Operators(Array Based)
 - Transformers
