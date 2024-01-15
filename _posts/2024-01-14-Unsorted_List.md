@@ -61,7 +61,7 @@ author_profile: true
         - C++ Standard: C++23
 
 > In most cases, MSVC in Visual Studio is also available<br />
-> However, you must use a C++17 or higher STL
+> However, you must use a C++17 or higher standard
 
 ### Preprocessing
 ```cpp

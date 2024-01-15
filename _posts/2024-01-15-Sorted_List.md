@@ -124,7 +124,7 @@ mid = low + (high - low) / 2
 
 > In most cases, MSVC in Visual Studio is also available<br />
 > GCC in UNIX and LINUX are always available<br />
-> However, you must use a C++17 or higher STL
+> However, you must use a C++17 or higher standard
 
 ### Preprocessing
 ```cpp
