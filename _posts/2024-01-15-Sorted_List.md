@@ -329,7 +329,7 @@ int main() {
 ```
 
 #### 참고문헌
-- Nell Dale. (2016). "C++ Plus Data Structues Sizth Edition". Jones&Bartlett Learning.
+- Nell Dale. (2016). "C++ Plus Data Structues Sixth Edition". Jones&Bartlett Learning.
 - GeeksforGeeks. (2024). "ArrayList in Java". [https://www.geeksforgeeks.org/arraylist-in-java/](https://www.geeksforgeeks.org/arraylist-in-java/).
 - yoongrammer. (2024). "이진 탐색(Binary Search) 개념 및 구현". [https://yoongrammer.tistory.com/75](https://yoongrammer.tistory.com/75).
 - OpenAI. (2024). ChatGPT(Jan 10, 2024). GPT-4. [https://chat.openai.com](https://chat.openai.com).
