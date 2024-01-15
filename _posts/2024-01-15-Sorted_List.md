@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "자료구조, Unsorted List"
+title:  "자료구조, Sorted List"
 categories: DataStructure
 tag: [data_structure, c++]
 toc: true
@@ -8,7 +8,7 @@ toc_sticky: true
 author_profile: true
 ---
 
-# 자료구조, Unsorted List
+# 자료구조, Sorted List
 
 ## List
 - Linear relationship
@@ -32,14 +32,76 @@ author_profile: true
     - 리스트의 모든 아이템을 원하는 상태로 변경
     - 리스트의 아이템에 순서대로 접근
 
-## Unsorted List(Array Based)
+## Sorted List(Array Based)
 - 리스트의 아이템들이 정렬된 상태로 배열됨
-- 아이템을 삽입하는 속도는 빠르나, 탐색 속도가 느림
-- 삽입 Big-O: O(1)
-- 삭제 Big-O: O(1)
-- 탐색 Big-O: O(N)
+- 아이템들이 정렬되어 있으면, 탐색이 빈번하게 발생하는 자료구조의 경우 용이하게 사용할 수 있음.
+    - 탐색 알고리즘: 이진 탐색(Binary Search)
+    - 삽입 Big-O: O(N)
+    - 삭제 Big-O: O(N)
+    - 탐색 Big-O: O(logN)
 
-### UnsortedList Operators(Array Based)
+### 이진 탐색(Binary Search)
+- 정렬된 리스트의 중간 값과 찾고자 하는 값을 비교하여 탐색
+
+#### Precondition
+- 정렬된 리스트
+
+#### 이진 탐색의 동작 방식
+1. 배열의 중간 값을 가져옴
+2. 중간 값과 검색 값을 비교
+    - 중간 값이 검색 값과 같으면 종료 (mid==key)
+    - 중간 값보다 검색 값이 크면 기준 배열의 오른쪽 구간을 탐색 (mid<key)
+    - 중간 값보다 검색 값이 작으면 기준 배열의 왼쪽 구간을 탐색 (mid>key)
+3. 값을 찾거나 간격이 비어있을 때까지 반복
+
+#### 검색 예
+
+- 배열의 가운데를 결정
+
+```cpp
+mid = low + (high - low) / 2
+```
+<div style="text-align: center">$$4=0+(9-0)/2$$</div>
+![step1](/images/2024-01-15-Sorted_List/step1.png)
+
+- 중앙 값과 검색 값을 비교
+    - A[4] < key 이므로 기존 구간의 오른쪽 구간이 탐색 범위
+
+```cpp
+low = mid + 1
+```
+<div style="text-align: center">$$5=4+1$$</div>
+![step2](/images/2024-01-15-Sorted_List/step2.png)
+
+- 중앙 값을 결정
+
+```cpp
+mid = low + (high - low) / 2
+```
+<div style="text-align: center">$$7=5+(9-5)/2$$</div>
+![step3](/images/2024-01-15-Sorted_List/step3.png)
+
+- 중앙 값과 검색 값을 비교
+    - A[7] < key 이므로 기존 구간의 왼쪽 구간이 탐색 범위
+
+```cpp
+high = mid - 1
+```
+<div style="text-align: center">$$6=7-1$$</div>
+![step4](/images/2024-01-15-Sorted_List/step4.png)
+
+- 중앙 값을 결정
+
+```cpp
+mid = low + (high - low) / 2
+```
+<div style="text-align: center">$$5=5+(6-5)/2$$</div>
+![step5](/images/2024-01-15-Sorted_List/step5.png)
+
+- 중앙 값과 검색 값을 비교
+    - A[5] = key 이므로 탐색을 종료
+
+### Sorted List Operators(Array Based)
 - Transformers
     - InsertItem
     - DeleteItem
@@ -70,7 +132,7 @@ using namespace std;
 
 #define MAX_ITEMS 50
 typedef int ItemType;
-class UnsortedType;
+class SortedType;
 ```
 > typedef를 사용하는 이유는 후에 리스트 아이템의 자료형을 쉽게 변경하기 위함
 
@@ -78,9 +140,9 @@ class UnsortedType;
 
 ### Class Definition
 ```cpp
-class UnsortedType {
+class SortedType {
 public:
-    UnsortedType();
+    SortedType();
     [[nodiscard]] bool IsFull() const; //리스트가 가득 차있는지 확인
     [[nodiscard]] int LengthIs() const; //리스트 길이 반환
     bool RetrieveItem(ItemType& item); //리스트에 파라미터로 준 아이템이 있는지 확인
@@ -96,7 +158,7 @@ private:
     int currentPos;
 };
 ```
-> Attribute에 대해서 알아보자
+> **Attribute에 대해서 알아보자**
 > - C++11 이후로 추가된 기능
 > - 함수 선언 시 attribute를 추가하여 컴파일러의 최적화에 도움을 줌
 > - [[nodiscard, noreturn]]과 같은 방식으로 사용
@@ -105,27 +167,48 @@ private:
 
 ### Class Constructor
 ```cpp
-UnsortedType::UnsortedType() {
+SortedType::SortedType() {
     length = 0;
     currentPos = 0;
-};
+}
 ```
 
 ### Class Transformer
 ```cpp
-void UnsortedType::InsertItem(ItemType item) {
-    info[length++] = item;
+void SortedType::InsertItem(ItemType item) {
+    //아이템을 삽입할 위치 찾기
+    int correctPos = 0;
+    for (int i = 0; i < length; i++) {
+        if (info[i] < item) {
+            correctPos = i-1;
+            break;
+        }
+    }
+    //해당 위치부터 있는 아이템들을 한 칸씩 뒤로 미루기
+    for (int i = length; i > correctPos; i--) {
+        info[i] = info[i-1];
+    }
+    //해당 위치에 넣고자 하는 아이템을 넣기
+    info[correctPos] = item;
+    length++; //길이를 1만큼 늘림
 }
 ```
 
 ```cpp
-void UnsortedType::DeleteItem(ItemType item) {
-    for (int i = 0; i < length; i++) { //list 길이 만큼 일치하는 아이템이 있는지 탐색
-        if (info[i] == item) { //일치하는 아이템이 있으면
-            info[i] = info[length-1]; //맨 마지막 요소를 해당 위치로 옮김
-            length--; //맨 마지막 요소를 지웠다 가정한 후 길이를 줄임
+void SortedType::DeleteItem(ItemType item) {
+    //아이템을 삭제할 위치 찾기
+    int correctPos = 0;
+    for (int i = 0; i < length; i++) {
+        if (info[i] == item) {
+            correctPos = i;
+            break;
         }
     }
+    //해당 위치에 아이템을 한 칸 씩 앞으로 당기기
+    for (int i = currentPos; i < length+1; i++) {
+        info[i] = info[i+1];
+    }
+    length--; //길이를 1만큼 줄임
 }
 ```
 
@@ -137,13 +220,18 @@ void UnsortedType::MakeEmpty() {
 
 ### Class Observer
 ```cpp
-bool UnsortedType::RetrieveItem(ItemType& item) {
-    for (int i = 0; i < length; i++) { //list 길이 만큼 일치하는 아이템이 있는지 탐색
-        if (info[i] == item) { //일치하는 아이템이 있으면
-            return true; //true 반환
+bool SortedType::RetrieveItem(ItemType& item) { //BinarySearch 구현
+    int midPoint; //탐색 범위 중심 인덱스
+    int first = 0; //탐색 범위 시작 인덱스
+    int last = length - 1; //탐색 범위 마지막 인덱스
+    bool found = false; //탐색 완료 시 참으로 변경
+    while ((first <= last) && !found) {
+        midPoint = (first + last) / 2; //탐색 범위 중심 계산
+        if (info[midPoint] == item) { //일치하는 아이템이 있으면
+            found = true; //found 참으로 변환
         }
     }
-    return false; //일치하는 아이템을 찾지 못하면 false 반환
+    return found;
 }
 ```
 
@@ -175,41 +263,38 @@ ItemType UnsortedType::GetNextItem() {
 ### Main Function
 ```cpp
 int main() {
-    UnsortedType list;
-    for (int i = 1; i <= 3; i++) {
-        list.InsertItem(i * 10);
-    }
+    SortedType list;
+
+    list.InsertItem(30);
+    list.InsertItem(10);
+    list.InsertItem(20);
+    list.InsertItem(70);
+    list.InsertItem(60);
 
     cout << "Length of list: " << list.LengthIs() << endl;
 
-    if (list.IsFull()) {
+    if (list.IsFull())
         cout << "The list is full." << endl;
-    }
-    else {
+    else
         cout << "The list is not full." << endl;
-    }
 
     int item = 20;
-    if (list.RetrieveItem(item)) {
+    if (list.RetrieveItem(item))
         cout << "Item " << item << " found in the list." << endl;
-    }
-    else {
+    else
         cout << "Item " << item << " not found in the list." << endl;
-    }
 
     list.DeleteItem(20);
     cout << "Item 20 deleted." << endl;
+
     cout << "Length of list after deletion: " << list.LengthIs() << endl;
 
     list.ResetList();
-    cout << "Items in the list: ";
+    cout << "Items in the list (sorted): ";
     for (int i = 0; i < list.LengthIs(); i++) {
         cout << list.GetNextItem() << " ";
     }
     cout << endl;
-
-    list.MakeEmpty();
-    cout << "Length of list: " << list.LengthIs() << endl;
 
     return EXIT_SUCCESS;
 }
@@ -219,4 +304,4 @@ int main() {
 - Nell Dale. (2016). "C++ Plus Data Structues Sizth Edition". Jones&Bartlett Learning.
 - GeeksforGeeks. (2024). "ArrayList in Java". [https://www.geeksforgeeks.org/arraylist-in-java/](https://www.geeksforgeeks.org/arraylist-in-java/)
 - OpenAI. (2024). ChatGPT(Jan 10, 2024). GPT-4. [https://chat.openai.com](https://chat.openai.com)
-- meongju0o0. (2024). "unsorted_list.cpp". [https://github.com/meongju0o0/meongju0o0-data-structure](https://github.com/meongju0o0/meongju0o0-data-structure)
+- meongju0o0. (2024). "sorted_list.cpp". [https://github.com/meongju0o0/meongju0o0-data-structure](https://github.com/meongju0o0/meongju0o0-data-structure)
