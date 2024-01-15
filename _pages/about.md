@@ -147,8 +147,6 @@ author_profile: true
 - **IoT Doorlock with Elevator**, 2018
     - C, Arduino, Serial, SPI, RFID, BlueTooth
 
----
-
 ### Tiny Projects
 - **Git Clone All**, Aug. 2023
     - batch, sh, jq, curl, git
@@ -160,8 +158,6 @@ author_profile: true
     - C++, iostream, fstream, algorithm, vector
 - **Gaussian Distribution Calculator**, May. 2017
     - C, stdio, stdlib
-
----
 
 ## Publications
 * **Juyeong Shin**, Young-Koo Lee. (2023). [Distributed Data Augmentation Technique for Graph Neural Network](https://www.dbpia.co.kr). Journal of Korea Software Congress, Pages --
