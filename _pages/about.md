@@ -197,7 +197,7 @@ author_profile: true
     - C, **C++**, JAVA, Kotlin
 - script language
     - **Python**, JavaScript
-- MarkUp Language
+- markup Language
     - HTML, CSS, SCSS
 
 ### Libraries
