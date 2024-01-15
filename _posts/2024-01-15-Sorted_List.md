@@ -123,11 +123,13 @@ mid = low + (high - low) / 2
         - C++ Standard: C++23
 
 > In most cases, MSVC in Visual Studio is also available<br />
+> GCC in UNIX and LINUX are always available<br />
 > However, you must use a C++17 or higher STL
 
 ### Preprocessing
 ```cpp
 #include <iostream>
+#include <climits>
 using namespace std;
 
 #define MAX_ITEMS 50
@@ -170,6 +172,9 @@ private:
 SortedType::SortedType() {
     length = 0;
     currentPos = 0;
+    for (int& i : info) {
+        i = INT_MIN;
+    }
 }
 ```
 
@@ -179,12 +184,14 @@ void SortedType::InsertItem(ItemType item) {
     //아이템을 삽입할 위치 찾기
     int correctPos = 0;
     for (int i = 0; i < length; i++) {
-        if (info[i] < item) {
-            correctPos = i-1;
+        if (info[i] <= item) {
+            correctPos++;
+        }
+        else {
             break;
         }
     }
-    //해당 위치부터 있는 아이템들을 한 칸씩 뒤로 미루기
+    //해당 위치 뒤부터 있는 아이템들을 한 칸씩 미루기
     for (int i = length; i > correctPos; i--) {
         info[i] = info[i-1];
     }
@@ -199,35 +206,47 @@ void SortedType::DeleteItem(ItemType item) {
     //아이템을 삭제할 위치 찾기
     int correctPos = 0;
     for (int i = 0; i < length; i++) {
-        if (info[i] == item) {
-            correctPos = i;
+        if (info[i] != item) {
+            correctPos++;
+        }
+        else {
             break;
         }
     }
     //해당 위치에 아이템을 한 칸 씩 앞으로 당기기
-    for (int i = currentPos; i < length+1; i++) {
+    for (int i = correctPos; i < length; i++) {
         info[i] = info[i+1];
     }
+    info[length - 1] = INT_MIN;
     length--; //길이를 1만큼 줄임
 }
 ```
 
 ```cpp
-void UnsortedType::MakeEmpty() {
-    length = 0; //length를 0으로 만들어 리스트가 빈 것 처럼 만듦
+void SortedType::MakeEmpty() {
+    for (int& i : info) {
+        i = INT_MIN;
+    }
+    length = 0;
 }
 ```
 
 ### Class Observer
 ```cpp
 bool SortedType::RetrieveItem(ItemType& item) { //BinarySearch 구현
-    int midPoint; //탐색 범위 중심 인덱스
     int first = 0; //탐색 범위 시작 인덱스
     int last = length - 1; //탐색 범위 마지막 인덱스
+    int midPoint = (first + last) / 2; //탐색 범위 중심 인덱스
     bool found = false; //탐색 완료 시 참으로 변경
     while ((first <= last) && !found) {
         midPoint = (first + last) / 2; //탐색 범위 중심 계산
-        if (info[midPoint] == item) { //일치하는 아이템이 있으면
+        if (item < info[midPoint]) {
+            last = midPoint - 1;
+        }
+        else if (item > info[midPoint]) {
+            first = midPoint + 1;
+        }
+        else if (info[midPoint] == item) { //일치하는 아이템이 있으면
             found = true; //found 참으로 변환
         }
     }
@@ -273,12 +292,20 @@ int main() {
 
     cout << "Length of list: " << list.LengthIs() << endl;
 
+    cout << "Items in the list (sorted): ";
+    list.ResetList();
+    for (int i = 0; i < list.LengthIs(); i++) {
+        cout << list.GetNextItem() << " ";
+    }
+    cout << endl;
+
     if (list.IsFull())
         cout << "The list is full." << endl;
     else
         cout << "The list is not full." << endl;
 
     int item = 20;
+    list.ResetList();
     if (list.RetrieveItem(item))
         cout << "Item " << item << " found in the list." << endl;
     else
@@ -286,11 +313,10 @@ int main() {
 
     list.DeleteItem(20);
     cout << "Item 20 deleted." << endl;
-
     cout << "Length of list after deletion: " << list.LengthIs() << endl;
 
-    list.ResetList();
     cout << "Items in the list (sorted): ";
+    list.ResetList();
     for (int i = 0; i < list.LengthIs(); i++) {
         cout << list.GetNextItem() << " ";
     }
