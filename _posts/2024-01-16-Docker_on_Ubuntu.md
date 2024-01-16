@@ -23,9 +23,10 @@ author_profile: true
 ![img](/images/2024-01-16-Docker_on_Ubuntu/apt-upgrade.png)
 
 **3. sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common**
+
 ![img](/images/2024-01-16-Docker_on_Ubuntu/apt-install-pre.png)
 
-**4. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -**
+**4. curl -fsSL https://download.docker.com/linux/ubuntu/gpg \| sudo apt-key add -**
 
 ![img](/images/2024-01-16-Docker_on_Ubuntu/apt-key-add.png)
 
