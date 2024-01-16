@@ -52,6 +52,48 @@ author_profile: true
 - 데비안 계열 리눅스 패키지 관리 매니저
 - 참고로 페도라 계열의 경우 yum, rpm을 사용
 
+### apt의 장점
+- 소프트웨어간 의존성 자동 해결
+- 시스템 패키지 자동 조작
+
+### apt install의 간략한 원리
+1. 레포지토리 탐색
+2. 찾은 패키지 설치
+
+- 이때, 기본 레포지토리에 없는 패키지의 경우 레포지토리 추가를 통해서 해결 가능
+
+### apt 명령어
+- 패키지 설치
+```bash
+sudo apt-get install 패키지_이름
+```
+
+- 패키지 제거
+```bash
+sudo apt-get remove 패키지_이름
+```
+
+- 패키지 검색
+```bash
+apt-cache search 패키지_이름
+```
+
+- 레포지토리 추가
+```bash
+sudo apt-get add-apt-repository "레포지토리 링크"
+```
+
+- 패키지 목록 갱신
+```bash
+sudo apt-get update
+```
+
+- 설치된 패키지 업데이트
+```bash
+sudo apt-get upgrade
+```
+
 ### 참고문헌
 - Haengsin. (2024). "Ubuntu에 Docker 설치" [https://haengsin.tistory.com/128](https://haengsin.tistory.com/128)
 - Wikipedia. (2024). "APT (software)" [https://en.wikipedia.org/wiki/APT_(software)](https://en.wikipedia.org/wiki/APT_(software))
+- e라이더. (2024). "리눅스 데비안 패키지 매니저 apt 사용법 (apt_get, apt_cache, apt_file)" [https://erider.co.kr/137/](https://erider.co.kr/137/)
