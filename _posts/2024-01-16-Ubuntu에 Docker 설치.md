@@ -4,36 +4,21 @@
 <p>그냥 생각보다 과정이 복잡했고, 본 게시물을 통해 데비안 패키지 매니저에 대해 좀 더 알게 될 기회라 생각해 작성하게 되었다.</p>
 
 ## Ubuntu에 Docker 설치 무작정 따라하기
-1. **sudo apt-get update**
-
+**1.sudo apt-get update**
 ![img](/images/2024-01-16-Ubuntu에%20Docker%20설치/apt-update.png)
-
-2. **sudo apt-get upgrade**
-
+**2.sudo apt-get upgrade**
 ![img](/images/2024-01-16-Ubuntu에%20Docker%20설치/apt-upgrade.png)
-
-3. **sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common**
-
+**3.sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common**
 ![img](/images/2024-01-16-Ubuntu에%20Docker%20설치/apt-install-pre.png)
-
-4. **curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -**
-
+**4.curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -**
 ![img](/images/2024-01-16-Ubuntu에%20Docker%20설치/apt-key-add.png)
-
-5. **sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"**
-
+**5.sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"**
 ![img](/images/2024-01-16-Ubuntu에%20Docker%20설치/apt-add-repo.png)
-
-6. **sudo apt-get install docker-ce docker-ce-cli containerd.io**
-
+**6.sudo apt-get install docker-ce docker-ce-cli containerd.io**
 ![img](/images/2024-01-16-Ubuntu에%20Docker%20설치/apt-install-docker.png)
-
-7. **sudo systemctl status docker**
-
+**7.sudo systemctl status docker**
 ![img](/images/2024-01-16-Ubuntu에%20Docker%20설치/systemctl-status-docker.png)
-
-8. **sudo docker run hello-world**
-
+**8.sudo docker run hello-world**
 ![img](/images/2024-01-16-Ubuntu에%20Docker%20설치/docker-run.png)
 
 ## debian apt에 대해서
