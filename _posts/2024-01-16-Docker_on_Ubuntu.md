@@ -34,6 +34,10 @@ author_profile: true
 
 ![img](/images/2024-01-16-Docker_on_Ubuntu/apt-add-repo.png)
 
+**6. sudo apt-get update**
+
+![img](/images/2024-01-16-Docker_on_Ubuntu/apt-update-2.png)
+
 **6. sudo apt-get install docker-ce docker-ce-cli containerd.io**
 
 ![img](/images/2024-01-16-Docker_on_Ubuntu/apt-install-docker.png)
