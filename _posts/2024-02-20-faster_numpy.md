@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "numpy 10배 더 빠르게 쓰기!"
-categories: Gossip
-tag: [gossip]
+categories: ComputerArchitecture
+tag: [computer_architecture, python]
 toc: true
 toc_sticky: true
 author_profile: true
