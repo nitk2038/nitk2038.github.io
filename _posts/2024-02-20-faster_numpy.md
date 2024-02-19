@@ -9,7 +9,7 @@ author_profile: true
 ---
 
 # numpy가 빠른 이유
-## 부제: numpy 10베 더 빠르게 쓰기
+## 부제: numpy 10배 더 빠르게 쓰기
 
 ### SIMD
 - Single Instruction Multi Data
