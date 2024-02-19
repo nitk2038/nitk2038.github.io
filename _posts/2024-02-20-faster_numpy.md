@@ -29,7 +29,7 @@ SIMD가 그래서 뭔지 더 구체적으로 알려줘..
 그 전에, 어떻게 구현할 것인가?
 ```cpp
 for (int i = 0; i < 4; i++) {
-Array[i] = array[i]*3;
+    array[i] = array[i]*3;
 }
 ```
 
