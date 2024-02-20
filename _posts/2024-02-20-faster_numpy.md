@@ -14,6 +14,7 @@ author_profile: true
 ### SIMD
 - Single Instruction Multi Data
 - 한번의 CPU 명령어로 두개 이상의 데이터를 처리
+![img](https://mblogthumb-phinf.pstatic.net/MjAxOTA5MTdfMjc2/MDAxNTY4NzA2NzQ3NTky.Tp-Mq1HkScFBcrQ5maojJAEVrnqyT6lwAbg40lGLGe4g.AUwXx1sBEkV4F7EBM42ZaSnzo0RhzG6HSwDj2cW8QCgg.PNG.fs0608/FasooTechBlog_SIMD1.png?type=w800)
 
 ### SIMD 아직은 안 알랴줌
 SIMD가 그래서 뭔지 더 구체적으로 알려줘..
@@ -52,6 +53,7 @@ ALU(Arithmetic Logic Unit, 진짜로 계산하는 애)가 3을 곱해줄거고
 그리고 CPU에는 SIMD 연산을 위한 특수레지스터가 존재한다.
 전통적으로 CPU 레지스터의 크기는 32비트이지만, SIMD를 위한 레지스터는 512비트 까지도 있다.
 대표적으로 인텔의 AVX512나 ARM의 NEON이 있다.
+
 #### 그래서 그게 뭐 어떻다는거야?
 8비트 integer를 선언했다고 해보자. AVX512에 총 64개의 데이터를 동시에 저장할 수 있는 것이다. 즉, 64개의 데이터를 레지스터에 동시에 올릴 수 있다는 것이다.
 
@@ -70,7 +72,7 @@ C/C++ 코딩할 때, SIMD 연산을 위한 명령어를 따로 공부해야 할�
 
 #### Python
 ##### 파이선 코딩할 때는?
-interpreter 언어다 보니.. 자동으로 최적화 해주기도 힘든 부분이 존재한다. 하지만! 방법은 존재한다! numpy array를 사용하면 된다!
+interpreter 언어다 보니.. 자동으로 최적화 해주기도 힘든 부분이 존재한다. 하지만 방법은 존재한다! numpy array를 사용하면 된다!
 numpy는 경우에 따라, CAPI를 통해 C++을 아주 적극적으로 활용하는 라이브러리다. SIMD도 당연 지원한다!
 
 ##### 조금 더 빠르게 쓰고 싶으면?
@@ -122,3 +124,8 @@ python list 연산 시간:  0.6139662265777588
 ### 마지막으로 붙이는 사족
 다만, 병렬로 데이터를 처리하기에 아주 적합한 환경에서 위 결과가 나오기는 했다. 
 논리적 순서가 필요한 연산이나 컴파일러나 numpy가 auto-vectorization하기 어려운 상황에서는 시스템 기본 int 자료형이 더 적합할 것이다.
+
+### 참고문헌
+- Teus. (2022.02.10). "[Python] Numpy가 빠른 이유-1편 (하드웨어 관점에서, SIMD)". [https://devocean.sk.com/blog/techBoardDetail.do?ID=163631](https://devocean.sk.com/blog/techBoardDetail.do?ID=163631).
+- Fasoo. (2019.09.17). "SIMD (Single Instruction Multiple Data)에 대한 집중탐구!". [https://m.blog.naver.com/fs0608/221650925743](https://m.blog.naver.com/fs0608/221650925743).
+- OpenAI. (2024). ChatGPT(Jan 10, 2024). GPT-4. [https://chat.openai.com](https://chat.openai.com).
