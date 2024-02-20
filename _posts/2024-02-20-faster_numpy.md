@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "numpy 10배 더 빠르게 쓰기!"
+title:  "numpy 10배 더 빠르게 쓰기"
 categories: ComputerArchitecture
 tag: [computer_architecture, python]
 toc: true
