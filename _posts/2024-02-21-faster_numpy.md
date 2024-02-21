@@ -18,4 +18,4 @@ numpy 이야기를 하기 전에, 파이선 이야기를 먼저 하고자 한다
 
 python list는 array가 아니다. 겉으로 생긴 것은 C++, JAVA, C# 배열과 비슷하지만, 작동 원리는 다르다.
 
-# C++ array
+## C++ array
