@@ -70,4 +70,4 @@ Python list의 ob_item은 **spatial locality**를 충족시킨다. 하지만, �
 - 박상원 깃헙블로그. "[Python] 리스트에서 메모리 할당에 대한 생각". [https://eprj453.github.io/python/2020/12/05/Python-리스트에서-메모리-할당에-대한-생각/](https://eprj453.github.io/python/2020/12/05/Python-리스트에서-메모리-할당에-대한-생각/).
 - 항상 초심으로. "Cache Friendly Code 기법". [https://gogorchg.tistory.com/entry/Cache-Friendly-Code-기법](https://gogorchg.tistory.com/entry/Cache-Friendly-Code-기법).
 - python. "cpython". [https://github.com/python/cpython](https://github.com/python/cpython).
-- OpenAI. (2024). ChatGPT(Jan 10, 2024). GPT-4. https://chat.openai.com.
+- OpenAI. (2024). ChatGPT(Jan 10, 2024). GPT-4. [https://chat.openai.com](https://chat.openai.com).
