@@ -86,6 +86,7 @@ import time
 if __name__ == '__main__':
     py_list = [random.randrange(1, 60) for _ in range(33554432)]
     np8_arr = np.random.randint(1, 60, size=33554432, dtype=np.int8)
+    np16_arr = np.random.randint(1, 60, size=33554432, dtype=np.int16)
     np32_arr = np.random.randint(1, 60, size=33554432, dtype=np.int32)
     np64_arr = np.random.randint(1, 60, size=33554432, dtype=np.int64)
 
@@ -93,6 +94,11 @@ if __name__ == '__main__':
     np8_arr * 3
     end_time = time.time()
     print("numpy, int8 연산 시간: ", end_time - start_time)
+
+    start_time = time.time()
+    np16_arr * 3
+    end_time = time.time()
+    print("numpy, int16 연산 시간: ", end_time - start_time)
 
     start_time = time.time()
     np32_arr * 3
@@ -113,10 +119,11 @@ if __name__ == '__main__':
 
 ### 실험 결과
 ```
-numpy, int8 연산 시간:  0.004251003265380859
-numpy, int32 연산 시간:  0.018476009368896484
-numpy, int64 연산 시간:  0.05152416229248047
-python list 연산 시간:  0.6139662265777588
+numpy, int8 연산 시간:  0.004483938217163086
+numpy, int16 연산 시간: 0.008640050888061523
+numpy, int32 연산 시간: 0.017509937286376953
+numpy, int64 연산 시간: 0.053878068923950195
+python list 연산 시간:  0.5993926525115967
 ```
 
 ### 마지막으로 붙이는 사족
