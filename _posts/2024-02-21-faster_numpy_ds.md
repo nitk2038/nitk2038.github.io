@@ -24,7 +24,7 @@ python list는 array가 아니다. 겉으로 생긴 것은 C++, JAVA, C# 배열�
 ```
 int arr[4] = {1, 2, 3, 4}
 ```
-위와 같은 배열이 있다고 하면 위 배열은 4byte만큼의 메모리를 연속적으로 저장한다. 변수 arr은 해당 배열의 시작 주소를 가지고 있고 index를 통해 $start_addr+4*index$원하는 배열의 원소에 접근할 수 있다.
+위와 같은 배열이 있다고 하면 위 배열은 4byte만큼의 메모리를 연속적으로 저장한다. 변수 arr은 해당 배열의 시작 주소를 가지고 있고 index를 통해 $start addr + 4 * index$원하는 배열의 원소에 접근할 수 있다.
 ![array](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BakZvzVaB1CYRX7xAqRY5w.png)
 
 ### python list
