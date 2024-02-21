@@ -188,22 +188,7 @@ author_profile: true
 * Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / Web Application Service
 
 ## Skills
-### Programming Languages
-cmd, bash, C, **C++**, **Python**, Kotlin, JAVA, JavaScript, HTML, CSS, SCSS
-
-### Libraries
-numpy, scipy, matplotlib, seaborn, scikit-learn, **PyTorch**, **DGL**
-
-### Frameworks
-React.js, ElasticSearch, Neo4j, Docker, K8s, Firebase
-
-### Operating System
-Windows, MacOS, **Ubuntu**, CentOS
-
-### Development Tools
-GNU nano editor, **Visual Studio Code**, Visual Studio, **PyCharm**, **Anaconda**, **Git**
-
-## Participations
-### Conference
-* 2023 Korea Software Congress
-* 2022 Korea Software Congress
+### Frequently used Language
+- Python, C++
+### Frequently used Libraries
+- PyTorch, DGL
