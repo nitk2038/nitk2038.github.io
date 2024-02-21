@@ -25,11 +25,10 @@ python list는 array가 아니다. 겉으로 생긴 것은 C++, JAVA, C# 배열�
 int arr[4] = {1, 2, 3, 4}
 ```
 위와 같은 배열이 있다고 하면 위 배열은 4byte만큼의 메모리를 연속적으로 저장한다. 변수 arr은 해당 배열의 시작 주소를 가지고 있고 index를 통해 $start addr + 4 * index$원하는 배열의 원소에 접근할 수 있다.
-![array](/images/2024-02-21-faster_numpy_ds/np_list.png)
 
 ### python list
 파이선 리스트의 저장 구조는 C++과 다르다. 파이선 리스트 object에는 ob_item이라는 이중 포인터가 있고, ob_item은 리스트 원소들의 주소 값을 저장한 C언어의 배열을 가르킨다. 그 배열은 배열 원소들의 주소를 저장하고 있으며 ob_item에 저장된 포인터를 통해 실제 원소 값에 접근한다.
-![list](/images/2024-02-21-faster_numpy_ds/py_list.png)
+![list](/images/2024-02-21-faster_numpy_ds/list_array.png)
 
 ### 그래서 그거랑 성능이랑 무슨 연관이 있는 것인데?
 C++ array를 보자. 규칙이 있다. 그것도 아주 간단한 규칙. 배열의 원소가 저장되어있는 메모리의 주소값이 정확히 4씩 증가한다.
@@ -42,7 +41,7 @@ python list는 그에 반해 규칙이 없다. ob_item이 저장하고 있는 �
 이제 주제를 살짝 넘겨서, 컴퓨터구조 이야기를 시작해보자.
 
 컴퓨터 메모리는 계층적으로 이루어져 있다. CPU(ALU)의 연산 속도에 비해 메모리는 턱없이 느리기 때문에 이를 그나마 완화하고자 가장 느리지만 용량이 큰 메모리, 그리고 상위 계층으로 갈수록 빠르지만 용량이 작은 메모리로 구성이 된다. 그림으로 표현하면 아래와 같다.
-![list](/images/2024-02-21-faster_numpy_ds/memory_hierarchy.png)
+![memory](/images/2024-02-21-faster_numpy_ds/memory_hierarchy.png)
 
 SSD가 제아무리 빨라봐야 RAM 보다는 느리고 RAM이 제아무리 빨라봐야 캐시 메모리(Cache Memory)보다 느리다. 반대로, 캐시 메모리는 제아무리 커봐야 램보다는 너무 작다.
 
