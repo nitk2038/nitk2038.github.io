@@ -192,3 +192,8 @@ author_profile: true
 - Python, C++
 ### Frequently used Libraries
 - PyTorch, DGL
+
+## Participations
+### Conference
+* 2023 Korea Software Congress
+* 2022 Korea Software Congress
