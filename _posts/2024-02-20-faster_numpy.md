@@ -78,6 +78,13 @@ numpy는 경우에 따라, CAPI를 통해 C++을 아주 적극적으로 활용�
 
 ### 실험 코드
 ```python
+"""
+    Environment
+---------------
+  Python 3.11.5
+   Clang 14.0.6
+   numpy 1.24.3
+"""
 import random
 import numpy as np
 import time
