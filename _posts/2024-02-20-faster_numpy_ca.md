@@ -140,4 +140,6 @@ python list 연산 시간:  0.5993926525115967
 ### 참고문헌
 - Teus. (2022.02.10). "[Python] Numpy가 빠른 이유-1편 (하드웨어 관점에서, SIMD)". [https://devocean.sk.com/blog/techBoardDetail.do?ID=163631](https://devocean.sk.com/blog/techBoardDetail.do?ID=163631).
 - Fasoo. (2019.09.17). "SIMD (Single Instruction Multiple Data)에 대한 집중탐구!". [https://m.blog.naver.com/fs0608/221650925743](https://m.blog.naver.com/fs0608/221650925743).
+- Intel. "인텔® Advanced Vector Extensions 512(인텔® AVX-512)를 통해 까다로운 워크로드를 위한 성능과 ROI를 극대화하십시오". [https://www.intel.co.kr/content/www/kr/ko/products/docs/accelerator-engines/what-is-intel-avx-512.html](https://www.intel.co.kr/content/www/kr/ko/products/docs/accelerator-engines/what-is-intel-avx-512.html).
+- Numpy. "CPU/SIMD Optimizations" [https://numpy.org/doc/stable/reference/simd/index.html](https://numpy.org/doc/stable/reference/simd/index.html).
 - OpenAI. (2024). ChatGPT(Jan 10, 2024). GPT-4. [https://chat.openai.com](https://chat.openai.com).
