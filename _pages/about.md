@@ -187,12 +187,6 @@ author_profile: true
 ## Study Interests
 * Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / Web Application Service
 
-## Skills
-### Frequently used Language
-- Python, C++
-### Frequently used Libraries
-- PyTorch, DGL
-
 ## Participations
 ### Conference
 * 2023 Korea Software Congress
