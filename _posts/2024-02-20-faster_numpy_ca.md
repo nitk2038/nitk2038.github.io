@@ -92,11 +92,11 @@ import numpy as np
 import time
 
 if __name__ == '__main__':
-    py_list = [random.randrange(1, 60) for _ in range(33554432)]
-    np8_arr = np.random.randint(1, 60, size=33554432, dtype=np.int8)
-    np16_arr = np.random.randint(1, 60, size=33554432, dtype=np.int16)
-    np32_arr = np.random.randint(1, 60, size=33554432, dtype=np.int32)
-    np64_arr = np.random.randint(1, 60, size=33554432, dtype=np.int64)
+    py_list = [random.randrange(1, 40) for _ in range(33554432)]
+    np8_arr = np.random.randint(1, 40, size=33554432, dtype=np.int8)
+    np16_arr = np.random.randint(1, 40, size=33554432, dtype=np.int16)
+    np32_arr = np.random.randint(1, 40, size=33554432, dtype=np.int32)
+    np64_arr = np.random.randint(1, 40, size=33554432, dtype=np.int64)
 
     start_time = time.time()
     np8_arr * 3
