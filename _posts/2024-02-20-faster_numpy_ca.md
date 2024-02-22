@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "numpy가 더 빠른 이유-컴퓨터구조 관점에서"
+title:  "numpy가 더 빠른 이유-레지스터 입장에서"
 categories: ComputerArchitecture
 tag: [computer_architecture, python]
 toc: true
