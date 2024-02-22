@@ -71,11 +71,11 @@ Python list의 ob_item은 **spatial locality**를 충족시킨다. 하지만, �
 #### Python
 ```python
 """
-        Environment
--------------------
-      Python 3.11.5
-       Clang 14.0.6
-       numpy 1.24.3
+    Environment
+---------------
+  Python 3.11.5
+   Clang 14.0.6
+   numpy 1.24.3
 """
 import ctypes
 import random
@@ -100,6 +100,12 @@ if __name__ == '__main__':
 
 #### C++
 ```cpp
+/*
+     Environment
+----------------
+    Clang 14.0.6
+       STD C++23
+*/
 #include <iostream>
 using namespace std;
 
