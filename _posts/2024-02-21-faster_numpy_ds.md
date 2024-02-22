@@ -101,10 +101,10 @@ if __name__ == '__main__':
 #### C++
 ```cpp
 /*
-     Environment
-----------------
-    Clang 14.0.6
-       STD C++23
+    Environment
+---------------
+   Clang 14.0.6
+      STD C++23
 */
 #include <iostream>
 using namespace std;
