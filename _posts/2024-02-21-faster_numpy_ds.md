@@ -73,8 +73,6 @@ Python list의 ob_item은 **spatial locality**를 충족시킨다. 하지만, �
 """
         Environment
 -------------------
-           Apple M2
-macOS Sonoma 14.3.1
       Python 3.11.5
        Clang 14.0.6
        numpy 1.24.3
