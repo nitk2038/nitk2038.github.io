@@ -77,7 +77,6 @@ Python list의 ob_item은 **spatial locality**를 충족시킨다. 하지만, �
        Clang 14.0.6
        numpy 1.24.3
 """
-
 import ctypes
 import random
 import numpy as np
