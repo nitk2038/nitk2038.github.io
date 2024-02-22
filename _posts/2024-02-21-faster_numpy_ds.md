@@ -77,6 +77,7 @@ Python list의 ob_item은 **spatial locality**를 충족시킨다. 하지만, �
        Clang 14.0.6
        numpy 1.24.3
 """
+
 import ctypes
 import random
 import numpy as np
@@ -86,15 +87,15 @@ if __name__ == '__main__':
     lib.print_arr_addr.argtypes = [ctypes.c_void_p, ctypes.c_int]
     lib.print_arr_addr.restype = None
 
-    py_list = [random.randrange(1, 100) for _ in range(10)]
-    np_list = np.random.randint(1, 100, size=10, dtype=np.int32)
+    py_list = [random.randrange(1, 100) for _ in range(5)]
+    np_list = np.array(py_list, dtype=np.int32)
 
-    print("----py_list----")
+    print("-------------py_list-------------")
     for item in py_list:
         print("address: {:}".format(hex(id(item))), end=',\t')
         print("value: {:}".format(item))
 
-    print("----np_list----")
+    print("-------------np_list-------------")
     lib.print_arr_addr(ctypes.c_void_p(np_list.ctypes.data), ctypes.c_int(len(np_list)))
 ```
 
@@ -118,28 +119,18 @@ extern "C" {
 #### Result
 ```
 -------------py_list-------------
-address: 0x104802bb8,   value: 56
-address: 0x104802df8,   value: 74
-address: 0x104803058,   value: 93
-address: 0x104802a58,   value: 45
-address: 0x1048027d8,   value: 25
-address: 0x104802ed8,   value: 81
-address: 0x1048030b8,   value: 96
-address: 0x104803078,   value: 94
-address: 0x104802b58,   value: 53
-address: 0x104803058,   value: 93
+address: 0x10508a558,   value: 5
+address: 0x10508b078,   value: 94
+address: 0x10508ae38,   value: 76
+address: 0x10508a758,   value: 21
+address: 0x10508ae38,   value: 76
 -------------np_list-------------
-Array data at address: 0x1246109a0
-address: 0x1246109a0,   value: 43
-address: 0x1246109a4,   value: 22
-address: 0x1246109a8,   value: 15
-address: 0x1246109ac,   value: 65
-address: 0x1246109b0,   value: 22
-address: 0x1246109b4,   value: 26
-address: 0x1246109b8,   value: 9
-address: 0x1246109bc,   value: 60
-address: 0x1246109c0,   value: 23
-address: 0x1246109c4,   value: 17
+Array data at address: 0x116e1aed0
+address: 0x116e1aed0,   value: 5
+address: 0x116e1aed4,   value: 94
+address: 0x116e1aed8,   value: 76
+address: 0x116e1aedc,   value: 21
+address: 0x116e1aee0,   value: 76
 ```
 
 ### 참고문헌
