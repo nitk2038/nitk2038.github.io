@@ -83,7 +83,6 @@ import ctypes
 import random
 import numpy as np
 
-
 if __name__ == '__main__':
     lib = ctypes.CDLL('./arr_addr.so')
     lib.print_arr_addr.argtypes = [ctypes.c_void_p, ctypes.c_int]

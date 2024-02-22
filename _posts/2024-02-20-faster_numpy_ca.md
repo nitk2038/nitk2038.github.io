@@ -91,7 +91,6 @@ import random
 import numpy as np
 import time
 
-
 if __name__ == '__main__':
     py_list = [random.randrange(1, 60) for _ in range(33554432)]
     np8_arr = np.random.randint(1, 60, size=33554432, dtype=np.int8)
