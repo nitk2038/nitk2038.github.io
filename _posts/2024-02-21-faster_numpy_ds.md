@@ -67,6 +67,84 @@ Python list의 ob_item은 **spatial locality**를 충족시킨다. 하지만, �
 
 너무 바쁜 파이선이라는 부제를 지은 이유도 그 때문이다. PyListObject에서 ob_item에 접근하고 그 포인터를 이용해 최종 목적지에 도달하니, 그 최종 목적지마저도 위치가 다들 제각각이니 너무 바쁜 파이선이라는 이름을 지어주었다.
 
+### Appendix (Source Code)
+#### Python
+```python
+"""
+        Environment
+-------------------
+           Apple M2
+macOS Sonoma 14.3.1
+      Python 3.11.5
+       Clang 14.0.6
+       numpy 1.24.3
+"""
+import ctypes
+import random
+import numpy as np
+
+
+if __name__ == '__main__':
+    lib = ctypes.CDLL('./arr_addr.so')
+    lib.print_arr_addr.argtypes = [ctypes.c_void_p, ctypes.c_int]
+    lib.print_arr_addr.restype = None
+
+    py_list = [random.randrange(1, 100) for _ in range(10)]
+    np_list = np.random.randint(1, 100, size=10, dtype=np.int32)
+
+    print("----py_list----")
+    for item in py_list:
+        print("address: {:}".format(hex(id(item))), end=',\t')
+        print("value: {:}".format(item))
+
+    print("----np_list----")
+    lib.print_arr_addr(ctypes.c_void_p(np_list.ctypes.data), ctypes.c_int(len(np_list)))
+```
+
+#### C++
+```cpp
+#include <iostream>
+using namespace std;
+
+extern "C" {
+    void print_arr_addr(void *array_address, int size) {
+        cout << "Array data at address: " << array_address << endl;
+        for (int i = 0; i < size; i++) {
+            cout << "address: " << (int*)array_address + i << ",\t";
+            cout << "value: " << *((int*)array_address + i) << endl;
+        }
+        cout << endl;
+    }
+}
+```
+
+#### Result
+```
+-------------py_list-------------
+address: 0x104802bb8,   value: 56
+address: 0x104802df8,   value: 74
+address: 0x104803058,   value: 93
+address: 0x104802a58,   value: 45
+address: 0x1048027d8,   value: 25
+address: 0x104802ed8,   value: 81
+address: 0x1048030b8,   value: 96
+address: 0x104803078,   value: 94
+address: 0x104802b58,   value: 53
+address: 0x104803058,   value: 93
+-------------np_list-------------
+Array data at address: 0x1246109a0
+address: 0x1246109a0,   value: 43
+address: 0x1246109a4,   value: 22
+address: 0x1246109a8,   value: 15
+address: 0x1246109ac,   value: 65
+address: 0x1246109b0,   value: 22
+address: 0x1246109b4,   value: 26
+address: 0x1246109b8,   value: 9
+address: 0x1246109bc,   value: 60
+address: 0x1246109c0,   value: 23
+address: 0x1246109c4,   value: 17
+```
+
 ### 참고문헌
 - SKT Enterprise. "[Python] Numpy가 빠른 이유-2편 (PyObject와 메모리 구조 관점에서)". [https://www.sktenterprise.com/bizInsight/blogDetail/dev/2679](https://www.sktenterprise.com/bizInsight/blogDetail/dev/2679).
 - 박상원 깃헙블로그. "[Python] 리스트에서 메모리 할당에 대한 생각". [https://eprj453.github.io/python/2020/12/05/Python-리스트에서-메모리-할당에-대한-생각/](https://eprj453.github.io/python/2020/12/05/Python-리스트에서-메모리-할당에-대한-생각/).
