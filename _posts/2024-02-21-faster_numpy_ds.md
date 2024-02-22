@@ -87,15 +87,15 @@ if __name__ == '__main__':
     lib.print_arr_addr.restype = None
 
     py_list = [random.randrange(1, 100) for _ in range(5)]
-    np_list = np.array(py_list, dtype=np.int32)
+    np_arr = np.array(py_list, dtype=np.int32)
 
     print("-------------py_list-------------")
     for item in py_list:
         print("address: {:}".format(hex(id(item))), end=',\t')
         print("value: {:}".format(item))
 
-    print("-------------np_list-------------")
-    lib.print_arr_addr(ctypes.c_void_p(np_list.ctypes.data), ctypes.c_int(len(np_list)))
+    print("-------------np_arr--------------")
+    lib.print_arr_addr(ctypes.c_void_p(np_arr.ctypes.data), ctypes.c_int(len(np_arr)))
 ```
 
 #### C++
@@ -129,7 +129,7 @@ address: 0x10508b078,   value: 94
 address: 0x10508ae38,   value: 76
 address: 0x10508a758,   value: 21
 address: 0x10508ae38,   value: 76
--------------np_list-------------
+-------------np_arr--------------
 Array data at address: 0x116e1aed0
 address: 0x116e1aed0,   value: 5
 address: 0x116e1aed4,   value: 94
