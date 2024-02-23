@@ -147,7 +147,7 @@ author_profile: true
 - **IoT Doorlock with Elevator**, 2018
     - C, Arduino, Serial, SPI, RFID, BlueTooth
 
-### Tiny Projects
+### Just for Fun
 - **Git Clone All**, Aug. 2023
     - batch, sh, jq, curl, git
 - **How many loves me**, Jun. 2023
