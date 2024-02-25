@@ -111,7 +111,6 @@ using namespace std;
 
 extern "C" {
     void print_arr_addr(void *array_address, int size) {
-        cout << "Array data at address: " << array_address << endl;
         for (int i = 0; i < size; i++) {
             cout << "address: " << (int*)array_address + i << ",\t";
             cout << "value: " << *((int*)array_address + i) << endl;
@@ -130,7 +129,6 @@ address: 0x10508ae38,   value: 76
 address: 0x10508a758,   value: 21
 address: 0x10508ae38,   value: 76
 -------------np_arr--------------
-Array data at address: 0x116e1aed0
 address: 0x116e1aed0,   value: 5
 address: 0x116e1aed4,   value: 94
 address: 0x116e1aed8,   value: 76
