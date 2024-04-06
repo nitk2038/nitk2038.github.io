@@ -184,10 +184,10 @@ author_profile: true
     * Korea Software Congress, 2022
 
 ## Research Interests
-* Graph Convolutional Network / Graph Data Augmentation / Distributed Training
+* Vector Database / Graph Convolutional Network / Distributed Training
 
 ## Study Interests
-* Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / Web Application Service
+* Natural Language Processing / Graph Neural Network / Vector Database / Distributed Data Processing / Web Application Service
 
 ## Participations
 ### Conference
