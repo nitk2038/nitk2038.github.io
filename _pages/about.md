@@ -138,8 +138,8 @@ author_profile: true
         - Supports large graph learning engine design
 
 ### Toy Projects
-- **Life Balancing Application for Android**, 2023
-    - Kotlin, Android Studio
+- **Foody Flavor**, 2024
+    - Python, bs4, selenium, PyTorch, PostgreSQL, Hadoop, Spark
 - **Distributed GraphSAGE Training using DistDGL and K8s**, 2023
     - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
 - **Jekyll Minimal Mistakes Blog Customizing**, 2022 -
@@ -147,21 +147,9 @@ author_profile: true
 - **IoT Doorlock with Elevator**, 2018
     - C, Arduino, Serial, SPI, RFID, BlueTooth
 
-### Tiny Projects
-- **Git Clone All**, Aug. 2023
-    - batch, sh, jq, curl, git
-- **How many loves me**, Jun. 2023
-    - HTML, CSS, JavaScript
-- **Find the one who didn't follow you (for github)**, May. 2023
-    - Python, requests, bs4, html5lib
-- **Vigilante Service Table**, Apr. 2021
-    - C++, iostream, fstream, algorithm, vector
-- **Gaussian Distribution Calculator**, May. 2017
-    - C, stdio, stdlib
-
 ## Publications
 * **Juyeong Shin**, Young-Koo Lee. (2024). [Hierarchical Quality Measurement Method for HNSW Index Performance Evaluation in Vector Database](https://www.dbpia.co.kr). Journal of Korea Computer Congress, Pages --
-    * Implementation: [DistMHAug](https://github.com/meongju0o0/DistMHAug)
+    * Implementation: [hnsw-graph-distance](https://github.com/meongju0o0/hnsw-graph-distance)
 
 ---
 
@@ -181,32 +169,18 @@ author_profile: true
 ---
 
 ## Awards and Honors
+* Excellence Student Award in Yong-In Studies Class
+    * Yong-In Special City, 2023
 * Excellence Award in Undergraduate Paper Contest
     * Korea Software Congress, 2023
 * Top Award in Undergraduate Paper Contest
     * Korea Software Congress, 2022
 
 ## Research Interests
-* Graph Convolutional Network / Graph Data Augmentation / Distributed Training
+* Vector Database / Parallel Computing / Distributed Computing
 
 ## Study Interests
-* Computer Vision / Natural Language Processing / Graph Neural Network / Distributed Data Processing / Web Application Service
-
-## Skills
-### Programming Languages
-cmd, bash, C, **C++**, **Python**, Kotlin, JAVA, JavaScript, HTML, CSS, SCSS
-
-### Libraries
-numpy, scipy, matplotlib, seaborn, scikit-learn, **PyTorch**, **DGL**
-
-### Frameworks
-React.js, ElasticSearch, Neo4j, Docker, K8s, Firebase
-
-### Operating System
-Windows, MacOS, **Ubuntu**, CentOS
-
-### Development Tools
-GNU nano editor, **Visual Studio Code**, Visual Studio, **PyCharm**, **Anaconda**, **Git**
+* Web Application Service / Computer Vision / Natural Language Processing / Graph Convolutional Network
 
 ## Participations
 ### Conference
