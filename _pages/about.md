@@ -160,7 +160,12 @@ author_profile: true
     - C, stdio, stdlib
 
 ## Publications
-* **Juyeong Shin**, Young-Koo Lee. (2023). [Distributed Data Augmentation Technique for Graph Neural Network](https://www.dbpia.co.kr). Journal of Korea Software Congress, Pages --
+* **Juyeong Shin**, Young-Koo Lee. (2024). [Hierarchical Quality Measurement Method for HNSW Index Performance Evaluation in Vector Database](https://www.dbpia.co.kr). Journal of Korea Computer Congress, Pages --
+    * Implementation: [DistMHAug](https://github.com/meongju0o0/DistMHAug)
+
+---
+
+* **Juyeong Shin**, Young-Koo Lee. (2023). [Distributed Data Augmentation Technique for Graph Neural Network](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11705601). Journal of Korea Software Congress, Pages 1800 -- 1802
     * Implementation: [DistMHAug](https://github.com/meongju0o0/DistMHAug)
 
 ---
