@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Introduce to vectorDB PPT"
-categories: DataBase
+categories: VectorDBMS
 tag: [database, ppt]
 classes: wide
 ---
