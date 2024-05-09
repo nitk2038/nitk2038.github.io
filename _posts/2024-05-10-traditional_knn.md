@@ -6,6 +6,7 @@ tag: [database, algorithm]
 toc: true
 toc_sticky: true
 author_profile: true
+future: true
 ---
 
 # Introduce to kNN(k Neareset Neighbors)
