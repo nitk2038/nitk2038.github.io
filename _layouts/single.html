@@ -75,9 +75,6 @@ layout: default
     {% endif %}
   </article>
 
-<<<<<<< HEAD
-  {% comment %}<!-- -->{% endcomment %}
-=======
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     {% include page__related.html posts=site.related_posts %}
@@ -85,5 +82,4 @@ layout: default
   {% elsif page.id and page.related %}
     {% include page__related.html posts=site.posts %}
   {% endif %}
->>>>>>> be3c046acf7391a0157b1007592b9011213505ea
 </div>
