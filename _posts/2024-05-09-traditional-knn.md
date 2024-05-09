@@ -9,7 +9,7 @@ author_profile: true
 ---
 
 # Introduce to kNN(k Neareset Neighbors)
-![knn-basic](/images/2024-05-09-HNSW/knn_basic.png)
+![knn-basic](/images/2024-05-09-traditional-knn/knn_basic.png)
 - 거리가 가장 가까운 이웃 k개를 반환하는 알고리즘
 - 혹은 가장 인접한 벡터 k개를 선택하여 voting을 통해 classification
 - Distance Measurement로는 크게 3가지 존재
