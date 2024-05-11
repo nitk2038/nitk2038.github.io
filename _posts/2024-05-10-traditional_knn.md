@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Traditional Nearest Neighbors Algorithms"
-categories: VectorDBMS
+categories: VectorDB
 tag: [database, algorithm]
 toc: true
 toc_sticky: true
@@ -9,18 +9,18 @@ author_profile: true
 ---
 
 # Introduce to kNN(k Neareset Neighbors)
-![knn-basic](/images/2024-05-10-traditional-knn/knn_basic.png)
+![knn-basic](/images/2024-05-10-traditional_knn/knn_basic.png)
 - 거리가 가장 가까운 이웃 k개를 반환하는 알고리즘
 - 혹은 가장 인접한 벡터 k개를 선택하여 voting을 통해 classification
 - Distance Measurement로는 크게 3가지 존재
     - L1 norm(Manhattan Distance)
-        - 2차원: $D=|x_1-x_2|+|y_1-y_2|$
-        - 3차원: $D=|x_1-x_2|+|y_1-y_2|+|z_1-z_2|$
+        - 2차원: $D=\left\vert x_1-x_2 \right\vert+\left\vert y_1-y_2 \right\vert$
+        - 3차원: $D=\left\vert x_1-x_2 \right\vert+\left\vert y_1-y_2 \right\vert+\left\vert z_1-z_2\right\vert$
     - L2 norm(Euclidean Distance)
         - 2차원: $D=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$
         - 3차원: $D=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}$
     - Cosine Distance
-        - $1-\frac{X \cdot Y}{{||X||}_2 \cdot {||Y||}_2}$
+        - $1-\frac{X \cdot Y}{\left\vert X \right\vert _2 \cdot \left\vert Y \right\vert _2}$
 
 ## k Nearest Neighbors Algorithms
 ### Brute-Force
