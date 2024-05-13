@@ -27,8 +27,7 @@ author_profile: true
 - 특징
     - 모든 데이터포인트 쌍의 거리를 계산 (pair-wise distance)
     - 저차원, 소규모 데이터셋에 대해 효과적
-<p align="center"><img src = "/images/2024-05-10-traditional_
-knn/pair-wise-distance.png"></p>
+<p align="center"><img src = "/images/2024-05-10-traditional_knn/pair-wise-distance.png"></p>
 
 - Time Complexity
     - pair-wise distance 연산: $O(DN^2)$
@@ -58,16 +57,19 @@ knn/pair-wise-distance.png"></p>
 1. X축에 대해 정렬한 후 중앙값을 기준으로 배열 분할
     - Y축에 대해 먼저 정렬하여 분할할 수도 있음
     - 이는 각 축의 분산에 의해 결정됨
-<p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-1.jpg"></p>
+    ![](/images/2024-05-10-traditional_knn/k-d-construction-1.jpg)
+
 2. Y축에 대해 정렬한 후 중앙값을 기준으로 배열 분할
-<p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-2.jpg"></p>
+    ![](/images/2024-05-10-traditional_knn/k-d-construction-2.jpg)
+
 3. 위 과정을 반복하면서 트리 생성
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-3.jpg"></p>
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction.png"></p>
 
 #### K-D Tree Nearest Neighbor Search Algorithm
 1. 새로운 점이 트리의 어디에 삽입되어야 하는지 탐색
-<p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-search.png"></p>
+    ![](/images/2024-05-10-traditional_knn/k-d-search.png)
+
 2. 도달한 리프 노드를 기준으로 자신이 속한 subtree를 우선적으로 탐색
     - 자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회
 
