@@ -56,15 +56,25 @@ author_profile: true
 - Precondition
     - 2차원 실수 공간 (X측, Y축)
 
-<p>&ensp;1. X축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</p>
-    - Y축에 대해 먼저 정렬하여 분할할 수도 있음
-    - 이는 각 축의 분산에 의해 결정됨
+<p>&emsp;1. X축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</p>
+<ul>
+    <ul>
+        <li>
+            ::marker
+            Y축에 대해 먼저 정렬하여 분할할 수도 있음
+        </li>
+        <li>
+            ::marker
+            이는 각 축의 분산에 의해 결정됨
+        </li>
+    </ul>
+</ul>
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-1.jpg"></p>
 
-<p>&ensp;2. Y축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</p>
+<p>&emsp;2. Y축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</p>
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-2.jpg"></p>
 
-3. 위 과정을 반복하면서 트리 생성
+<p>&emsp;3. 위 과정을 반복하면서 트리 생성</p>
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-3.jpg"></p>
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction.png"></p>
 
@@ -73,7 +83,16 @@ author_profile: true
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-search.png"></p>
 
 <p>&ensp;2. 도달한 리프 노드를 기준으로 자신이 속한 subtree를 우선적으로 탐색</p>
-    - 자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회
+<ul>
+    <ul>
+        <li>
+            ::marker
+            자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회
+        </li>
+    </ul>
+</ul>
+
+- 자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회
 
 #### Time Complexity
 - Time Complexity(Notations)
