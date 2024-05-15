@@ -56,38 +56,29 @@ author_profile: true
 - Precondition
     - 2차원 실수 공간 (X측, Y축)
 
-<p>&emsp;1. X축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</p>
-<ul>
+<ol>
+    <li>X축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</li>
     <ul>
-        <li>
-            Y축에 대해 먼저 정렬하여 분할할 수도 있음
-        </li>
-        <li>
-            이는 각 축의 분산에 의해 결정됨
-        </li>
+        <li>Y축에 대해 먼저 정렬하여 분할할 수도 있음</li>
+        <li>이는 각 축의 분산에 의해 결정됨</li>
     </ul>
-</ul>
-<p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-1.jpg"></p>
-
-<p>&emsp;2. Y축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</p>
-<p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-2.jpg"></p>
-
-<p>&emsp;3. 위 과정을 반복하면서 트리 생성</p>
-<p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-3.jpg"></p>
-<p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction.png"></p>
+    <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-1.jpg"></p>
+    <li>Y축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</li>
+    <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-2.jpg"></p>
+    <li>위 과정을 반복하면서 트리 생성</li>
+    <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction-3.jpg"></p>
+    <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction.png"></p>
+</ol>
 
 #### K-D Tree Nearest Neighbor Search Algorithm
-<p>&emsp;1. 새로운 점이 트리의 어디에 삽입되어야 하는지 탐색</p>
-<p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-search.png"></p>
-
-<p>&emsp;2. 도달한 리프 노드를 기준으로 자신이 속한 subtree를 우선적으로 탐색</p>
-<ul>
+<ol>
+    <li>새로운 점이 트리의 어디에 삽입되어야 하는지 탐색</li>
+    <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-search.png"></p>
+    <li>도달한 리프 노드를 기준으로 자신이 속한 subtree를 우선적으로 탐색</li>
     <ul>
-        <li>
-            자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회
-        </li>
+        <li>자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회</li>
     </ul>
-</ul>
+</ol>
 
 #### Time Complexity
 - Time Complexity(Notations)
