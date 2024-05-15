@@ -60,11 +60,9 @@ author_profile: true
 <ul>
     <ul>
         <li>
-            ::marker
             Y축에 대해 먼저 정렬하여 분할할 수도 있음
         </li>
         <li>
-            ::marker
             이는 각 축의 분산에 의해 결정됨
         </li>
     </ul>
@@ -79,20 +77,17 @@ author_profile: true
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-construction.png"></p>
 
 #### K-D Tree Nearest Neighbor Search Algorithm
-<p>&ensp;1. 새로운 점이 트리의 어디에 삽입되어야 하는지 탐색</p>
+<p>&emsp;1. 새로운 점이 트리의 어디에 삽입되어야 하는지 탐색</p>
 <p align="center"><img src = "/images/2024-05-10-traditional_knn/k-d-search.png"></p>
 
-<p>&ensp;2. 도달한 리프 노드를 기준으로 자신이 속한 subtree를 우선적으로 탐색</p>
+<p>&emsp;2. 도달한 리프 노드를 기준으로 자신이 속한 subtree를 우선적으로 탐색</p>
 <ul>
     <ul>
         <li>
-            ::marker
             자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회
         </li>
     </ul>
 </ul>
-
-- 자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회
 
 #### Time Complexity
 - Time Complexity(Notations)
