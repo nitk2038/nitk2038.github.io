@@ -260,8 +260,9 @@ cdef int init_node{{name_suffix}}(
 ```
 
 ### 참고 문헌
-- cjkangme.log. “[3D] KD Tree와 BVH” 2024. 01.11. [https://velog.io/@cjkangme/3D-KD-Tree%EC%99%80-BVH](https://velog.io/@cjkangme/3D-KD-Tree%EC%99%80-BVH)
+- cjkangme.log. “[3D] KD Tree와 BVH” 2024.01.11. [https://velog.io/@cjkangme/3D-KD-Tree%EC%99%80-BVH](https://velog.io/@cjkangme/3D-KD-Tree%EC%99%80-BVH)
 - 고귀양이의 노트. “ball tree” 2019.08.01. [https://nobilitycat.tistory.com/entry/ball-tree](https://nobilitycat.tistory.com/entry/ball-tree)
+- Geetha Mattaparthi. "Ball tree and KD Tree Algorithms" 2024.01.23. [https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
 - “1.6 Nearest Neighbors”. Scikit Learn. Version 1.4.1. [https://scikit-learn.org/stable/modules/neighbors.html](https://scikit-learn.org/stable/modules/neighbors.html)
 - "scikit-learn/sklearn/neighbors". [https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/neighbors](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/neighbors)
 - "scikit-learn/sklearn/tree/_tree.pyx". [https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx](https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx)
