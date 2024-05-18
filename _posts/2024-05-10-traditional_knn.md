@@ -196,7 +196,7 @@ if sort_results:
     results = neigh_dist, neigh_ind
 ```
 
-#### k-D Tree
+#### k-D Tree, Ball Tree
 ```python
 cdef int allocate_data{{name_suffix}}(
     BinaryTree{{name_suffix}} tree,
