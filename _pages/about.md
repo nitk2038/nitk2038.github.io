@@ -139,7 +139,7 @@ author_profile: true
 
 ### Toy Projects
 - **Domestic Stock Followup Service**, 2024
-    - Python, bs4, selenium, crontab, MySQL, Hadoop, Spark
+    - Python, node.js, bs4, selenium, crontab, MySQL, Hadoop, Spark
 - **Distributed GraphSAGE Training using DistDGL and K8s**, 2023
     - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
 - **Jekyll Minimal Mistakes Blog Customizing**, 2022 -
