@@ -137,12 +137,12 @@ author_profile: true
         - Supports large graph learning engine design
 
 ### Toy Projects
-- **Foody Flavor**, 2024
-    - Python, bs4, selenium, PyTorch, PostgreSQL, Hadoop, Spark
+- **Domestic Stock Followup Service**, 2024
+    - Python, bs4, selenium, node.js, crontab, MySQL, Hadoop, Spark, Github Flow, AWS EC2, AWS RDS
 - **Distributed GraphSAGE Training using DistDGL and K8s**, 2023
     - Ubuntu(WSL), NFS, Docker, K8s, Python, PyTorch, DGL
 - **Jekyll Minimal Mistakes Blog Customizing**, 2022 -
-    - Ruby, HTML, CSS, JavaScript, Firebase, GitHub
+    - Ruby, Jekyll, node.js, Firebase, GitHub
 - **IoT Doorlock with Elevator**, 2018
     - C, Arduino, Serial, SPI, RFID, BlueTooth
 
