@@ -71,9 +71,9 @@ cout << cur_node->item;
         - 반대로 새로운 객체의 next 포인터가 'C'를 먼저 가르키게 한 뒤 'B' 노드의 next포인터가 새로운 객체를 가르키게 한다
     - 당연히 'Solution 2'가 교과서적인 접근이다.
 
-- '너무 쉽고도 당연한 solution 아닌가?' 라고 생각될 수 있으나, Doubly Linked List의 Insertion 알고리즘에도 동일하게 적용되는 아이디어이다. 막상 Doubly Linked List를 보면 Insertion의 순서가 마냥 쉽게 떠올르진 않을 것이다. (적어도 나는 그랬다)
-
 ![sll_insert](/images/2024-08-03-LinkedList/SLL_Insert.png)
+
+- '너무 쉽고도 당연한 solution 아닌가?' 라고 생각될 수 있으나, Doubly Linked List의 Insertion 알고리즘에도 동일하게 적용되는 아이디어이다. 막상 Doubly Linked List를 보면 Insertion의 순서가 마냥 쉽게 떠올르진 않을 것이다. (적어도 나는 그랬다)
 
 ### Singly Linked List(SLL)에 필요한 Operators
 - Constructor
@@ -132,7 +132,7 @@ public:
         bool operator==(const Iterator& other) const; //SLL iterator가 지시하는 노드가 서로 동일한지 확인하는 연산자
         bool operator!=(const Iterator& other) const; //SLL iterator가 지시하는 노드가 서로 다른지 확인하는 연산자
         Node* GetCurrent() const; //SLL iterator가 현재 지시하고 있는 노드의 포인터를 반환
-        Node* GetPrevious() const; // 현재 지시하고 있는 노드의 이전 노드의 포인터를 반환
+        Node* GetPrevious() const; //현재 지시하고 있는 노드의 이전 노드의 포인터를 반환
     };
 
     explicit SLL(ItemType root_item);
