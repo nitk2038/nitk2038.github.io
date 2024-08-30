@@ -123,6 +123,8 @@ public:
     class Iterator { //SLL 객체의 아이템 접근을 위한 iterator
     private:
         Node* current;
+        Node* previous;
+
     public:
         explicit Iterator(Node* node); //iterator 객체 생성자
         ItemType& operator*() const; //SLL Node의 item 접근을 위한 연산자 오버로딩
@@ -130,6 +132,7 @@ public:
         bool operator==(const Iterator& other) const; //SLL iterator가 지시하는 노드가 서로 동일한지 확인하는 연산자
         bool operator!=(const Iterator& other) const; //SLL iterator가 지시하는 노드가 서로 다른지 확인하는 연산자
         Node* GetCurrent() const; //SLL iterator가 현재 지시하고 있는 노드의 포인터를 반환
+        Node* GetPrevious() const; // 현재 지시하고 있는 노드의 이전 노드의 포인터를 반환
     };
 
     explicit SLL(ItemType root_item);
@@ -170,6 +173,10 @@ bool SLL::Iterator::operator!=(const Iterator& other) const {
 
 Node* SLL::Iterator::GetCurrent() const {
     return current;
+}
+
+Node* SLL::Iterator::GetPrevious() const {
+    return previous;
 }
 ```
 
@@ -217,37 +224,31 @@ bool SLL::IsEmpty() const {
 
 ```cpp
 int SLL::SizeIs() const {
-    int count = 0;
-    Node* cur_node = root;
-    while(cur_node != nullptr) {
-        count++;
-        cur_node = cur_node->next;
-    }
-    return count;
+    return size;
 }
 ```
 
 ### Transformer
 ```cpp
 void SLL::Insert(Iterator pos, ItemType new_item) {
-    if(IsFull()) {
-        cerr << "List is Full, bad_alloc exception." << endl;
+    if (IsFull()) {
+        cerr << "List is Full, bad_alloc exception" << endl;
         return;
     }
+
     Node* new_node = new Node();
     new_node->item = new_item;
-    new_node->next = nullptr;
 
     if (pos.GetCurrent() == root) {
         new_node->next = root;
         root = new_node;
-    } else {
-        Node* prev_node = root;
-        while (prev_node->next != pos.GetCurrent()) {
-            prev_node = prev_node->next;
-        }
+    }
+    else {
+        Node* prev_node = pos.GetPrevious();
         new_node->next = pos.GetCurrent();
-        prev_node->next = new_node;
+        if (prev_node != nullptr) {
+            prev_node->next = new_node;
+        }
     }
     size++;
 }
@@ -266,12 +267,11 @@ void SLL::Erase(Iterator pos) {
         delete temp_ptr;
     }
     else {
-        Node* prev_node = root;
-        while (prev_node->next != pos.GetCurrent()) {
-            prev_node = prev_node->next;
+        Node* prev_node = pos.GetPrevious();
+        if (prev_node != nullptr) {
+            prev_node->next = pos.GetCurrent()->next;
+            delete pos.GetCurrent();
         }
-        prev_node->next = pos.GetCurrent()->next;
-        delete pos.GetCurrent();
     }
     size--;
 }
