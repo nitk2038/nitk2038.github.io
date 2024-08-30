@@ -41,7 +41,7 @@ author_profile: true
 - 위 그림에서 Head를 현재 노드의 Next 포인터를 따라 한 칸씩 이동시키며 탐색
 
 - 3번 째 item을 찾고자 한다면 아래와 같이 코드를 작성할 수 있을 것
-    - Node라는 별도의 구조체와 SLL이라는 클래스틑 이미 있다고 가정하자
+    - Node라는 별도의 구조체와 SLL이라는 클래스는 이미 있다고 가정하자
 
 ```cpp
 Node* cur_node = SLL.get_root(); // cur_node->item == 'A'
@@ -229,7 +229,7 @@ int SLL::SizeIs() const {
 ```cpp
 void SLL::Insert(Iterator pos, ItemType new_item) {
     if(IsFull()) {
-        cerr << "List is Full, bad_alloc exception" << endl;
+        cerr << "List is Full, bad_alloc exception." << endl;
         return;
     }
     Node* new_node = new Node();
