@@ -73,6 +73,8 @@ cout << cur_node->item;
 
 - '너무 쉽고도 당연한 solution 아닌가?' 라고 생각될 수 있으나, Doubly Linked List의 Insertion 알고리즘에도 동일하게 적용되는 아이디어이다. 막상 Doubly Linked List를 보면 Insertion의 순서가 마냥 쉽게 떠올르진 않을 것이다. (적어도 나는 그랬다)
 
+![sll_insert](/images/2024-08-03-LinkedList/SLL_Insert.png)
+
 ### Singly Linked List(SLL)에 필요한 Operators
 - Constructor
 - Destructor
