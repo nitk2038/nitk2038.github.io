@@ -303,5 +303,11 @@ int main() {
 
     return EXIT_SUCCESS;
 }
-
 ```
+
+#### 참고문헌
+- Nell Dale. (2016). "C++ Plus Data Structues Sixth Edition". Jones&Bartlett Learning.
+- GeeksforGeeks. (2024). "Singly Linked List Data Structure". [https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/](https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/).
+- GeeksforGeeks. (2024). "What are real life exaples of double linked list". [https://www.geeksforgeeks.org/what-are-real-life-examples-of-double-linked-list/](https://www.geeksforgeeks.org/what-are-real-life-examples-of-double-linked-list/).
+- OpenAI. (2024). ChatGPT(Jan 10, 2024). GPT-4o. [https://chat.openai.com](https://chat.openai.com).
+- meongju0o0. (2024). "singly_linked_list.cpp". [https://github.com/meongju0o0/meongju0o0-data-structure](https://github.com/meongju0o0/meongju0o0-data-structure).
