@@ -32,8 +32,7 @@ author_profile: true
 
 ## Singly Linked List(SLL)
 - Doubly Linked List에 앞서 특수한 상황을 위한 Linked List
-- 말이 특수한 상황이지, Doubly Linked List보다 제한적인 기능을 가진 자료구조
-    - ~~개인적인 생각으로, Singly Linked List를 써도 되는 상황에서는 성능상 이점이 있을 수 있겠지만, 그 이점이 그다지 크다고는 생각 안함~~
+- Doubly Linked List는 현재 노드의 전, 후 모두 이동 가능하나, Sigly Linked List는 현재 노드의 후로만 이동 가능
 
 ![singly_linked_list](/images/2024-08-03-LinkedList/LLdrawio.png)
 
