@@ -158,6 +158,7 @@ ItemType& SLL::Iterator::operator*() const {
 
 SLL::Iterator& SLL::Iterator::operator++() {
     if (current != nullptr) {
+        previous = current;
         current = current->next;
     }
     return *this;
@@ -223,7 +224,7 @@ bool SLL::IsEmpty() const {
 ```
 
 ```cpp
-int SLL::SizeIs() const {
+size_t SLL::SizeIs() const {
     return size;
 }
 ```
