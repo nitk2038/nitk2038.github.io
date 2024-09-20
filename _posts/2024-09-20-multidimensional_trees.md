@@ -47,7 +47,7 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 
 ## 일단은 BST부터
 ### BST란 무엇인가?
-![bst](/images/2024-09-20-multidimensional_trees/bst.png)
+<p align="center"><img src = "/images/2024-09-20-multidimensional_trees/bst.png"></p>
 
 - 이진탐색트리(BST, Binary Search Tree)는 아래와 같은 속성이 있는 이진트리 자료구조이다.
     - 각 노드에 값이 있다.
@@ -91,10 +91,58 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 
 ## 이제 KD트리
 ### KD트리(k-Dimensional tree)
-- k차원 공간의 점들을 구조화하는 공간 분할 자료 구조
 - 종류: 다차원 BST
 - 발명일: 1975
 - 발명자: 존 벤틀리
+
+- k차원 공간의 점들을 구조화하는 공간 분할 자료구조
+- 중심 데이터포인트를 기준으로 분할 초평면을 만들어 트리 생성
+- BST(Binary Search Tree)와 유사하나, k-Dimension 상의 데이터를 트리로 구축할 수 있음
+- BST를 x축에 대해서 수행 -> y축에 대해서 수행 -> z축에 대해서 수행 -> x축에 대해서 수행 -> y축에 대해서 ...
+
+### k-D Tree Construction Algorithm
+- Precondition
+    - 2차원 실수 공간 (X측, Y축)
+
+<ol>
+    <li>X축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</li>
+    <ul>
+        <li>Y축에 대해 먼저 정렬하여 분할할 수도 있음</li>
+        <li>이는 각 축의 분산에 의해 결정됨</li>
+    </ul>
+    <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/k-d-construction-1.jpg"></p>
+    <li>Y축에 대해 정렬한 후 중앙값을 기준으로 배열 분할</li>
+    <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/k-d-construction-2.jpg"></p>
+    <li>위 과정을 반복하면서 트리 생성</li>
+    <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/k-d-construction-3.jpg"></p>
+    <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/k-d-construction.png"></p>
+</ol>
+
+### K-D Tree Nearest Neighbor Search Algorithm
+<ol>
+    <li>새로운 점이 트리의 어디에 삽입되어야 하는지 탐색</li>
+    <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/k-d-search.png"></p>
+    <li>도달한 리프 노드를 기준으로 자신이 속한 subtree를 우선적으로 탐색</li>
+    <ul>
+        <li>자신이 속한 subtree에서 k개의 최근접 이웃을 모두 탐색하지 못한 경우, 부모 노드의 subtree에서 순회</li>
+    </ul>
+</ol>
+
+### Time Complexity
+- Time Complexity(Notations)
+    - Dimension: $D$
+    - Number of Vectors: $N$
+
+- Time Complexity(Building)
+    - 추가할 point가 어느 subtree에 위치하는지 탐색: $O(DlogN)$
+    - 총 벡터 n개를 만족할 때가지 트리 구축: $O(N)$
+    - 최종 Time Complexity: $O(DNlogN)$
+
+- Time Complexity(Search)
+    - 평균적인 복잡도
+        - 추가할 point가 어느 subtree에 위치하는지 탐색: $O(DlogN)$
+    - 최악의 경우, i.e. Skewed Tree
+        - 추가할 point가 어느 subtree에 위치하는지 탐색: $O(DN)$
 
 ### 참고 문헌
 - Wikipedia. (2024.08.18). "전순서 집합". [https://ko.wikipedia.org/wiki/전순서_집합](https://ko.wikipedia.org/wiki/전순서_집합).
