@@ -132,11 +132,11 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 ### Time Complexity
 - Time Complexity(Notations)
     - Dimension: $D$
-    - Number of Vectors: $N$
+    - Number of Records: $N$
 
 - Time Complexity(Building)
     - 추가할 point가 어느 subtree에 위치하는지 탐색: $O(DlogN)$
-    - 총 벡터 n개를 만족할 때가지 트리 구축: $O(N)$
+    - 총 레코드 n개를 만족할 때가지 트리 구축: $O(N)$
     - 최종 Time Complexity: $O(DNlogN)$
 
 - Time Complexity(Search)
