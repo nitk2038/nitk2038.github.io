@@ -128,9 +128,6 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
 - 그러나, GCN은 위 그림과는 차이가 존재
 
 
-
-
-- 처음 GCN에 대해 공부할 때는 위의 그림을 통해 쉽게 이해할 수도 있으나, 수식에서 잘못된 부분이 존재
 - 우선, $H_1^{(l)}$ 은 1번 노드의 Feature Matrix (혹은 Hidden State Matrix)
 - 마찬가지로, $H_2^{(l)}$ 은 2번 노드의 Feature Matrix (혹은 Hidden State Matrix)
 - 이때, 각 노드 별로 차수(degree)가 다르므로 각 hidden state가 더해지는 가중치가 다름
@@ -138,7 +135,7 @@ $$H^{(l+1)}=\sigma({\tilde{D}}^{-1/2} \tilde{A} {\tilde{D}}^{-1/2} H^{(l)} W^{(l
     - 따라서, 위 수식에 각 노드별로 어느 만큼의 가중치를 주어 Node Feature를 업데이트 할 것인지 기입해야함
     - 즉, 가중치 항을 추가해야함
 - 또한, 모든 Feature Vector가 같은 Weight Matrix를 공유하는 것은 사실 (Weight Sharing)
-    - 그러나, 위 수식처럼 같은 Weight Vector를 공유하는 것은 절대 아님
+    - 그러나, 위 수식처럼 같은 Weight Vector를 공유하는 것은 아님
     - GCN에서 Weight Matrix는 가중치 열벡터의 나열로 구성되는데, 각 열벡터는 서로 다른 값을 가짐
 
 

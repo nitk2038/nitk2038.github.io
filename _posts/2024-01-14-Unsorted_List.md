@@ -53,17 +53,6 @@ author_profile: true
     - GetNextItem
 
 ## Source Code
-- Dependency
-    - OS: Windows11, 23H2
-    - IDE: JetBrain CLion
-    - Build Toolchain: CMake 3.27
-        - Compiler: MSYS2(GCC for Windows)
-        - C++ Standard: C++23
-
-> In most cases, MSVC in Visual Studio is also available<br />
-> GCC in UNIX and LINUX are always available<br />
-> However, you must use a C++17 or higher standard
-
 ### Preprocessing
 ```cpp
 #include <iostream>
@@ -97,12 +86,6 @@ private:
     int currentPos;
 };
 ```
-> Attribute에 대해서 알아보자
-> - C++11 이후로 추가된 기능
-> - 함수 선언 시 attribute를 추가하여 컴파일러의 최적화에 도움을 줌
-> - [[nodiscard, noreturn]]과 같은 방식으로 사용
-> - 사용하지 않아도 상관 없음
-> - C++11, C++14, C++17, C++20, C++23 버전별로 계속 추가됨
 
 ### Class Constructor
 ```cpp
