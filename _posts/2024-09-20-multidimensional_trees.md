@@ -8,5 +8,5 @@ toc_sticky: true
 author_profile: true
 ---
 
-# BST(Binary Search Tree, 이진탐색트리)와 KD트리 그리고 B트리와 R트리
+# BST(Binary Search Tree, 이진탐색트리)와 KD트리 그리고 B트리, B+트리와 R트리, R트리, R*트리
 ## multidimensional indexing techniques(다차원 인덱싱 기법들)
