@@ -146,6 +146,24 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
         - 추가할 point가 어느 subtree에 위치하는지 탐색: $O(DN)$
 
 ## B트리, 다시 1차원으로
+### B트리는 왜 필요할까?
+B트리는 데이터베이스(mySQL, mongoDB, ...)와 파일 시스템(NTFS, ...)에서 널리 사용되는 트리 자료구조 중 하나로 이진 트리를 확장해 하나의 노드가 가질 수 있는 자식노드의 최대 숫자가 2보다 큰 트리 구조이다.
+
+<p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree.png"></p>
+
+B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남아 있는 경우 기존 트리 구조를 변경하지 않은 채로 추가적인 노드를 삽입할 수 있다. 마찬가지로, 삭제연산 시에도 트리 재균형 연산이 필요한 경우가 훨씬 줄어든다. 이러한 장점으로 데이터베이스나 파일 시스템에서 B트리 자료구조를 채택한다.
+
+하드웨어 관점에서 데이터베이스나 파일 시스템은 메모리보다 하드디스크를 더 중점적으로 관리해주는 소프트웨어이다. 이때, 하드디스크는 메모리에 비해 속도가 현저히 느린데 아이템 삽입, 삭제 시마다 트리 재균형 연산을 수행했다간 시스템의 속도가 무지하게 감소할 것이다.
+
+~~보통 BST는 AVL트리, Red-Black트리와 같은 자가균형 이진트리로 구현되는데, 삽입, 삭제 연산시에 재균형과정이 필요하다.~~
+
+### B트리 노드 구조
+
+### B트리 탐색 연산
+
+### B트리 삽입 연산
+
+### B트리 삭제 연산
 
 ## R트리, B트리를 다차원으로
 
@@ -154,6 +172,7 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 - Wikipedia. (2024.06.03). "사전식 순서". [https://ko.wikipedia.org/wiki/사전식_순서](https://ko.wikipedia.org/wiki/사전식_순서).
 - Wikipedia. (2023.05.13). "이진 탐색 트리". [https://ko.wikipedia.org/wiki/이진_탐색_트리](https://ko.wikipedia.org/wiki/이진_탐색_트리).
 - Wikipedia. (2024.05.16). "k-d 트리". [https://ko.wikipedia.org/wiki/K-d_트리](https://ko.wikipedia.org/wiki/K-d_트리).
+- Wikipedia. (2022.12.31). "B 트리". [https://ko.wikipedia.org/wiki/B_트리](https://ko.wikipedia.org/wiki/B_트리).
 - cjkangme.log. “[3D] KD Tree와 BVH” 2024.01.11. [https://velog.io/@cjkangme/3D-KD-Tree와-BVH](https://velog.io/@cjkangme/3D-KD-Tree와-BVH)
 - Geetha Mattaparthi. "Ball tree and KD Tree Algorithms" 2024.01.23. [https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
 - OpenAI. (2024). ChatGPT(Aug 8, 2024). GPT-4o. [https://chat.openai.com](https://chat.openai.com).
