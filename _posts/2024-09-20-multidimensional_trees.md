@@ -46,7 +46,7 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 
 앞으로 소개할 KD트리와 R트리는 이러한 한계점을 극복하기 위해 등장한 자료구조이다. 이들은 다차원 데이터를 효율적으로 탐색할 수 있게 해준다. 예를 들어 KD트리는 k차원 공간(k-Dimension)에서의 효율적인 탐색을 위한 구조로, 다양한 속성을 동시에 고려한 탐색이 가능하다.
 
-## 일단은 BST부터
+## BST, 결국 기본은 BST
 ### BST란 무엇인가?
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/bst.png"></p>
 
@@ -90,7 +90,7 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 2. 다차원 속성에서는 적용이 불가능하다.
     - 이를 개선하기 위해 k-D트리와 같은 자료구조가 존재한다.
 
-## BST를 다차원으로, KD트리
+## KD트리, BST를 다차원으로
 ### KD트리(k-Dimensional tree)
 - 종류: 다차원 BST
 - 발명일: 1975
@@ -147,7 +147,7 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 
 ## B트리, 다시 1차원으로
 
-## B트리를 다차원으로, R트리
+## R트리, B트리를 다차원으로
 
 ### 참고 문헌
 - Wikipedia. (2024.08.18). "전순서 집합". [https://ko.wikipedia.org/wiki/전순서_집합](https://ko.wikipedia.org/wiki/전순서_집합).
