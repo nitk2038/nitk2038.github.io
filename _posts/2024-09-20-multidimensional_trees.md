@@ -176,11 +176,36 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
    - 중앙에 위치한 키를 부모 노드로 올리고, 나머지 키를 좌우 두 개의 새로운 자식 노드로 분할한다.
    - 부모 노드에 여유가 없을 경우, 부모 노드도 분할을 반복한다. 최악의 경우 **루트 노드까지 분할**이 일어나면서 트리의 높이가 1만큼 증가할 수 있다.
 
+### Case 1. 분할이 발생하지 않는 경우(M=3)
+
+<p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-insertion1.png"></p>
+
+### Case 2. 분할이 발생하는 경우(M=3)
+
+<p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-insertion2.png"></p>
+
 ### B트리 삭제 연산
 1. **탐색**: 삭제할 키를 먼저 탐색한다. 키가 리프 노드에 있을 경우, 바로 삭제한다.
 2. **재조정(Underflow)**: 삭제 후 노드에 너무 적은 키(최소 M/2 - 1개)가 남게 되면, **재조정**이 필요하다. 이때 두 가지 방법이 사용된다:
    - **형제 노드로부터 차용(Borrow)**: 인접한 형제 노드에서 한 개의 키를 빌려와서 해당 노드의 키 개수를 채운다.
    - **병합(Merge)**: 만약 형제 노드에서 키를 빌릴 수 없다면, 해당 노드를 형제 노드와 병합하고, 부모 노드에서 키를 하나 내려준다. 이때, 부모 노드의 키가 부족하면 부모 노드도 병합 또는 차용 과정을 거친다. 이때, 이 과정이 루트 노드까지 올라가면 트리의 높이가 1만큼 줄어들 수 있다.
+
+#### 말단 노드에서 삭제
+##### Case 1. 삭제하고 재조정이 필요하지 않는 경우(M=2)
+
+<p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-delete1.png"></p>
+
+##### Case 2-1. 재조정이 필요하고 차용이 가능한 경우(M=2)
+
+<p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-delete2.png"></p>
+
+##### Case 2-2. 재조정이 필요하고 차용이 불가능한 경우(M=2)
+
+<p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-delete3.png"></p>
+
+#### 내부 노드에서 삭제(M=2)
+
+<p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-delete4.png"></p>
 
 ## R트리, B트리를 다차원으로
 
@@ -192,4 +217,5 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
 - Wikipedia. (2022.12.31). "B 트리". [https://ko.wikipedia.org/wiki/B_트리](https://ko.wikipedia.org/wiki/B_트리).
 - cjkangme.log. “[3D] KD Tree와 BVH” 2024.01.11. [https://velog.io/@cjkangme/3D-KD-Tree와-BVH](https://velog.io/@cjkangme/3D-KD-Tree와-BVH)
 - Geetha Mattaparthi. "Ball tree and KD Tree Algorithms" 2024.01.23. [https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
+- Chan Young Jeong. (2023.03.18.). "B-트리(B-Tree)란? B트리 탐색, 삽입, 삭제 과정" [https://velog.io/@chanyoung1998/B트리](https://velog.io/@chanyoung1998/B트리)
 - OpenAI. (2024). ChatGPT(Aug 8, 2024). GPT-4o. [https://chat.openai.com](https://chat.openai.com).
