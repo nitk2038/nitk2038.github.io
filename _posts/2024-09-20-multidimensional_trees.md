@@ -16,7 +16,7 @@ author_profile: true
 
 하지만 문제가 있다. 기존 자료구조 수업에서 BST를 다룰 때 어떻게 했었는가? BST 노드 하나 당 하나의 item만 삽입이 가능했다. 노드 하나 당 여러 item을 삽입시킨다 하여도 결국 정렬은 하나의 아이템을 기준으로 하거나 기껏해봐야 lexicographic order(사전식 순서)로만 정렬이 가능했다.
 
-> **lexicographic order**
+> **lexicographic order, 2개 속성일때 코드 예**
 
 ```cpp
 bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
