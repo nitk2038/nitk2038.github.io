@@ -28,7 +28,8 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
     }
 }
 ```
-<br/><br/>
+
+<br/>
 아래 테이블을 생각해보자. Name에 대해서는 정렬이 이루어져 있다. BST인지 아닌지를 떠나, 정렬이 되어 있는 상태에서는 이진탐색을 활용해 O(logN) Complexity로 탐색이 가능하니 Name에 대해서 'Eve'를 찾을 때는 O(logN) Complexity를 보장해준다.
 
 하지만 몸무게가 50kg인 사람을 찾고싶으면? 순차탐색이 최선이다. 즉, O(N) Complexity가 최선이라는 것이다.
@@ -144,9 +145,13 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
     - 최악의 경우, i.e. Skewed Tree
         - 추가할 point가 어느 subtree에 위치하는지 탐색: $O(DN)$
 
+## B트리, 다시 1차원으로
+
 ### 참고 문헌
 - Wikipedia. (2024.08.18). "전순서 집합". [https://ko.wikipedia.org/wiki/전순서_집합](https://ko.wikipedia.org/wiki/전순서_집합).
 - Wikipedia. (2024.06.03). "사전식 순서". [https://ko.wikipedia.org/wiki/사전식_순서](https://ko.wikipedia.org/wiki/사전식_순서).
 - Wikipedia. (2023.05.13). "이진 탐색 트리". [https://ko.wikipedia.org/wiki/이진_탐색_트리](https://ko.wikipedia.org/wiki/이진_탐색_트리).
 - Wikipedia. (2024.05.16). "k-d 트리". [https://ko.wikipedia.org/wiki/K-d_트리](https://ko.wikipedia.org/wiki/K-d_트리).
+- cjkangme.log. “[3D] KD Tree와 BVH” 2024.01.11. [https://velog.io/@cjkangme/3D-KD-Tree와-BVH](https://velog.io/@cjkangme/3D-KD-Tree와-BVH)
+- Geetha Mattaparthi. "Ball tree and KD Tree Algorithms" 2024.01.23. [https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
 - OpenAI. (2024). ChatGPT(Aug 8, 2024). GPT-4o. [https://chat.openai.com](https://chat.openai.com).
