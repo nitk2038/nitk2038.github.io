@@ -176,11 +176,11 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
    - 중앙에 위치한 키를 부모 노드로 올리고, 나머지 키를 좌우 두 개의 새로운 자식 노드로 분할한다.
    - 부모 노드에 여유가 없을 경우, 부모 노드도 분할을 반복한다. 최악의 경우 **루트 노드까지 분할**이 일어나면서 트리의 높이가 1만큼 증가할 수 있다.
 
-### Case 1. 분할이 발생하지 않는 경우(M=3)
+#### Case 1. 분할이 발생하지 않는 경우(M=3)
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-insertion1.png"></p>
 
-### Case 2. 분할이 발생하는 경우(M=3)
+#### Case 2. 분할이 발생하는 경우(M=3)
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-insertion2.png"></p>
 
