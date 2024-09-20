@@ -90,7 +90,7 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 2. 다차원 속성에서는 적용이 불가능하다.
     - 이를 개선하기 위해 k-D트리와 같은 자료구조가 존재한다.
 
-## 이제 KD트리
+## BST를 다차원으로, KD트리
 ### KD트리(k-Dimensional tree)
 - 종류: 다차원 BST
 - 발명일: 1975
