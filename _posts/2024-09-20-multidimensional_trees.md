@@ -147,6 +147,8 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 
 ## B트리, 다시 1차원으로
 
+## B트리를 다차원으로, R트리
+
 ### 참고 문헌
 - Wikipedia. (2024.08.18). "전순서 집합". [https://ko.wikipedia.org/wiki/전순서_집합](https://ko.wikipedia.org/wiki/전순서_집합).
 - Wikipedia. (2024.06.03). "사전식 순서". [https://ko.wikipedia.org/wiki/사전식_순서](https://ko.wikipedia.org/wiki/사전식_순서).
