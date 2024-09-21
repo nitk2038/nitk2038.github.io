@@ -251,7 +251,7 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
 - Nobert Beckmann, Hans-Peter Kriegel, et al. "The R*-tree: an efficient and robust access method for points and rectangles". ACM SIGMOD '90: Proceedings of the 1990 ACM SIGMOD international conference on Management of data. 1990.
 - cjkangme.log. “[3D] KD Tree와 BVH” 2024.01.11. [https://velog.io/@cjkangme/3D-KD-Tree와-BVH](https://velog.io/@cjkangme/3D-KD-Tree와-BVH)
 - Geetha Mattaparthi. "Ball tree and KD Tree Algorithms" 2024.01.23. [https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
-- Chan Young Jeong. (2023.03.18.). "B-트리(B-Tree)란? B트리 탐색, 삽입, 삭제 과정" [https://velog.io/@chanyoung1998/B트리](https://velog.io/@chanyoung1998/B트리)
+- Chan Young Jeong. (2023.03.18.). "B-트리(B-Tree)란? B트리 탐색, 삽입, 삭제 과정" [https://velog.io/@chanyoung1998/B트리](https://velog.io/@chanyoung1998/B트리).
 - dad-rock. (2021.06.23). "[Data Structures] R-Tree | R-트리" [https://dad-rock.tistory.com/594](https://dad-rock.tistory.com/594).
 - jwKim96. (2022.11.15). "[MySQL] R-Tree Index와 공간 탐색" [https://jwkim96.tistory.com/298](https://jwkim96.tistory.com/298).
 - OpenAI. (2024). ChatGPT(Aug 8, 2024). GPT-4o. [https://chat.openai.com](https://chat.openai.com).
