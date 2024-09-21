@@ -160,7 +160,7 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
 물론 B트리도 재균형 연산이 필요한 경우가 발생하지만, 재균형 연산이 필요한 경우가 BST에 비해 적고 더 효율적으로 재균형 연산을 수행할 수 있다. 이때, B트리의 차수(degree)가 클 수록 재균형 연산이 필요한 경우는 줄어들고 더 효율적인 재균형 연산이 가능하다.(트리의 높이가 낮아지기 때문)
 
 ### B트리 노드 구조
-- **노드의 자식 수 제한**: B트리의 각 노드는 최대 m개의 자식을 가질 수 있으며, 이를 **차수(degree)**라 한다. B트리의 **차수 M**이 주어지면:
+- **노드의 자식 수 제한**: B트리의 각 노드는 최대 M개의 자식을 가질 수 있으며, 이를 **차수(degree)**라 한다. B트리의 **차수 M**이 주어지면:
   - **최대 M개의 자식 노드**를 가질 수 있다.
   - **최대 M+1개의 키**를 노드에 저장할 수 있다.
 - **균형 유지**: 모든 리프 노드의 높이는 동일하며, 트리는 항상 균형 상태를 유지한다.
@@ -172,15 +172,18 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
 
 ### B트리 삽입 연산
 1. **탐색**: 삽입할 위치를 탐색한다. 삽입할 위치가 결정되면 해당 노드에 키를 삽입한다.
-2. **분할(Overflow)**: 노드에 이미 m-1개의 키가 있을 경우, 해당 노드는 더 이상 키를 추가할 수 없으므로 **분할**이 필요하다.
+2. **분할(Overflow)**: 노드에 이미 m+1개의 키가 있을 경우, 해당 노드는 더 이상 키를 추가할 수 없으므로 **분할**이 필요하다.
    - 중앙에 위치한 키를 부모 노드로 올리고, 나머지 키를 좌우 두 개의 새로운 자식 노드로 분할한다.
    - 부모 노드에 여유가 없을 경우, 부모 노드도 분할을 반복한다. 최악의 경우 **루트 노드까지 분할**이 일어나면서 트리의 높이가 1만큼 증가할 수 있다.
 
 #### Case 1. 분할이 발생하지 않는 경우(M=3)
+- 말단 노드가 넘치지 않았다면, 오름차순으로 키를 삽입한다.
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-insertion1.png"></p>
 
 #### Case 2. 분할이 발생하는 경우(M=3)
+- 말단 노드에 키가 가득 찬 경우, 노드를 분할한다.
+    - 노드가 넘치면 가운데 키(median key)를 기준으로 좌우 키를 분할하고 가운데 키는 승진한다.
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-insertion2.png"></p>
 
@@ -192,18 +195,44 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
 
 #### 말단 노드에서 삭제
 ##### Case 1. 삭제하고 재조정이 필요하지 않는 경우(M=2)
+- 말단 노드에서 아이템을 삭제한다.
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-delete1.png"></p>
 
 ##### Case 2-1. 재조정이 필요하고 차용이 가능한 경우(M=2)
+- 아래 예시에서, '31'을 삭제하면 최소한의 키 수(M/2 - 1)보다 작아져서 재조정이 필요하다.
+    - 키 수가 여유있는 형제 노드의 지원을 받는다.
+        - 동생 노드(왼쪽 노드)를 보면 키가 '25, 28'로 여유가 있기 때문에 동생노드로부터 키를 지원 받는다. 바로 28로 옮기는 것이 아니라 B트리의 속성에 맞게 28은 부모노드로 옮기고 30을 내린다.
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-delete2.png"></p>
 
 ##### Case 2-2. 재조정이 필요하고 차용이 불가능한 경우(M=2)
+1. 동생이 있으면 동생 노드와 현재 노드 사이의 키를 부모로부터 내려 받는다
+    - 그 키와 나의 키를 차례대로 동생에게 합친다.
+    - 현재 노드를 삭제한다.
+2. 동생이 없으면 형 노드와 현재 노드 사이의 키를 부모로부터 내려받는다.
+    - 부모로부터 받은 키와 형 노드의 키를 차례대로 나에게 합친다.
+    - 형 노드를 삭제한다.
+
+##### Case 2-3. 리프노드에서 삭제하고 재조정 해야하는 경우
+- 재조정 진행 이후 부모 노드에서 문제가 발생하여 다시 재조정을 해야하는 경우
+
+1. 부모가 루트 노드가 아니라면
+    - 그 위치에서부터 다시 1번부터 재조정 진행
+2. 부모가 루트 노드이고 비어있다면
+    - 부모 노드를 삭제한다.
+    - 직전에 합쳐진 노드가 루트노드가 된다.
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-delete3.png"></p>
 
 #### 내부 노드에서 삭제(M=2)
+- 내부 노드에 있는 데이터를 삭제하려면 말단 노드에 있는 데이터와 위치를 바꾼 후 삭제한다.
+- 이후에는 Case2와 동일하게 진행
+
+> 어떤 말단노드에 있는 데이터와 바꿀 것인가?<br/>
+삭제할 데이터의 선임자나 후임자와 위치를 바꿔준다.<br/>
+- 선임자(predecessor): 나보다 작은 데이터들 중 가장 큰 데이터
+- 후임자(successor): 나보다 큰 데이터들 중 가장 작은 데이터
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree-delete4.png"></p>
 
@@ -215,7 +244,12 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
 - Wikipedia. (2023.05.13). "이진 탐색 트리". [https://ko.wikipedia.org/wiki/이진_탐색_트리](https://ko.wikipedia.org/wiki/이진_탐색_트리).
 - Wikipedia. (2024.05.16). "k-d 트리". [https://ko.wikipedia.org/wiki/K-d_트리](https://ko.wikipedia.org/wiki/K-d_트리).
 - Wikipedia. (2022.12.31). "B 트리". [https://ko.wikipedia.org/wiki/B_트리](https://ko.wikipedia.org/wiki/B_트리).
+- Wikipedia. (2024.05.16). "R 트리". [https://ko.wikipedia.org/wiki/R_트리](https://ko.wikipedia.org/wiki/R_트리).
+- Antonin Guttman. "R-trees: a dynamic index structure for spatial searching". ACM SIGMOD Record. Vol14, Issue 2. 1984.
+- Nobert Beckmann, Hans-Peter Kriegel, et al. "The R*-tree: an efficient and robust access method for points and rectangles". ACM SIGMOD '90: Proceedings of the 1990 ACM SIGMOD international conference on Management of data. 1990.
 - cjkangme.log. “[3D] KD Tree와 BVH” 2024.01.11. [https://velog.io/@cjkangme/3D-KD-Tree와-BVH](https://velog.io/@cjkangme/3D-KD-Tree와-BVH)
 - Geetha Mattaparthi. "Ball tree and KD Tree Algorithms" 2024.01.23. [https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9](https://medium.com/@geethasreemattaparthi/ball-tree-and-kd-tree-algorithms-a03cdc9f0af9)
 - Chan Young Jeong. (2023.03.18.). "B-트리(B-Tree)란? B트리 탐색, 삽입, 삭제 과정" [https://velog.io/@chanyoung1998/B트리](https://velog.io/@chanyoung1998/B트리)
+- dad-rock. (2021.06.23). "[Data Structures] R-Tree | R-트리" [https://dad-rock.tistory.com/594](https://dad-rock.tistory.com/594).
+- jwKim96. (2022.11.15). "[MySQL] R-Tree Index와 공간 탐색" [https://jwkim96.tistory.com/298](https://jwkim96.tistory.com/298).
 - OpenAI. (2024). ChatGPT(Aug 8, 2024). GPT-4o. [https://chat.openai.com](https://chat.openai.com).
