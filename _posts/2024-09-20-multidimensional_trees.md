@@ -245,6 +245,8 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
 - Wikipedia. (2024.05.16). "k-d 트리". [https://ko.wikipedia.org/wiki/K-d_트리](https://ko.wikipedia.org/wiki/K-d_트리).
 - Wikipedia. (2022.12.31). "B 트리". [https://ko.wikipedia.org/wiki/B_트리](https://ko.wikipedia.org/wiki/B_트리).
 - Wikipedia. (2024.05.16). "R 트리". [https://ko.wikipedia.org/wiki/R_트리](https://ko.wikipedia.org/wiki/R_트리).
+- R. Bayer, E. McCreight, et al. "Organization and maintenance of large ordered indices". SIGFIDET '70: Proceedings of the 1970 ACM SIGFIDET. 1970.
+- John T. Robinson. "The K-D-B tree: a search structure for large multidimensional dynamic indexes". SIGMOD '81: Proceedings of the 1981 ACM SIGMOD international conference on Management of data. 1981.
 - Antonin Guttman. "R-trees: a dynamic index structure for spatial searching". ACM SIGMOD Record. Vol14, Issue 2. 1984.
 - Nobert Beckmann, Hans-Peter Kriegel, et al. "The R*-tree: an efficient and robust access method for points and rectangles". ACM SIGMOD '90: Proceedings of the 1990 ACM SIGMOD international conference on Management of data. 1990.
 - cjkangme.log. “[3D] KD Tree와 BVH” 2024.01.11. [https://velog.io/@cjkangme/3D-KD-Tree와-BVH](https://velog.io/@cjkangme/3D-KD-Tree와-BVH)
