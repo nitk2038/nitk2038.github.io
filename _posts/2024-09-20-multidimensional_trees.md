@@ -19,7 +19,7 @@ author_profile: true
 > **lexicographic order, 2개 속성일때 코드 예**
 
 ```cpp
-bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
+bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) {
     if(get<0>(a) != get<0>(b)) {
         return get<0>(a) < get<0>(b);
     }
@@ -32,7 +32,7 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 <br/>
 아래 테이블을 생각해보자. Name에 대해서는 정렬이 이루어져 있다. BST인지 아닌지를 떠나, 정렬이 되어 있는 상태에서는 이진탐색을 활용해 O(logN) Complexity로 탐색이 가능하니 Name에 대해서 'Eve'를 찾을 때는 O(logN) Complexity를 보장해준다.
 
-하지만 몸무게가 50kg인 사람을 찾고싶으면? 순차탐색이 최선이다. 즉, O(N) Complexity가 최선이라는 것이다.
+하지만 Weight가 50kg인 사람을 찾고싶으면? 순차탐색이 최선이다. 즉, O(N) Complexity가 최선이라는 것이다.
 
 | ID  | Name   | Age | Height | Weight | Country  |
 | --- | ------ | --- | ------ | ------ | -------- |
@@ -147,7 +147,7 @@ bool cmp(const tuple<int, int>& a, const tuple<int, int>& b) const {
 
 ## B트리, 다시 1차원으로
 ### B트리는 왜 필요할까?
-B트리는 데이터베이스(mySQL, mongoDB, ...)와 파일 시스템(NTFS, ...)에서 널리 사용되는 트리 자료구조 중 하나로 이진 트리를 확장해 하나의 노드가 가질 수 있는 자식노드의 최대 숫자가 2보다 큰 트리 구조이다.
+B트리는 데이터베이스(mySQL, mongoDB, ...)와 파일 시스템(NTFS, HFS+, ...)에서 널리 사용되는 트리 자료구조 중 하나로 이진 트리를 확장해 하나의 노드가 가질 수 있는 자식노드의 최대 숫자가 2보다 큰 트리 구조이다.
 
 <p align="center"><img src = "/images/2024-09-20-multidimensional_trees/B-tree.png"></p>
 
