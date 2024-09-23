@@ -247,7 +247,7 @@ B트리는 삽입연산 시에 아직 삽입할 수 있는 자식노드가 남�
 
 R트리는 다차원 공간에서 범위 검색 및 최근접 이웃 검색을 효율적으로 수행하기 위한 트리 자료구조이다. 이번 포스트의 최종 목적지, 여러 속성(다차원 데이터)을 인덱싱하고 각 속성에 대해 효율적인 탐색이 가능하도록 해주는 자료구조이다.
 
-참고로 R트리는 Antonin Guttman이 ACM SIGMOD(Special Interest Group on Management of Data)에서 1984년에 제안했다.
+참고로 R트리는 Antonin Guttman이 ACM SIGMOD(Special Interest Group on Management of Data)에서 1984년에 제안했다. ~~나도 저런 곳에 번듯한 논문 하나 쓰고싶다..~~
 
 R트리는 B트리와 유사한 구조를 가지지만, 다차원 데이터를 처리할 수 있도록 각 노드가 특정 공간 영역을 나타내는 방식으로 동작한다. 즉, 다차원 데이터를 처리하는데 최적화된 자료구조라는 것이다.
 
