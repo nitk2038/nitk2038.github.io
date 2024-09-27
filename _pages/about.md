@@ -174,7 +174,7 @@ author_profile: true
 * Vector Database / Parallel Computing / Distributed Computing
 
 ## Study Interests
-* Web Application Service / Computer Vision / Natural Language Processing / Graph Convolutional Network
+* Data Mining / Computer Vision / Graph Convolutional Network / Natural Language Processing
 
 ## Participations
 ### Conference
