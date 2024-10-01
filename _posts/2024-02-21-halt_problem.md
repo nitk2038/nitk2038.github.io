@@ -56,7 +56,7 @@ function halt(prog, prob)
     if working
         return true
     else
-       return false 
+        return false 
 ```
 이게 뭐야.. working하는지 안 하는지는 조상님이 알려주냐?
 
