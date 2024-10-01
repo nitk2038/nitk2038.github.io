@@ -58,7 +58,7 @@ function halt(prog, prob)
     else
        return false 
 ```
-이게 뭐야.. 그래서 working하는지 안 하는지는 어떻게 판별할 건데?
+이게 뭐야.. working하는지 안 하는지는 조상님이 알려주냐?
 
 일단 뒤로 미루어 두고 작동하면 true를 반환하고 그렇지 않으면 false를 반환한다는 것만 알아두자.
 
