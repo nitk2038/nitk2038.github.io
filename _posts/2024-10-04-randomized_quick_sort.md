@@ -12,12 +12,11 @@ author_profile: true
 ## Quick Sort
 - Quick Sort는 분할정복 알고리즘(Divide & Conquer) 알고리즘으로서, pivot을 잡고 partiton 함수로 pivot보다 작은 item들은 왼쪽에, pivot보다 큰 item들은 오른쪽에 분할한 뒤, 왼쪽 부분과 오른쪽 부분 각각을 재귀적으로 pivot을 잡고 partition하면서 정렬하는 알고리즘이다.
 
-우선 Quick Sort의 작동 방식을 살펴보자.
+- 우선 Quick Sort의 작동 방식을 살펴보자.
 ![quick_sort](/images/2024-10-04-randomized_quick_sort/quick_sort_algorithm.png)
-
-1. 우선 pivot을 정한다(보통 left, right, mid 중 하나를 사용한다)
-2. pivot을 기준으로 그보다 작은 아이템은 왼쪽에 배치하고 그보다 큰 아이템은 오른쪽에 배치한다
-3. 위 과정을 재귀적으로 반복한다.(종료 조건: (left >= right). 즉, 연산할 배열의 크기가 0이거나 0보다 작은? 경우)
+    1. pivot을 정한다(보통 left, right, mid 중 하나를 사용한다)
+    2. pivot을 기준으로 그보다 작은 아이템은 왼쪽에 배치하고 그보다 큰 아이템은 오른쪽에 배치한다
+    3. 위 과정을 재귀적으로 반복한다.(종료 조건: (left >= right). 즉, 연산할 배열의 크기가 0이거나 0보다 작은? 경우)
 
 ## Quick Sort의 장점
 - 평균 시간복잡도가 $O(NlogN)$ 복잡도의 정렬알고리즘 중 가장 빠르다
