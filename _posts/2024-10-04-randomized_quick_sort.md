@@ -17,7 +17,7 @@ author_profile: true
     1. pivot을 정한다(보통 left, right, mid 중 하나를 사용한다)
     2. pivot을 기준으로 그보다 작은 아이템은 왼쪽에 배치하고 그보다 큰 아이템은 오른쪽에 배치한다
     3. 위 과정을 재귀적으로 반복한다.
-        - 종료 조건: (left >= right)
+        - 종료 조건: left >= right
         - 즉, 연산할 배열의 크기가 0이거나 0보다 작은? 경우
 
 ## Quick Sort의 장점
