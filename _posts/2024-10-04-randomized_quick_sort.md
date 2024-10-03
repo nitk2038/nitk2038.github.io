@@ -52,8 +52,14 @@ author_profile: true
 
 그리고 저정도의 아이디어도 생각해보지 않고 '구린 알고리즘'이라는 딱지를 붙혀놓은 스스로가 부끄럽기도 했다.
 
-태도를 고치자. 수업에서 배운 내용 착실하게 이해하고 암기하는 것도 물론 중요하다. 이게 1순위다. 하지만, 개선 방법가 아이디어를 고민해보는 습관을 더 들이고 싶었다.
+태도를 고치자. 수업에서 배운 내용 착실하게 이해하고 암기하는 것도 물론 중요하다. 이게 1순위다. 하지만, 개선 방법과 아이디어를 고민해보는 습관을 더 들이고 싶었다.
 
 
 ### 참고 문헌
-- 
+- Wikipedia. (2024.02.03). "퀵 정렬". [https://ko.wikipedia.org/wiki/퀵_정렬](https://ko.wikipedia.org/wiki/퀵_정렬)
+- Wikipedia. (2024.08.26). "힙 정렬". [https://ko.wikipedia.org/wiki/힙_정렬](https://ko.wikipedia.org/wiki/힙_정렬)
+- Wikipedia. (2024.01.31). "합병 정렬". [https://ko.wikipedia.org/wiki/합병_정렬](https://ko.wikipedia.org/wiki/합병_정렬)
+- favtutor. (2022.01.29). "Quick Sort in C++". [https://favtutor.com/blogs/quick-sort-cpp](https://favtutor.com/blogs/quick-sort-cpp).
+- hackerearth. "Quick Sort". [https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/](https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/).
+- 오나기. (2019.01.09). "[알고리즘] 1. Randomized Quick Sort". [https://m.blog.naver.com/mycute0905/221437896729](https://m.blog.naver.com/mycute0905/221437896729).
+- 놀이터. (2019.04.21). "(Algorithm) Analysis of Randomized Quick Sort". [https://m.blog.naver.com/scy7351/221519210300](https://m.blog.naver.com/scy7351/221519210300).
