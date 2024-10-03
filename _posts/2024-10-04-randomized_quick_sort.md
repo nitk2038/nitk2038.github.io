@@ -13,7 +13,7 @@ author_profile: true
 - Quick Sort는 분할정복 알고리즘(Divide & Conquer) 알고리즘으로서, pivot을 잡고 partiton 함수로 pivot보다 작은 item들은 왼쪽에, pivot보다 큰 item들은 오른쪽에 분할한 뒤, 왼쪽 부분과 오른쪽 부분 각각을 재귀적으로 pivot을 잡고 partition하면서 정렬하는 알고리즘이다.
 
 우선 Quick Sort의 작동 방식을 살펴보자.
-![quick_sort](quick_sort_algorithm.png)
+![quick_sort](/images/2024-10-04-randomized_quick_sort/quick_sort_algorithm.png)
 
 1. 우선 pivot을 정한다(보통 left, right, mid 중 하나를 사용한다)
 2. pivot을 기준으로 그보다 작은 아이템은 왼쪽에 배치하고 그보다 큰 아이템은 오른쪽에 배치한다
@@ -43,7 +43,7 @@ author_profile: true
 - 시시하다면, randomized quick sort의 expected time complexity 계산 방법 찾아보자
     - ~~물론 이것도 딱히 어렵진 않다~~
 
-![randomized_quick_sort](randomized_quick_sort.png)
+![randomized_quick_sort](/images/2024-10-04-randomized_quick_sort/randomized_quick_sort.jpg)
 
 ## 느낀점
 2년 동안 quick sort(빠른 정렬)은 말로만 빠르지 되게 구리다고 생각했다. 'item이 정렬된 상태일 상황은 얼마든지 만들어질 수 있을 것 같은데, 저걸 어디다가 써먹어?'라고 생각했기 때문이다.
@@ -53,3 +53,7 @@ author_profile: true
 그리고 저정도의 아이디어도 생각해보지 않고 '구린 알고리즘'이라는 딱지를 붙혀놓은 스스로가 부끄럽기도 했다.
 
 태도를 고치자. 수업에서 배운 내용 착실하게 이해하고 암기하는 것도 물론 중요하다. 이게 1순위다. 하지만, 개선 방법가 아이디어를 고민해보는 습관을 더 들이고 싶었다.
+
+
+### 참고 문헌
+- 
