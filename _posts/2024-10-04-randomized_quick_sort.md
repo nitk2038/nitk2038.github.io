@@ -31,7 +31,7 @@ author_profile: true
     - 현재 pivot으로 설정된 단 하나의 item만 제자리를 찾았고, 나머지는 상태 그대로 유지된다
         - ~~보통, $O(NlogN)$ 시간복잡도를 보장하는 heap sort, merge sort와 같은 경우 한번의 정렬 과정으로 나머지 item도 weak-ordering을 갖추게 된다~~
         - ~~heap sort는 한번의 과정으로 나머지 item은 heap 규칙에 따른 weak-ordering이 수행되고~~
-        - ~~merge sort는 logN을 구성하고 있는 각 계층에서 나눠진 배열끼리의 ordering이 수행된다~~
+        - ~~merge sort는 logN을 구성하고 있는 각 계층에서 나눠진 배열 내에서의 ordering이 수행된다~~
     - 불필요한 얘기가 길었지만, 결론적으로 item 하나를 정렬하면서 다른 item은 전혀 건드리지 않았고 배열 내 모든 원소를 한 개씩 삽입하며 정렬이 수행된다
     - 결과론적으로, Selection Sort와 다를바 없어진다
 
