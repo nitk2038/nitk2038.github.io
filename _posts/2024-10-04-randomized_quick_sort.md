@@ -38,9 +38,7 @@ author_profile: true
 ## Randomized Quick Sort란?
 - 방금 얘기한 최악의 경우를 해결하기 위한 방법이다
 - 되게 별거 없다. pivot을 랜덤으로 선택하면 된다
-- N의 크기가 커질 수록 최악의 경우가 발생할 가능성은 더더욱 낮을 것이고 기존 Quick Sort에 비해 평균 시간복잡도도 개선되었다
-- 시시하다면, randomized quick sort의 expected time complexity 계산 방법 찾아보자
-    - ~~물론 이것도 엄청 어렵다거나 하지는 않다~~
+- N의 크기가 커질 수록 최악의 경우가 발생할 가능성은 0에 수렴할 것이다.
 
 ![randomized_quick_sort](/images/2024-10-04-randomized_quick_sort/randomized_quick_sort.jpg)
 
