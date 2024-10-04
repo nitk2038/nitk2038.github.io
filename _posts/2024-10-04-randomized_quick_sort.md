@@ -35,7 +35,7 @@ author_profile: true
         - ~~heap sort는 한번의 과정으로 나머지 item은 heap 규칙에 따른 weak-ordering이 수행되고~~
         - ~~merge sort는 logN을 구성하고 있는 각 계층에서 나눠진 배열 내에서의 ordering이 수행된다~~
     - 불필요한 얘기가 길었지만, 결론적으로 item 하나를 정렬하면서 다른 item은 전혀 건드리지 않았고 배열 내 모든 원소를 한 개씩 삽입하며 정렬이 수행된다
-    - 결론적으로, Selection Sort와 다를바 없어진다
+    - 결론적으로, Exchange Sort와 다를바 없어진다
 
 ## Randomized Quick Sort란?
 - 방금 얘기한 최악의 경우를 해결하기 위한 방법이다
