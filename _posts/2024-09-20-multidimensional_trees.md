@@ -10,11 +10,11 @@ author_profile: true
 
 # BST(Binary Search Tree)와 KD트리 그리고 B트리와 R트리
 ## 트리를 이용한 인덱싱 기법들.. 근데 이제, 다차원을 곁들인
-컴퓨터공학과 2학년 이상이라면 자료구조 수업을 들었을 것이다. 그리고 그 수업에서 BST(Binary Search Tree, 이진탐색트리)도 다들 배웠을 것이다.
+자료구조를 공부한 적이 있다면 BST(Binary Search Tree, 이진탐색트리)도 배웠을 것이다.
 
 이진탐색트리는 상당히 매력적인 자료구조라 생각한다. BST를 사용하면 기존 Unsorted List의 O(N) Complexity를 O(logN) Complexity로 확연히 감소시켜준다.
 
-하지만 문제가 있다. 기존 자료구조 수업에서 BST를 다룰 때 어떻게 했었는가? BST 노드 하나 당 하나의 item만 삽입이 가능했다. 노드 하나 당 여러 item을 삽입시킨다 하여도 결국 정렬은 하나의 아이템을 기준으로 하거나 기껏해봐야 lexicographic order(사전식 순서)로만 정렬이 가능했다.
+하지만 문제가 있다. 기존 자료구조 교과서에서 BST를 다룰 때 어떻게 했었는가? BST 노드 하나 당 하나의 item만 삽입이 가능했다. 노드 하나 당 여러 item을 삽입시킨다 하여도 결국 정렬은 하나의 아이템을 기준으로 하거나 기껏해봐야 lexicographic order(사전식 순서)로만 정렬이 가능했다.
 
 > **lexicographic order, 2개 속성일때 코드 예**
 
