@@ -22,7 +22,7 @@ author_profile: true
 ## L1 캐시, L2 캐시, L3 캐시
 그럼 이 L3, L2, L1을 결정짓는 특징적인 부분은 무엇일까? 우선 아래 그림을 보자.
 
-<p align="center"><img src="/images/2024-11-02-cache_miss_in_multithreading/cpu_architecture.png", width="650"></p>
+<p align="center"><img src="/images/2024-11-01-cache_miss_in_multithreading/cpu_architecture.png", width="650"></p>
 
 ### L1 캐시
 L1 캐시는 코어 칩 내부에 위치하고 있고 명령어 캐시와 데이터 캐시로 나누어져 있다. **명령어 집합**과 **데이터 집합**은 다른 특성을 보이는 경향이 있다.
@@ -64,7 +64,7 @@ trade-off 관계가 존재하지만, 1번을 선택하는 것이 더 나은 선�
         - L3 Cache Memory: 8.0MB
     - RAM: 16GB
 
-![expr_result](/images/2024-11-02-멀티쓰레딩%20환경에서%20캐시%20미스에%20대해/expr_result.png)
+![expr_result](/images/2024-11-01-cache_miss_in_multithreading/expr_result.png)
 
 ## Appendix (Source Code)
 ### Common Part
