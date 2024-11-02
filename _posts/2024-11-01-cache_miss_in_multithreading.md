@@ -54,7 +54,7 @@ L3 캐시는 코어 밖에 위치해 코어 간에 서로 공유해서 사용하
 trade-off 관계가 존재하지만, **1번**을 선택하는 것이 더 나은 선택이다. (사실 이런 점을 고려하지 않아도 굳이 **2번** 방식을 채택하는 경우를 본 적도 없다.)
 
 ## 얼마나 차이가 났을까?
-크다면 큰 차이이고, 작다면 작은 차이지만 1.3배 정도의 차이로 **1번** 방식이 빨랐다. 실험 결과는 아래와 같았다.
+크다면 큰 차이이고, 작다면 작은 차이지만 18.3% 정도의 차이로 **1번** 방식이 빨랐다. 실험 결과는 아래와 같다.
 
 - 실험 환경
     - Compiler: MinGW 11.0 w64
@@ -83,12 +83,14 @@ trade-off 관계가 존재하지만, **1번**을 선택하는 것이 더 나은 
 #define ARR_SIZE 1073741824
 #define NUM_THREADS 8
 
+typedef long long dtype;
+
 typedef struct {
-    const long long *nums;
+    const dtype *nums;
     size_t step;
     size_t start_idx;
     size_t end_idx;
-    long long sum;
+    dtype sum;
 } ThreadData;
 
 void *parallel_sum(void *arg) {
@@ -105,14 +107,14 @@ void *parallel_sum(void *arg) {
 ```c
 int main() {
     srand(time(NULL));
-    long long *nums = malloc(ARR_SIZE * sizeof(long long)); // 힙 영역에 배열 선언
+    dtype *nums = malloc(ARR_SIZE * sizeof(dtype)); // 힙 영역에 배열 선언
     if(nums == NULL) {
         perror("malloc");
         exit(-1);
     }
 
     for(size_t i = 0; i < ARR_SIZE; i++) {
-        nums[i] = rand() % 10;
+        nums[i] = rand() % 10000;
     }
 
     const size_t chunk_size = ARR_SIZE / NUM_THREADS;
@@ -133,7 +135,7 @@ int main() {
         }
     }
 
-    long long total_sum = 0;
+    dtype total_sum = 0;
     for(int i = 0; i < NUM_THREADS; i++) {
         pthread_join(threads[i], NULL);
         total_sum += thread_data[i].sum;
@@ -152,34 +154,34 @@ int main() {
 #### Result
 **Try 1**
 ```bash
-TOTAL SUM AGGR RESULT: 4831632244
-SUM AGGR EXECUTION TIME: 2.730000
+TOTAL SUM AGGR RESULT: 5040316172000
+SUM AGGR EXECUTION TIME: 2.837000
 ```
 
 **Try 2**
 ```bash
-TOTAL SUM AGGR RESULT: 4831510428
-SUM AGGR EXECUTION TIME: 2.959000
+TOTAL SUM AGGR RESULT: 5040268586880
+SUM AGGR EXECUTION TIME: 2.986000
 ```
 
 **Try 3**
 ```bash
-TOTAL SUM AGGR RESULT: 4831531380
-SUM AGGR EXECUTION TIME: 2.556000
+TOTAL SUM AGGR RESULT: 5040166751664
+SUM AGGR EXECUTION TIME: 2.728000
 ```
 
 ### Method 2
 ```c
 int main() {
     srand(time(NULL));
-    long long *nums = malloc(ARR_SIZE * sizeof(long long)); // 힙 영역에 배열 선언
+    dtype *nums = malloc(ARR_SIZE * sizeof(dtype)); // 힙 영역에 배열 선언
     if(nums == NULL) {
         perror("malloc");
         exit(-1);
     }
 
     for(size_t i = 0; i < ARR_SIZE; i++) {
-        nums[i] = rand() % 10;
+        nums[i] = rand() % 10000;
     }
 
     pthread_t threads[NUM_THREADS];
@@ -199,7 +201,7 @@ int main() {
         }
     }
 
-    long long total_sum = 0;
+    dtype total_sum = 0;
     for(int i = 0; i < NUM_THREADS; i++) {
         pthread_join(threads[i], NULL);
         total_sum += thread_data[i].sum;
@@ -218,20 +220,20 @@ int main() {
 #### Result
 **Try 1**
 ```bash
-TOTAL SUM AGGR RESULT: 4831684862
-SUM AGGR EXECUTION TIME: 3.564000
+TOTAL SUM AGGR RESULT: 5040306388592
+SUM AGGR EXECUTION TIME: 3.529000
 ```
 
 **Try 2**
 ```bash
-TOTAL SUM AGGR RESULT: 4831668134
-SUM AGGR EXECUTION TIME: 3.730000
+TOTAL SUM AGGR RESULT: 5040129143344
+SUM AGGR EXECUTION TIME: 3.492000
 ```
 
 **Try 3**
 ```bash
-TOTAL SUM AGGR RESULT: 4831502262
-SUM AGGR EXECUTION TIME: 3.500000
+TOTAL SUM AGGR RESULT: 5040085003856
+SUM AGGR EXECUTION TIME: 3.441000
 ```
 
 ### 참고 문헌
