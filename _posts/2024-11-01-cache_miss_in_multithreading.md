@@ -31,7 +31,9 @@ L1 캐시는 코어 칩 내부에 위치하고 있고 명령어 캐시와 데이
 
 **명령어 집합**은 똑같은 명령어가 계속 반복해서 나타날 경향이 커 주로 시간 지역성이 높고 **데이터 집합**은 주로 공간 지역성이 높게 나타날 가능성이 크다.
 
-이 둘을 나누어 관리하면 서로 다른 지역성을 활용할 수 있고 별도의 파이프라인을 구축해 명령어와 데이터를 동시에 읽을 수도 있다. 이러한 장점을 취하기 위해 L1 캐시는 명령어 집합과 데이터 집합을 분리해 관리해준다. 대신, 그만큼 활용하지 못하는 공간이 생길 수 있으니 캐시 메모리 용량 측면에서는 손해이다.
+이 둘을 나누어 관리하면 서로 다른 지역성을 활용할 수 있고 별도의 파이프라인을 구축해 명령어와 데이터를 동시에 읽을 수도 있다.
+
+이러한 장점을 취하기 위해 L1 캐시는 명령어 집합과 데이터 집합을 분리해 관리해준다. 대신, 그만큼 활용하지 못하는 공간이 생길 수 있으니 캐시 메모리 용량 측면에서는 손해이다.
 
 ### L2 캐시
 L2 캐시는 CPU에 따라 코어 내에 위치할 수도, 코어 밖에 위치할 수도 있다. L2 캐시를 코어 간에 공유자원으로 사용하는 경우도 있다.
@@ -47,14 +49,14 @@ L3 캐시는 코어 밖에 위치해 코어 간에 서로 공유해서 사용하
 
 어떻게 배열을 나누어 각 코어가 하는 일을 분배해야 할까? 여러 방법이 있겠지만, 일단 두 가지만 비교하자면
 1. 크기가 100인 배열이 있고 코어의 개수는 2개라고 하면, 0~49번 idx의 배열과, 50~99번 idx 배열로 나누어 합 연산을 수행한다.
-2. 마찬가지로, 크기가 100인 배열과 코어가 2개 있다고 하면, 짝수 idx를 0번 코어에서, 홀수 idx는 1번 코어에서 처리하게 하는 것이다.
+2. 마찬가지로, 크기가 100인 배열과 코어가 2개 있다고 하면, 짝수 idx를 0번 코어에서, 홀수 idx는 1번 코어에서 처리한다.
 
-이미 결론을 다 말한 것 같지만, **1번**이 더 유리할 것이다. L3 캐시에 올라가게 되는 데이터의 cache hit은 **2번**이 더 유리할 수 있지만, L1 캐시와 L2 캐시에 올라가는 데이터의 cache hit은 **1번**이 절대적으로 유리하다.
+이미 결론을 다 말한 것 같지만, **1번**이 더 유리할 것이다. L3 캐시에 올라가게 되는 데이터의 캐시 적중률은 **2번**이 더 유리할 수도 있지만, L1 캐시와 L2 캐시에 올라가는 데이터의 캐시 적중률은 **1번**이 더 유리하다.
 
-trade-off 관계가 존재하지만, **1번**을 선택하는 것이 더 나은 선택이다. (사실 이런 점을 고려하지 않아도 굳이 **2번** 방식을 채택하는 경우를 본 적도 없다.)
+trade-off 관계가 존재하지만, **1번**을 선택하는 것이 더 나은 선택이다. (사실 이런 점을 고려하지 않아도 굳이 **2번** 방식을 채택하는 경우를 본 적은 없다.)
 
 ## 얼마나 차이가 났을까?
-크다면 큰 차이이고, 작다면 작은 차이지만 18.3% 정도의 차이로 **1번** 방식이 빨랐다. 실험 결과는 아래와 같다.
+크다면 큰 차이이고, 작다면 작은 차이지만 17% 정도의 차이로 **1번** 방식이 빨랐다. 실험 결과는 아래와 같다.
 
 - 실험 환경
     - Compiler: MinGW 11.0 w64
@@ -68,9 +70,7 @@ trade-off 관계가 존재하지만, **1번**을 선택하는 것이 더 나은 
 
 ![expr_result](/images/2024-11-01-cache_miss_in_multithreading/expr_result.png)
 
-다만, 위 실험 결과는 **long long** 자료형을 사용하였을 때의 결과이다.
-
-자료형을 **int**로만 바꾸어주어도 캐시 적중률이 거의 동일해 유의미한 속도 차이를 보여주지 않는다.
+다만, 위 실험 결과는 **long long** 자료형을 사용하였을 때의 결과이다. 자료형을 **int**로만 바꾸어주어도 캐시 적중률이 거의 동일해 유의미한 속도 차이를 보여주지 않는다.
 
 ## Appendix (Source Code)
 ### Common Part
@@ -107,7 +107,7 @@ void *parallel_sum(void *arg) {
 ```c
 int main() {
     srand(time(NULL));
-    dtype *nums = malloc(ARR_SIZE * sizeof(dtype)); // 힙 영역에 배열 선언
+    dtype *nums = malloc(ARR_SIZE * sizeof(dtype));
     if(nums == NULL) {
         perror("malloc");
         exit(-1);
@@ -121,14 +121,16 @@ int main() {
     pthread_t threads[NUM_THREADS];
     ThreadData thread_data[NUM_THREADS];
 
-    const clock_t start = clock();
     for(int i = 0; i < NUM_THREADS; i++) {
-        thread_data[i].nums = nums; // 각 쓰레드에 배열의 포인터만 넘겨서 연산
+        thread_data[i].nums = nums;
         thread_data[i].step = 1;
-        thread_data[i].start_idx = i * chunk_size; // 쓰레드 개수를 통해 배열 연산 범위 지정
+        thread_data[i].start_idx = i * chunk_size;
         thread_data[i].end_idx = (i == NUM_THREADS - 1) ? ARR_SIZE : (i + 1) * chunk_size;
         thread_data[i].sum = 0;
+    }
 
+    const clock_t start = clock();
+    for(int i = 0; i < NUM_THREADS; i++) {
         if(pthread_create(&threads[i], NULL, parallel_sum, &thread_data[i])) {
             perror("pthread_create");
             exit(-1);
@@ -154,14 +156,14 @@ int main() {
 #### Result
 **Try 1**
 ```bash
-TOTAL SUM AGGR RESULT: 5040316172000
-SUM AGGR EXECUTION TIME: 2.837000
+TOTAL SUM AGGR RESULT: 5040129388928
+SUM AGGR EXECUTION TIME: 2.772000
 ```
 
 **Try 2**
 ```bash
-TOTAL SUM AGGR RESULT: 5040268586880
-SUM AGGR EXECUTION TIME: 2.986000
+TOTAL SUM AGGR RESULT: 5040108967152
+SUM AGGR EXECUTION TIME: 2.704000
 ```
 
 **Try 3**
@@ -174,7 +176,7 @@ SUM AGGR EXECUTION TIME: 2.728000
 ```c
 int main() {
     srand(time(NULL));
-    dtype *nums = malloc(ARR_SIZE * sizeof(dtype)); // 힙 영역에 배열 선언
+    dtype *nums = malloc(ARR_SIZE * sizeof(dtype));
     if(nums == NULL) {
         perror("malloc");
         exit(-1);
@@ -187,14 +189,16 @@ int main() {
     pthread_t threads[NUM_THREADS];
     ThreadData thread_data[NUM_THREADS];
 
-    const clock_t start = clock();
     for(int i = 0; i < NUM_THREADS; i++) {
-        thread_data[i].nums = nums; // 각 쓰레드에 배열의 포인터만 넘겨서 연산
-        thread_data[i].step = NUM_THREADS; // 쓰레드 개수만큼 건너뛰며 합 연산
+        thread_data[i].nums = nums;
+        thread_data[i].step = NUM_THREADS;
         thread_data[i].start_idx = i;
         thread_data[i].end_idx = ARR_SIZE;
         thread_data[i].sum = 0;
+    }
 
+    const clock_t start = clock();
+    for(int i = 0; i < NUM_THREADS; i++) {
         if(pthread_create(&threads[i], NULL, parallel_sum, &thread_data[i])) {
             perror("pthread_create");
             exit(-1);
@@ -220,20 +224,20 @@ int main() {
 #### Result
 **Try 1**
 ```bash
-TOTAL SUM AGGR RESULT: 5040306388592
-SUM AGGR EXECUTION TIME: 3.529000
+TOTAL SUM AGGR RESULT: 5040140662144
+SUM AGGR EXECUTION TIME: 3.261000
 ```
 
 **Try 2**
 ```bash
-TOTAL SUM AGGR RESULT: 5040129143344
-SUM AGGR EXECUTION TIME: 3.492000
+TOTAL SUM AGGR RESULT: 5040115655552
+SUM AGGR EXECUTION TIME: 3.263000
 ```
 
 **Try 3**
 ```bash
-TOTAL SUM AGGR RESULT: 5040085003856
-SUM AGGR EXECUTION TIME: 3.441000
+TOTAL SUM AGGR RESULT: 5040263545616
+SUM AGGR EXECUTION TIME: 3.363000
 ```
 
 ### 참고 문헌
