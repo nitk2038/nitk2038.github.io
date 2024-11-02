@@ -58,7 +58,7 @@ trade-off 관계가 존재하지만, **1번**을 선택하는 것이 더 나은 
 
 - 실험 환경
     - Compiler: MinGW 11.0 w64
-    - C11 Standard
+    - C17 Standard
     - 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
         - 4 Core, 8 Logical Processor
         - L1 Cache Memory: 320KB
