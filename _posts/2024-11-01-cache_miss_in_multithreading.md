@@ -10,7 +10,7 @@ author_profile: true
 
 # 멀티 쓰레딩 환경에서 캐시 미스에 대해
 ## CPU 캐시의 구조
-이번 포스팅에 앞서, [numpy가 더 빠른 이유 - 캐시메모리 입장에서](https://meongju0o0.github.io/computerarchitecture/faster_numpy_ds/)를 먼저 보고 오길 추천한다. 이번 포스팅도 CPU 캐시메모리와 관련된 이야기를 할 것이기 때문이다.
+이번 포스팅에 앞서, [numpy가 더 빠른 이유 - 캐시메모리 입장에서](https://meongju0o0.github.io/computerarchitecture/faster_numpy_ds/)를 먼저 보고 오길 권장한다. CPU 캐시 메모리에 대한 대략적인 이해 후 이번 포스팅을 보는 것을 추천한다.
 
 컴퓨터 저장장치는 여러 계층으로 구성되어있다. 느리지만 용량이 큰 저장장치, 적당한 속도와 적당한 용량의 저장장치, 빠르지만 용량이 아주 작은 저장장치로 구성되어있다.
 
