@@ -68,6 +68,10 @@ trade-off 관계가 존재하지만, **1번**을 선택하는 것이 더 나은 
 
 ![expr_result](/images/2024-11-01-cache_miss_in_multithreading/expr_result.png)
 
+다만, 위 실험 결과는 **long long** 자료형을 사용하였을 때의 결과이다.
+
+자료형을 **int**로만 바꾸어주어도 cache hit ratio가 거의 동일해 유의미한 속도 차이를 보여주지 않는다.
+
 ## Appendix (Source Code)
 ### Common Part
 ```c
