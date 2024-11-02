@@ -88,7 +88,7 @@ typedef struct {
 } ThreadData;
 
 void *parallel_sum(void *arg) {
-    ThreadData *data = (ThreadData *)arg;
+    ThreadData *data = arg;
     data->sum = 0;
     for(size_t i = data->start_idx; i < data->end_idx; i += data->step) {
         data->sum += data->nums[i];
@@ -101,10 +101,10 @@ void *parallel_sum(void *arg) {
 ```c
 int main() {
     srand(time(NULL));
-    long long *nums = (long long *)malloc(ARR_SIZE * sizeof(long long));
+    long long *nums = malloc(ARR_SIZE * sizeof(long long)); // 힙 영역에 배열 선언
     if(nums == NULL) {
         perror("malloc");
-        return 1;
+        exit(-1);
     }
 
     for(size_t i = 0; i < ARR_SIZE; i++) {
@@ -117,15 +117,15 @@ int main() {
 
     const clock_t start = clock();
     for(int i = 0; i < NUM_THREADS; i++) {
-        thread_data[i].nums = nums;
+        thread_data[i].nums = nums; // 각 쓰레드에 배열의 포인터만 넘겨서 연산
         thread_data[i].step = 1;
-        thread_data[i].start_idx = i * chunk_size; // 쓰레드 개수를 통해 배열 슬라이싱
+        thread_data[i].start_idx = i * chunk_size; // 쓰레드 개수를 통해 배열 연산 범위 지정
         thread_data[i].end_idx = (i == NUM_THREADS - 1) ? ARR_SIZE : (i + 1) * chunk_size;
         thread_data[i].sum = 0;
 
         if(pthread_create(&threads[i], NULL, parallel_sum, &thread_data[i])) {
             perror("pthread_create");
-            exit(1);
+            exit(-1);
         }
     }
 
@@ -149,23 +149,22 @@ int main() {
 ```c
 int main() {
     srand(time(NULL));
-    long long *nums = (long long *)malloc(ARR_SIZE * sizeof(long long));
+    long long *nums = malloc(ARR_SIZE * sizeof(long long)); // 힙 영역에 배열 선언
     if(nums == NULL) {
         perror("malloc");
-        return 1;
+        exit(-1);
     }
 
     for(size_t i = 0; i < ARR_SIZE; i++) {
         nums[i] = rand() % 10;
     }
 
-    const size_t chunk_size = ARR_SIZE / NUM_THREADS;
     pthread_t threads[NUM_THREADS];
     ThreadData thread_data[NUM_THREADS];
 
     const clock_t start = clock();
     for(int i = 0; i < NUM_THREADS; i++) {
-        thread_data[i].nums = nums;
+        thread_data[i].nums = nums; // 각 쓰레드에 배열의 포인터만 넘겨서 연산
         thread_data[i].step = NUM_THREADS; // 쓰레드 개수만큼 건너뛰며 합 연산
         thread_data[i].start_idx = i;
         thread_data[i].end_idx = ARR_SIZE;
@@ -173,7 +172,7 @@ int main() {
 
         if(pthread_create(&threads[i], NULL, parallel_sum, &thread_data[i])) {
             perror("pthread_create");
-            exit(1);
+            exit(-1);
         }
     }
 
