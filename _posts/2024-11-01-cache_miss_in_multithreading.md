@@ -146,19 +146,19 @@ int main() {
 ```
 
 #### Result
-- **Try 1**
+**Try 1**
 ```bash
 TOTAL SUM AGGR RESULT: 4831632244
 SUM AGGR EXECUTION TIME: 2.730000
 ```
 
-- **Try 2**
+**Try 2**
 ```bash
 TOTAL SUM AGGR RESULT: 4831510428
 SUM AGGR EXECUTION TIME: 2.959000
 ```
 
-- **Try 3**
+**Try 3**
 ```bash
 TOTAL SUM AGGR RESULT: 4831531380
 SUM AGGR EXECUTION TIME: 2.556000
@@ -212,19 +212,19 @@ int main() {
 ```
 
 #### Result
-- **Try 1**
+**Try 1**
 ```bash
 TOTAL SUM AGGR RESULT: 4831684862
 SUM AGGR EXECUTION TIME: 3.564000
 ```
 
-- **Try 2**
+**Try 2**
 ```bash
 TOTAL SUM AGGR RESULT: 4831668134
 SUM AGGR EXECUTION TIME: 3.730000
 ```
 
-- **Try 3**
+**Try 3**
 ```bash
 TOTAL SUM AGGR RESULT: 4831502262
 SUM AGGR EXECUTION TIME: 3.500000
