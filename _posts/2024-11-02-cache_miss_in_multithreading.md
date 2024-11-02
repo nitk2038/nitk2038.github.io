@@ -22,9 +22,7 @@ author_profile: true
 ## L1 캐시, L2 캐시, L3 캐시
 그럼 이 L3, L2, L1을 결정짓는 특징적인 부분은 무엇일까? 우선 아래 그림을 보자.
 
-<p align="center">
-  <img src="/images/2024-11-02-cache_miss_in_multithreading/cpu_architecture.png", width="650">
-</p>
+<p align="center"><img src="/images/2024-11-02-cache_miss_in_multithreading/cpu_architecture.png", width="650"></p>
 
 ### L1 캐시
 L1 캐시는 코어 칩 내부에 위치하고 있고 명령어 캐시와 데이터 캐시로 나누어져 있다. **명령어 집합**과 **데이터 집합**은 다른 특성을 보이는 경향이 있다.
