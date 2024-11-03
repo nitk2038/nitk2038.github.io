@@ -50,9 +50,9 @@ L3 캐시는 코어 밖에 위치해 코어 간에 서로 공유해서 사용하
 1. 크기가 100인 배열이 있고 코어의 개수는 2개라고 하면, 0~49번 idx의 배열과, 50~99번 idx 배열로 나누어 합 연산을 수행한다.
 2. 마찬가지로, 크기가 100인 배열과 코어가 2개 있다고 하면, 짝수 idx를 0번 코어에서, 홀수 idx는 1번 코어에서 처리한다.
 
-이미 결론을 다 말한 것 같지만, **1번**이 더 유리할 것이다. L3 캐시에 올라가게 되는 데이터의 캐시 적중률은 **2번**이 더 유리할 수도 있지만, L1 캐시와 L2 캐시에 올라가는 데이터의 캐시 적중률은 **1번**이 더 유리하다.
+이미 결론을 다 말한 것 같지만, **1번**이 더 유리할 것이다.
 
-trade-off 관계가 존재하지만, **1번**을 선택하는 것이 더 나은 선택이다. (사실 이런 점을 고려하지 않아도 굳이 **2번** 방식을 채택하는 경우를 본 적은 없다.)
+L3 캐시에 올라가게 되는 데이터의 캐시 적중률은 **1번**이나 **2번**모두 비슷할 수 있지만, L1 캐시와 L2 캐시에 올라가는 데이터의 캐시 적중률은 **1번**이 분명히 더 유리하다.
 
 ## 얼마나 차이가 났을까?
 크다면 큰 차이이고, 작다면 작은 차이지만 17% 정도의 차이로 **1번** 방식이 빨랐다. 실험 결과는 아래와 같다.
@@ -92,21 +92,17 @@ typedef struct {
     dtype sum;
 } ThreadData;
 
-void parallel_sum(void *arg) {
-    ThreadData *data = arg;
+void* parallel_sum(void *arg) {
+    ThreadData *data = (ThreadData*)arg;
     data->sum = 0;
     for(size_t i = data->start_idx; i < data->end_idx; i += data->step) {
         data->sum += data->nums[i];
     }
-    pthread_exit(NULL);
+    return NULL;
 }
-```
 
-### Method 1
-```c
-int main() {
-    srand(time(NULL));
-    dtype *nums = malloc(ARR_SIZE * sizeof(dtype));
+dtype* get_nums(const size_t arr_size) {
+    dtype *nums = malloc(arr_size * sizeof(dtype));
     if(nums == NULL) {
         perror("malloc");
         exit(-1);
@@ -115,6 +111,16 @@ int main() {
     for(size_t i = 0; i < ARR_SIZE; i++) {
         nums[i] = rand() % 10000;
     }
+
+    return nums;
+}
+```
+
+### Method 1
+```c
+int main() {
+    srand(time(NULL));
+    dtype *nums = get_nums(ARR_SIZE);
 
     const size_t chunk_size = ARR_SIZE / NUM_THREADS;
     pthread_t threads[NUM_THREADS];
@@ -130,7 +136,7 @@ int main() {
 
     const clock_t start = clock();
     for(int i = 0; i < NUM_THREADS; i++) {
-        if(pthread_create(&threads[i], NULL, (void *)parallel_sum, &thread_data[i])) {
+        if(pthread_create(&threads[i], NULL, parallel_sum, &thread_data[i])) {
             perror("pthread_create");
             exit(-1);
         }
@@ -147,7 +153,7 @@ int main() {
     printf("SUM AGGR EXECUTION TIME: %lf\n", (double)(end - start) / CLOCKS_PER_SEC);
 
     free(nums);
-    pthread_exit(NULL);
+
     return 0;
 }
 ```
@@ -175,15 +181,7 @@ SUM AGGR EXECUTION TIME: 2.728000
 ```c
 int main() {
     srand(time(NULL));
-    dtype *nums = malloc(ARR_SIZE * sizeof(dtype));
-    if(nums == NULL) {
-        perror("malloc");
-        exit(-1);
-    }
-
-    for(size_t i = 0; i < ARR_SIZE; i++) {
-        nums[i] = rand() % 10000;
-    }
+    dtype *nums = get_nums(ARR_SIZE);
 
     pthread_t threads[NUM_THREADS];
     ThreadData thread_data[NUM_THREADS];
@@ -198,7 +196,7 @@ int main() {
 
     const clock_t start = clock();
     for(int i = 0; i < NUM_THREADS; i++) {
-        if(pthread_create(&threads[i], NULL, (void *)parallel_sum, &thread_data[i])) {
+        if(pthread_create(&threads[i], NULL, parallel_sum, &thread_data[i])) {
             perror("pthread_create");
             exit(-1);
         }
@@ -215,7 +213,7 @@ int main() {
     printf("SUM AGGR EXECUTION TIME: %lf\n", (double)(end - start) / CLOCKS_PER_SEC);
 
     free(nums);
-    pthread_exit(NULL);
+
     return 0;
 }
 ```
