@@ -92,13 +92,13 @@ typedef struct {
     dtype sum;
 } ThreadData;
 
-void *parallel_sum(void *arg) {
+void parallel_sum(void *arg) {
     ThreadData *data = arg;
     data->sum = 0;
     for(size_t i = data->start_idx; i < data->end_idx; i += data->step) {
         data->sum += data->nums[i];
     }
-    return NULL;
+    pthread_exit(NULL);
 }
 ```
 
@@ -130,7 +130,7 @@ int main() {
 
     const clock_t start = clock();
     for(int i = 0; i < NUM_THREADS; i++) {
-        if(pthread_create(&threads[i], NULL, parallel_sum, &thread_data[i])) {
+        if(pthread_create(&threads[i], NULL, (void *)parallel_sum, &thread_data[i])) {
             perror("pthread_create");
             exit(-1);
         }
@@ -198,7 +198,7 @@ int main() {
 
     const clock_t start = clock();
     for(int i = 0; i < NUM_THREADS; i++) {
-        if(pthread_create(&threads[i], NULL, parallel_sum, &thread_data[i])) {
+        if(pthread_create(&threads[i], NULL, (void *)parallel_sum, &thread_data[i])) {
             perror("pthread_create");
             exit(-1);
         }
