@@ -1,41 +1,27 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
-# Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
-title                    : "meongju0o0's blog"
+locale                   : "en-US"
+title                    : "steingate's blog"
 title_separator          : "|"
-subtitle                 : "Quest for Knowledge Representation"
-name                     : "Juyeong Shin"
-description              : "meongju0o0's blog"
-url                      : "https://meongju0o0.github.io"
+subtitle                 : "yoyo"
+name                     : "Nitin Kumar"
+description              : "steingate's blog"
+url                      : "https://nitk2038.github.io"
 baseurl                  : "/"
-repository               : "meongju0o0/meongju0o0.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "nitk2038/nitk2038.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/teaser.png"
 logo                     : "/assets/images/logo.png"
-masthead_title           : "meongju0o0's blog" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "steingate's blog" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
 copyright_url            : # "copyright" URL, defaults to site.url
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "false" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : majorWallet
+    shortname            : nk
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -83,7 +69,7 @@ google:
 # SEO Related
 google_site_verification :
 bing_site_verification   :
-naver_site_verification  : "7330ddfa15247761253ae25b8684f16f8a07d046"
+naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
 
@@ -106,53 +92,34 @@ social:
 analytics:
   provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : "G-C2804W5DLT"
+    tracking_id          : "G-628LDHTBHJ"
     anonymize_ip         : False # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Juyeong Shin"
+  name             : "Nitin Kumar"
   avatar           : "/assets/images/bio-photo.png"
-  bio              : "KHU CSE 19<br>KHU DKE Lab."
-  location         : "Republic of Korea"
+  bio              : "yoyo-nk"
+  location         : "steingate"
   email            : #
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:bl4angel20@gmail.com"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/meongju0o0"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/meongju0o0"
+      url: "mailto:steingate305@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/meongju0o0"
-    - label: "DockerHub"
-      icon: "fab fa-fw fa-docker"
-      url: "https://hub.docker.com/u/meongju0o0"
-
+      url: "https://github.com/nitk2038"
 
 # Site Footer
 footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:bl4angel20@gmail.com"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/meong_ju0o0"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/meongju0o0"
+      url: "mailto:nitinkumar21038@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/meongju0o0"
-    - label: "DockerHub"
-      icon: "fab fa-fw fa-docker"
-      url: "https://hub.docker.com/u/meongju0o0"
+      url: "https://github.com/nitk2038"
 
 
 # Reading Files

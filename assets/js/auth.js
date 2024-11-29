@@ -4,13 +4,13 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyAgjTZHgeW_Mj9ob8_3OYFGx_xgBoa0yH0",
-    authDomain: "meongju0o0-git-blog-todolist.firebaseapp.com",
-    projectId: "meongju0o0-git-blog-todolist",
-    storageBucket: "meongju0o0-git-blog-todolist.appspot.com",
-    messagingSenderId: "462108512601",
-    appId: "1:462108512601:web:9d5a3357bbae002828fc48",
-    measurementId: "G-RHKPH551R7"
+  apiKey: "AIzaSyCUru8IbhArwEnRhAUAOJRj9m6U-fkT6sw",
+  authDomain: "steingate-blog.firebaseapp.com",
+  projectId: "steingate-blog",
+  storageBucket: "steingate-blog.firebasestorage.app",
+  messagingSenderId: "1022465465622",
+  appId: "1:1022465465622:web:b7072179f87ddaeaec0437",
+  measurementId: "G-HJKDH5KD44"
 };
 
 // Initialize Firebase
@@ -32,10 +32,10 @@ window.login = function() {
     event.preventDefault();
     const userEmail = document.getElementById("email_field").value;
     const userPass = document.getElementById("password_field").value;
-  
+
     signInWithEmailAndPassword(auth, userEmail, userPass)
     .then((userCredential) => {
-        // Signed in 
+        // Signed in
         const user = userCredential.user;
         console.log('User signed in');
         // ...
